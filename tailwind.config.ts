@@ -9,8 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        bg: {
+          primary: "var(--bg-primary)",
+          secondary: "var(--bg-secondary)",
+          tertiary: "var(--bg-tertiary)",
+        },
+        fg: {
+          primary: "var(--fg-primary)",
+          secondary: "var(--fg-secondary)",
+          tertiary: "var(--fg-tertiary)",
+        },
+        sep: {
+          primary: "var(--sep-primary)",
+          secondary: "var(--sep-secondary)",
+          tertiary: "var(--sep-tertiary)",
+        },
       },
     },
   },

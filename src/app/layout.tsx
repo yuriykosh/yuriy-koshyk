@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+import { ReactLenis } from "@/utils/lenis";
+
+import Header from "@/components/Header";
+
 const satoshi = localFont({
   src: [
     {
@@ -27,7 +31,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${satoshi.className} antialiased`}>{children}</body>
+      <ReactLenis root>
+        <body className={`${satoshi.className} antialiased`}>
+          <Header />
+          {children}
+          <footer></footer>
+        </body>
+      </ReactLenis>
     </html>
   );
 }
