@@ -25,7 +25,10 @@ const ProjectsSection = () => {
   });
 
   return (
-    <section ref={container} className="relative mt-[50vh]">
+    <section ref={container} className="relative mt-[15vh] mb-6">
+      <h3 className="text-sm text-bg-primary font-semibold sticky m-6 top-6 mix-blend-difference">
+        Selected work
+      </h3>
       {projects.map((project, i) => {
         const targetScale = 1 - (projects.length - i) * 0.05;
         return (

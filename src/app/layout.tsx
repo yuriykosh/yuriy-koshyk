@@ -5,6 +5,7 @@ import "./globals.css";
 import { ReactLenis } from "@/utils/lenis";
 
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const satoshi = localFont({
   src: [
@@ -35,7 +36,7 @@ export default function RootLayout({
         <body className={`${satoshi.className} antialiased`}>
           <Header />
           {children}
-          <footer></footer>
+          <Footer />
         </body>
       </ReactLenis>
     </html>
