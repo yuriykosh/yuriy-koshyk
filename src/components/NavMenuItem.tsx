@@ -7,18 +7,20 @@ import {
   itemContentMotion,
   itemCoverMotion,
 } from "@/utils/animations";
+import Link from "next/link";
 
 interface NavMenuItemProps {
   index: number;
   title: string;
+  url: string;
 }
 
-const NavMenuItem: React.FC<NavMenuItemProps> = ({ index, title }) => {
+const NavMenuItem: React.FC<NavMenuItemProps> = ({ index, title, url }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
     <motion.li
-      className={`cursor-pointer py-8 relative w-full ${
+      className={`cursor-pointer py-4 min-[430px]:py-6 sm:py-8 relative w-full ${
         isLoading ? "pointer-events-none" : "pointer-events-auto"
       }`}
       initial="initial"
@@ -32,17 +34,20 @@ const NavMenuItem: React.FC<NavMenuItemProps> = ({ index, title }) => {
           variants={itemCoverMotion}
         />
         <motion.span
-          className="w-[4ch] text-2xl sm:text-3xl md:text-4xl"
+          className="w-[4ch] text-xl sm:text-3xl md:text-4xl"
           variants={itemContentMotion}
         >
           {index.toLocaleString("en-US", { minimumIntegerDigits: 2 })}
         </motion.span>
-        <h1 className="uppercase tracking-wide text-4xl sm:text-5xl md:text-6xl flex-1">
+        <Link
+          href={url}
+          className="uppercase tracking-wide text-3xl sm:text-5xl md:text-6xl flex-1"
+        >
           {title}
-        </h1>
+        </Link>
       </div>
       <motion.div
-        className="absolute bottom-0 h-[1px] bg-sep-primary w-full origin-left"
+        className="absolute bottom-0 h-[1px] bg-sep-tertiary w-full origin-left"
         variants={dividerMotion}
       />
     </motion.li>

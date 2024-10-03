@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({
   year,
   src,
   url,
-  color,
+  // color,
   progress,
   range,
   targetScale,
@@ -59,6 +59,7 @@ const Card: React.FC<CardProps> = ({
             <motion.div className="w-full h-full" style={{ scale: imageScale }}>
               <Image
                 fill
+                quality={100}
                 src={`/images/${src}`}
                 alt="image"
                 className="object-cover"

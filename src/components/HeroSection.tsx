@@ -6,9 +6,9 @@ import Divider from "@/components/assets/Divider";
 
 const HeroSection = () => {
   return (
-    <section className="h-[80vh] relative flex flex-col px-6 pt-40">
+    <section className="h-[80vh] relative flex flex-col px-6 pt-20 min-[390px]:pt-40">
       <motion.div
-        className="uppercase tracking-wide  mx-auto flex-1 flex flex-col text-5xl leading-snug sm:text-6xl sm:leading-snug md:text-7xl md:leading-tight lg:text-[6.2rem] xl:text-[8rem]"
+        className="uppercase tracking-wide  mx-auto flex-1 flex flex-col text-5xl leading-snug sm:text-6xl sm:leading-snug md:text-7xl md:leading-tight lg:text-[6.1rem] xl:text-[7.2rem] min-[1308px]:text-[8rem]"
         initial="initial"
         animate="animate"
       >
@@ -37,7 +37,7 @@ const HeroSection = () => {
           </motion.h2>
         </div>
         <motion.h2
-          className="font-semibold md:pl-[10%]"
+          className="font-semibold md:pl-[10%] relative after:hidden md:after:inline-block after:absolute after:top-1/2 after:-translate-y-1/2 after:h-[1ch] after:w-[1ch] after:ml-8 after:bg-fg-primary after:rounded-full"
           variants={textRevealMotion(0.5)}
         >
           That Matters
@@ -61,7 +61,7 @@ const HeroSection = () => {
             interact with them. Align them with business goals.{" "}
             <Link
               href={"/"}
-              className="underline underline-offset-2 hover:text-fg-secondary "
+              className="inline-block underline underline-offset-2 hover:text-fg-secondary "
             >
               Send me an email and say hey.
             </Link>

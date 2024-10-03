@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NavMenuToggle from "./NavMenuToggle";
+import LocalTime from "./assets/LocalTime";
 
 interface NavbarProps {
   menuOpen: boolean;
@@ -8,7 +9,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
   return (
-    <div className="grid grid-cols-2 items-start p-6 sticky top-0 mix-blend-difference z-[100]">
+    <div className="grid grid-cols-2 md:grid-cols-3 items-start p-6 sticky top-0 mix-blend-difference z-[100]">
       <Link
         href={"/"}
         className="flex items-baseline gap-1 w-fit text-sm text-bg-primary font-semibold"
@@ -31,10 +32,12 @@ const Navbar: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
         </svg>
       </Link>
 
-      <ul className="text-sm text-bg-primary font-semibold">
+      <ul className="hidden md:block justify-self-center text-sm text-bg-primary font-semibold">
         <li>Product Designer</li>
         <li className="text-sm opacity-45">Always learning</li>
       </ul>
+      <LocalTime />
+
       <NavMenuToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
     </div>
   );

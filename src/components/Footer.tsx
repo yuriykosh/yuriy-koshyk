@@ -1,15 +1,14 @@
-import Link from "next/link";
 import ScrollUp from "./assets/ScrollUp";
 import Divider from "./assets/Divider";
 
 const Footer = () => {
   return (
     <div
-      className="relative h-[65vh]"
+      className="relative h-[80vh] sm:h-[65vh]"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="relative h-[calc(100vh+65vh)] -top-[100vh]">
-        <div className="sticky top-[calc(100vh-65vh)] h-[65vh]">
+      <div className="relative h-[calc(100vh+80vh)] sm:h-[calc(100vh+65vh)] -top-[100vh]">
+        <div className="sticky top-[calc(100vh-80vh)] h-[80vh] sm:top-[calc(100vh-65vh)] sm:h-[65vh]">
           <footer className="bg-bg-tertiary py-8 px-6 h-full w-full flex flex-col justify-between">
             <div className="flex flex-col gap-6">
               <ScrollUp className=" flex justify-center text-sm font-semibold text-bg-primary" />
@@ -38,7 +37,7 @@ const Footer = () => {
               </p>
             </div>
 
-            <ul className="grid grid-cols-3 items-baseline text-sm font-semibold text-fg-secondary">
+            <ul className="text-center sm:text-left sm:grid grid-cols-3 items-baseline text-sm font-semibold text-fg-secondary">
               <li>Made with love by</li>
               <li className="justify-self-center">Yuriy Koshyk</li>
               <li className="justify-self-end">Copyright ©2024</li>
