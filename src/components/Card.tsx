@@ -39,8 +39,6 @@ const Card: React.FC<CardProps> = ({
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const scale = useTransform(progress, range, [1, targetScale]);
 
-  console.log("This is :" + progress);
-
   return (
     <div
       ref={container}
@@ -55,7 +53,11 @@ const Card: React.FC<CardProps> = ({
         className="flex flex-col relative top-[25%] h-[80vh] w-[96%] bg-bg-primary origin-top"
       >
         <div className="flex flex-col h-full gap-1">
-          <Link href={url} className="relative w-full h-full overflow-hidden">
+          <Link
+            href={url}
+            onClick={() => window.scrollTo(0, 0)}
+            className="relative w-full h-full overflow-hidden"
+          >
             <motion.div className="w-full h-full" style={{ scale: imageScale }}>
               <Image
                 fill

@@ -12,7 +12,7 @@ const Footer = () => {
           <footer className="bg-bg-tertiary py-8 px-6 h-full w-full flex flex-col justify-between">
             <div className="flex flex-col gap-6">
               <ScrollUp className=" flex justify-center text-sm font-semibold text-bg-primary" />
-              <Divider />
+              <Divider className="bg-sep-tertiary" />
             </div>
 
             <div className="max-w-lg flex flex-col items-center gap-6 text-3xl text-bg-primary text-center mx-auto">
