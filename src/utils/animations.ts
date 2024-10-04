@@ -25,7 +25,7 @@ export const dividerMotion = {
   animate: {
     scaleX: 1,
     transition: {
-      delay: 1,
+      delay: 0.5,
       duration: 0.8,
       ease: easings.easeInOutQuint,
     },
@@ -46,7 +46,7 @@ export const itemCoverMotion = {
   animate: {
     height: 0,
     transition: {
-      delay: 1,
+      delay: 0.75,
       duration: 0.8,
       ease: easings.easeInOutQuint,
     },

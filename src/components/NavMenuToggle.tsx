@@ -33,15 +33,7 @@ const NavMenuToggle: React.FC<NavMenuToggleProps> = ({
       path1Controls.start(path1Variants.closed);
       path2Controls.start(path2Variants.closed);
     }
-  }, [
-    menuOpen,
-    path1Controls,
-    path1Variants.closed,
-    path1Variants.open,
-    path2Controls,
-    path2Variants.closed,
-    path2Variants.open,
-  ]);
+  }, []);
 
   return (
     <div

@@ -10,7 +10,9 @@ const Header = () => {
 
   return (
     <header>
-      <AnimatePresence>{menuOpen && <NavMenu />}</AnimatePresence>
+      <AnimatePresence>
+        {menuOpen && <NavMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
+      </AnimatePresence>
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
     </header>
   );

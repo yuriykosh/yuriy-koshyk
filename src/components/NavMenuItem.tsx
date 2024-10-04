@@ -13,9 +13,18 @@ interface NavMenuItemProps {
   index: number;
   title: string;
   url: string;
+
+  menuOpen: boolean;
+  setMenuOpen: (_: boolean) => void;
 }
 
-const NavMenuItem: React.FC<NavMenuItemProps> = ({ index, title, url }) => {
+const NavMenuItem: React.FC<NavMenuItemProps> = ({
+  index,
+  title,
+  url,
+  menuOpen,
+  setMenuOpen,
+}) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
@@ -41,6 +50,7 @@ const NavMenuItem: React.FC<NavMenuItemProps> = ({ index, title, url }) => {
         </motion.span>
         <Link
           href={url}
+          onClick={() => setMenuOpen(!menuOpen)}
           className="uppercase tracking-wide text-3xl sm:text-5xl md:text-6xl flex-1"
         >
           {title}

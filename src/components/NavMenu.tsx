@@ -3,20 +3,25 @@ import { motion } from "framer-motion";
 import NavMenuItem from "./NavMenuItem";
 import Link from "next/link";
 
-const NavMenu = () => {
+interface NavMenuProps {
+  menuOpen: boolean;
+  setMenuOpen: (_: boolean) => void;
+}
+
+const NavMenu: React.FC<NavMenuProps> = ({ menuOpen, setMenuOpen }) => {
   const navItems = [
     { title: "Index", url: "/" },
-    { title: "Library", url: "/" },
-    { title: "About", url: "/" },
-    { title: "Playground", url: "/" },
+    { title: "Library", url: "/library" },
+    { title: "About", url: "/about" },
+    { title: "Playground", url: "/playground" },
   ];
 
   const contactItems = [
     { title: "yuriy.koshyk@gmail.com", url: "mailto:yuriy.koshyk@gmail.com" },
-    { title: "LinkedIn", url: "/" },
-    { title: "GitHub", url: "/" },
-    { title: "Dribbble", url: "/" },
-    { title: "Resume", url: "/" },
+    { title: "LinkedIn", url: "https://www.linkedin.com/in/yuriy-koshyk" },
+    { title: "GitHub", url: "https://github.com/yuriykosh" },
+    { title: "Behance", url: "https://www.behance.net/yuriykosh" },
+    { title: "Resume", url: "https://read.cv/yuriy_kosh" },
   ];
 
   return (
@@ -36,6 +41,8 @@ const NavMenu = () => {
             index={i + 1}
             title={item.title}
             url={item.url}
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
           />
         ))}
       </motion.ul>
@@ -44,7 +51,7 @@ const NavMenu = () => {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 2, duration: 2, ease: easings.easeOutQuart },
+          transition: { delay: 1.75, duration: 2, ease: easings.easeOutQuart },
         }}
         exit={{ opacity: 0, transition: { duration: 0 } }}
         className="h-[1ch] w-[1ch] mb-4 bg-fg-secondary rounded-full"
@@ -54,7 +61,7 @@ const NavMenu = () => {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 1.5, duration: 2, ease: easings.easeOutQuart },
+          transition: { delay: 1, duration: 2, ease: easings.easeOutQuart },
         }}
         exit={{ opacity: 0, transition: { duration: 0 } }}
         className="flex flex-col gap-1 w-full font-semibold text-fg-secondary"

@@ -23,7 +23,7 @@ export const projects = [
       "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
     year: 2023,
     src: "event-pos.png",
-    url: "/projects",
+    url: "/projects/eventpos",
     color: "#C2491D",
   },
   {
