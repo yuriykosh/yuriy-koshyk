@@ -166,18 +166,20 @@ export default function ProjectEventPOS() {
                   in the events industry, setting new standards for efficiency,
                   security, and user experience.
                 </p>
-                <Divider />
-                <div className="relative w-full h-[60vh]">
-                  <Image
-                    src={"/images/eventPOS/closeupBottom.png"}
-                    fill
-                    quality={100}
-                    alt="image"
-                    style={{ objectFit: "contain" }}
-                    className="object-right-top -translate-y-[calc(1rem-1px)]"
-                  />
-                </div>
               </TrackedSection>
+            </div>
+          </div>
+          <div className="px-6">
+            <Divider />
+            <div className="relative w-full h-[80vh]">
+              <Image
+                src={"/images/eventPOS/closeupBottom.png"}
+                fill
+                quality={100}
+                alt="image"
+                style={{ objectFit: "contain" }}
+                className="object-top -translate-y-[calc(1.35rem-1px)]"
+              />
             </div>
           </div>
         </article>
