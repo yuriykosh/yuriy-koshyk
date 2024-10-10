@@ -7,7 +7,7 @@ interface IntroImageProps {
 }
 
 const IntroImage: React.FC<IntroImageProps> = ({ url }) => {
-  const container = useRef();
+  const container = useRef<HTMLDivElement | null>(null);
 
   const { scrollYProgress } = useScroll({
     target: container,
