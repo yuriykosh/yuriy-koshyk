@@ -1,6 +1,6 @@
 const Goals = () => {
   return (
-    <ul className="grid grid-cols-2 gap-4 my-6 py-2 leading-normal text-fg-secondary">
+    <ul className="grid grid-cols-2 gap-4 my-10 py-2 leading-normal">
       <li className="flex flex-col gap-6 p-8 border border-sep-primary rounded-xl">
         <svg
           width="64"

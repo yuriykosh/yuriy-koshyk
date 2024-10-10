@@ -36,7 +36,7 @@ export default function ProjectEventPOS() {
             </div>
           </div>
 
-          <div className="grid grid-cols-[10%_1fr_10%] lg:grid-cols-[15%_1fr_5%] mt-10 mb-40">
+          <div className="grid grid-cols-[10%_1fr_10%] lg:grid-cols-[15%_1fr_5%] mt-10 mb-20">
             <TableOfContents />
             <div className="min-h-screen mx-auto max-w-[80ch]">
               <section className="my-8">
@@ -106,19 +106,8 @@ export default function ProjectEventPOS() {
               <TrackedSection
                 sectionId={1}
                 tocTitle="Design Process"
-                className="mt-8 mb-12"
+                className="mt-20 mb-10"
               >
-                <Divider />
-                <div className="relative w-full h-[60vh]">
-                  <Image
-                    src={"/images/eventPOS/closeupBottom.png"}
-                    fill
-                    quality={100}
-                    alt="image"
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-
                 <h3 className="leading-tight tracking-normal font-medium text-4xl mb-4">
                   Design Process
                 </h3>
@@ -134,7 +123,7 @@ export default function ProjectEventPOS() {
               <TrackedSection
                 sectionId={2}
                 tocTitle="Key Features"
-                className="my-8"
+                className="mt-20 mb-10"
               >
                 <h3 className="leading-tight tracking-normal font-medium text-4xl mb-4">
                   Key Features
@@ -151,12 +140,13 @@ export default function ProjectEventPOS() {
                 sectionId={3}
                 tocTitle="Conclusion"
                 isLast
-                className="my-8"
+                className="mt-20 mb-10"
               >
                 <h3 className="leading-tight tracking-tight font-semibold text-xl mb-2 sr-only">
                   Conclusion
                 </h3>
-                <p className="leading-normal py-2">
+                <Divider />
+                <p className="leading-normal py-2 mt-20">
                   Since its launch, EventPOS has garnered widespread acclaim for
                   its innovative approach to event payment solutions. Event
                   organizers have reported significant improvements in
@@ -166,7 +156,8 @@ export default function ProjectEventPOS() {
                   users, leading to widespread adoption across a diverse range
                   of events.
                 </p>
-                <p className="leading-normal py-2">
+
+                <p className="leading-normal py-2 mb-20">
                   EventPOS stands as a testament to the power of user-centered
                   design and technological innovation in addressing the complex
                   challenges of event management and payment processing. By
@@ -175,6 +166,17 @@ export default function ProjectEventPOS() {
                   in the events industry, setting new standards for efficiency,
                   security, and user experience.
                 </p>
+                <Divider />
+                <div className="relative w-full h-[60vh]">
+                  <Image
+                    src={"/images/eventPOS/closeupBottom.png"}
+                    fill
+                    quality={100}
+                    alt="image"
+                    style={{ objectFit: "contain" }}
+                    className="object-right-top -translate-y-[calc(1rem-1px)]"
+                  />
+                </div>
               </TrackedSection>
             </div>
           </div>

@@ -22,7 +22,7 @@ const DesignProcessStages = () => {
       image: "/images/eventPOS/wireframing.png",
       styles: {
         container: "",
-        image: "scale-110 translate-x-[10%] -translate-y-[10%]",
+        image: "scale-110 translate-x-[5%] -translate-y-[10%]",
         title: "",
         description: "",
       },
@@ -34,7 +34,7 @@ const DesignProcessStages = () => {
       image: "/images/eventPOS/ui-design.png",
       styles: {
         container: "",
-        image: "scale-[120%] -translate-x-[5%]",
+        image: "scale-125 -translate-x-[6.5%]",
         title: "",
         description: "",
       },
@@ -66,7 +66,7 @@ const DesignProcessStages = () => {
   ];
 
   return (
-    <ul className="flex flex-col gap-6">
+    <ul className="flex flex-col gap-0 -mt-[10%]">
       {stages.map((stage, i) => (
         <li key={i} className={`grid grid-cols-5 gap-8 items-center`}>
           <div className={`col-span-3 ${~i & 1 ? "" : "order-last"}`}>
