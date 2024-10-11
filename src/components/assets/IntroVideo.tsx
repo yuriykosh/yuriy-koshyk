@@ -1,14 +1,13 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
 import { useRef } from "react";
 
-interface IntroImageProps {
+interface IntroVideoProps {
   url: string;
 }
 
-const IntroImage: React.FC<IntroImageProps> = ({ url }) => {
+const IntroVideo: React.FC<IntroVideoProps> = ({ url }) => {
   const container = useRef<HTMLDivElement | null>(null);
 
   const { scrollYProgress } = useScroll({
@@ -21,16 +20,16 @@ const IntroImage: React.FC<IntroImageProps> = ({ url }) => {
   return (
     <div className="h-[80vh] overflow-hidden">
       <motion.div style={{ y }} className="relative h-full">
-        <Image
+        <video
           src={url}
-          fill
-          sizes="100vw"
-          quality={100}
-          alt="eventPOS case study hero picture"
-          style={{ objectFit: "cover" }}
+          autoPlay
+          muted
+          playsInline
+          loop
+          style={{ position: "absolute", objectFit: "cover" }}
         />
       </motion.div>
     </div>
   );
 };
-export default IntroImage;
+export default IntroVideo;

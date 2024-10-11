@@ -32,8 +32,8 @@ const Footer = () => {
                 />
               </svg>
               <p>
-                I believe that to aim for excellence in the face of great
-                opportunities and challenges, is the mark of a designer.
+                I turn challenges into simple, impactful solutions that meet
+                both user needs and business goals.
               </p>
             </div>
 

@@ -56,14 +56,19 @@ const HeroSection = () => {
               },
             }}
           >
-            Based in Stuttgart, Yuriy is a full-stack product designer curious
-            about interfaces, intelligent systems and the ways in which we
-            interact with them. Align them with business goals.{" "}
+            Based in Stuttgart, I&#39;m Yuriy, a full-stack product designer
+            passionate about crafting intuitive interfaces and intelligent
+            systems that enhance user interactions and align with business
+            goals.{" "}
             <Link
               href={"/"}
-              className="inline-block underline underline-offset-2 hover:text-fg-secondary "
+              className="underline-offset-2 hover:text-fg-secondary "
             >
-              Send me an email and say hey.
+              Let&#39;s connect—
+              <span className="inline-block underline">
+                send me an email
+              </span>{" "}
+              and say hi!
             </Link>
           </motion.p>
         </div>
