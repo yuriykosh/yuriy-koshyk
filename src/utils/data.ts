@@ -45,3 +45,54 @@ export const projects = [
     color: "#88A28D",
   },
 ];
+
+export const stack = [
+  {
+    category: "Principles",
+    skills: [
+      "Interaction Design",
+      "Visual Design",
+      "Design Systems",
+      "Prototyping",
+      "Material Design",
+      "Human-Centered Design",
+      "Heuristic evaluation",
+      "Product Thinking",
+      "Usability Testing  &  A/B Testing",
+      "User Research",
+    ],
+  },
+  {
+    category: "Tools",
+    skills: [
+      "Figma",
+      "Protopie",
+      "Hotjar",
+      "Adobe Creative Suite",
+      "Blender",
+      "Google Analytics",
+      "PowerBI",
+      "Webflow",
+      "Framer",
+    ],
+  },
+  {
+    category: "Stack",
+    skills: [
+      "HTML5",
+      "CSS3, SASS",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+      "React",
+      "Next.js",
+      "GSAP",
+      "Famer Motion",
+      "Tailwind",
+    ],
+  },
+  {
+    category: "Awards",
+    skills: ["Best Innovation and Creativity (Big Pitch Competition)"],
+  },
+];

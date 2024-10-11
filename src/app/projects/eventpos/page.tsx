@@ -1,6 +1,5 @@
 "use client";
 
-// import { useRef } from "react";
 import Image from "next/image";
 import { TOCContext, useTOCContextValues } from "@/utils/TOCContext";
 import TableOfContents from "@/components/TableOfContents";
@@ -10,7 +9,6 @@ import Divider from "@/components/assets/Divider";
 import DesignProcessStages from "@/components/projects/eventpos/DesignProcessStages";
 import Goals from "@/components/projects/eventpos/Goals";
 import KeyFeatures from "@/components/projects/eventpos/KeyFeatures";
-// import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function ProjectEventPOS() {
   const { values } = useTOCContextValues();
@@ -94,7 +92,7 @@ export default function ProjectEventPOS() {
                 <h3 className="leading-tight tracking-normal font-medium text-4xl mb-4">
                   Project Goals
                 </h3>
-                <p className="leading-normal py-2">
+                <p className="leading-normal  py-2">
                   The primary goal of EventPOS was to streamline the payment
                   process at events, ensuring quick, secure, and hassle-free
                   transactions for both vendors and attendees. Key objectives
