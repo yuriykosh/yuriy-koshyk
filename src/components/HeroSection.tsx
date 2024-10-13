@@ -2,11 +2,10 @@ import * as motion from "framer-motion/client";
 
 import Link from "next/link";
 import { easings, textRevealMotion } from "@/utils/animations";
-import Divider from "@/components/assets/Divider";
 
 const HeroSection = () => {
   return (
-    <section className="h-[80vh] relative flex flex-col px-6 pt-20 min-[390px]:pt-40">
+    <section className="h-[100vh] min-[376px]:h-[80vh] relative flex flex-col px-6 pt-20 min-[390px]:pt-40">
       <motion.div
         className="uppercase tracking-wide  mx-auto flex-1 flex flex-col text-5xl leading-snug sm:text-6xl sm:leading-snug md:text-7xl md:leading-tight lg:text-[6.1rem] xl:text-[7.2rem] min-[1308px]:text-[8rem]"
         initial="initial"
@@ -73,7 +72,6 @@ const HeroSection = () => {
           </motion.p>
         </div>
       </motion.div>
-      <Divider />
     </section>
   );
 };

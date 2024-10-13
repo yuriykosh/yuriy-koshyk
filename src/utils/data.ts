@@ -1,8 +1,8 @@
 export const projects = [
   {
     title: "Gliese1",
-    description:
-      "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
+    tags: "Desktop Web, B2C SaaS",
+    description: "Finance SaaS solution for all kinds of businesses.",
     year: 2024,
     src: "gliese1.jpg",
     url: "/projects/gliese1",
@@ -10,8 +10,9 @@ export const projects = [
   },
   {
     title: "DF Druckluft-Fachhandel",
+    tags: "Web, B2C & B2B E-commerce",
     description:
-      "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
+      "Multimillion-dollar e-commerce for complete compressed air solutions (a part of Atlas Copco Group)",
     year: 2024,
     src: "df.webp",
     url: "/projects",
@@ -19,8 +20,9 @@ export const projects = [
   },
   {
     title: "EventPOS",
+    tags: "iOS & Android, B2C SaaS",
     description:
-      "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
+      "A cutting-edge mobile payment app crafted specifically for events.",
     year: 2023,
     src: "event-pos.png",
     url: "/projects/eventpos",
@@ -28,8 +30,9 @@ export const projects = [
   },
   {
     title: "Heimdal Data",
+    tags: "Desktop & Mobile Web, B2B",
     description:
-      "The coastlines of Denmark are documented in tonal colors in a pensive new series by Danish photographers Ulrik Hasemann and Mathias Svold; an ongoing project investigating how humans interact with and disrupt the Danish coast.",
+      "Software development agency specializes in creating products for the payment, fintech, gamedev and other fields.",
     year: 2023,
     src: "heimdal-data.jpg",
     url: "/projects",
@@ -37,8 +40,9 @@ export const projects = [
   },
   {
     title: "DreamNet Telecom.",
+    tags: "iOS, B2C SaaS",
     description:
-      "Dutch photographer Mark Rammers has shared with IGNANT the first chapter of his latest photographic project, ‘all over again’—captured while in residency at Hektor, an old farm in Los Valles, Lanzarote. Titled ‘Beginnings’, the mesmerizing collection of images is a visual and meditative journey into the origins of regrets and the uncertainty of stepping into new unknowns.",
+      "Telecommunication company that provides internet and television for thousands users.",
     year: 2022,
     src: "dream-net.png",
     url: "/projects",
@@ -61,6 +65,7 @@ export const stack = [
       "Usability Testing  &  A/B Testing",
       "User Research",
     ],
+    color: "#2C37CD",
   },
   {
     category: "Tools",
@@ -75,6 +80,7 @@ export const stack = [
       "Webflow",
       "Framer",
     ],
+    color: "#2CCD67",
   },
   {
     category: "Stack",
@@ -90,9 +96,11 @@ export const stack = [
       "Famer Motion",
       "Tailwind",
     ],
+    color: "#CA2CCD",
   },
   {
     category: "Awards",
     skills: ["Best Innovation and Creativity (Big Pitch Competition)"],
+    color: "#CD9F2C",
   },
 ];

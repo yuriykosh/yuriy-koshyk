@@ -8,6 +8,7 @@ import Link from "next/link";
 interface CardProps {
   i: number;
   title: string;
+  tags: string;
   description: string;
   year: number;
   src: string;
@@ -21,6 +22,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({
   i,
   title,
+  tags,
   description,
   year,
   src,
@@ -58,22 +60,28 @@ const Card: React.FC<CardProps> = ({
             onClick={() => window.scrollTo(0, 0)}
             className="relative w-full h-full overflow-hidden"
           >
-            <motion.div className="w-full h-full" style={{ scale: imageScale }}>
+            <motion.div
+              className="relative w-full h-full"
+              style={{ scale: imageScale }}
+            >
               <Image
                 fill
                 quality={100}
+                sizes="100vw"
                 src={`/images/${src}`}
                 alt="image"
                 className="object-cover"
               />
             </motion.div>
           </Link>
-          <div className="w-full grid grid-cols-3 relative py-2 text-sm font-semibold text-fg-secondary">
-            <ul>
+          <div className="w-full grid grid-cols-3  grid-rows-2 md:grid-rows-1 gap-4 relative py-2 text-sm font-semibold text-fg-secondary">
+            <ul className="col-span-2 md:col-span-1 ">
               <li className="text-fg-primary">{title}</li>
-              <li>iOS & Android, B2C SaaS</li>
+              <li>{tags}</li>
             </ul>
-            <p className="font-medium">{description}</p>
+            <p className="col-span-3 md:col-span-1 max-md:order-last font-medium">
+              {description}
+            </p>
             <p className="justify-self-end">{year}</p>
           </div>
         </div>

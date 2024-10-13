@@ -5,6 +5,7 @@ import Card from "./Card";
 import { useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
+import Divider from "./assets/Divider";
 
 const ProjectsSection = () => {
   const container = useRef(null);
@@ -25,7 +26,8 @@ const ProjectsSection = () => {
   });
 
   return (
-    <section ref={container} className="relative mt-[15vh] mb-6">
+    <section ref={container} className="relative mt-10 mb-6">
+      <Divider />
       <h3 className="text-sm text-bg-primary font-semibold sticky m-6 top-6 mix-blend-difference">
         Selected work
       </h3>

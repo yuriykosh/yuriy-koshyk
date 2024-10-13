@@ -1,13 +1,22 @@
+// import Divider from "../assets/Divider";
+
 interface StackItemProps {
   category: string;
   skills: string[];
+  color: string;
 }
 
 const StackItem: React.FC<StackItemProps> = ({ category, skills }) => {
+  // const textColor = color !== "" ? "" : "text-fg-secondary";
+
   return (
-    <li className="flex flex-col gap-4 font-medium text-fg-secondary">
-      <h2 className="text-fg-primary">{category}</h2>
-      <ul className="flex flex-col gap-2">
+    <li className="flex flex-col gap-4  w-fit">
+      <h2 className=" text-fg-primary font-semibold">{category}</h2>
+      {/* <Divider /> */}
+      <ul
+        className={`flex flex-col gap-2 text-sm text-fg-secondary font-medium`}
+        // style={{ color: color }}
+      >
         {skills.map((skill, i) => {
           return <li key={i}>{skill}</li>;
         })}

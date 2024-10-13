@@ -12,7 +12,7 @@ const Navbar: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
     <div className="grid grid-cols-2 md:grid-cols-6 items-start p-6 sticky top-0 mix-blend-difference z-[100]">
       <Link
         href={"/"}
-        className="flex items-baseline gap-1 col-span-3 w-fit text-sm text-bg-primary font-medium"
+        className="flex items-baseline gap-1 col-span-1 md:col-span-3 w-fit text-sm text-bg-primary font-medium"
       >
         Yuriy Koshyk
         <svg
