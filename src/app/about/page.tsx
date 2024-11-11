@@ -1,46 +1,60 @@
+"use client";
+
 import StackList from "@/components/about/StackList";
 import Divider from "@/components/assets/Divider";
+import { motion } from "framer-motion";
+import { textRevealMotion, dividerMotion } from "@/utils/animations";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function About() {
   return (
     <main>
-      <section className="w-full mt-[35vh] px-6 text-[3.5rem] leading-tight tracking-tight font-medium ">
-        <h1 className="mb-4">
+      <motion.section
+        className="w-full mt-[35vh] px-6 text-4xl md:text-[3.5rem] leading-tight tracking-tight font-medium"
+        initial="initial"
+        animate="animate"
+      >
+        <motion.h1 className="mb-20" variants={textRevealMotion(0)}>
           Designing impactful digital experiences with a focus on business
           growth and user satisfaction.
-        </h1>
-        <Divider />
-      </section>
+        </motion.h1>
+        <motion.div className="w-full origin-left" variants={dividerMotion}>
+          <Divider />
+        </motion.div>
+      </motion.section>
 
-      <section className="grid grid-cols-6 p-6 my-20">
+      <section className="grid grid-cols-1 md:grid-cols-6 gap-6 md:gap-0 p-6 mt-4 mb-24">
         <StackList />
 
-        <div className="col-span-3 flex flex-col gap-10 text-2xl font-medium">
-          <p>
+        <motion.div
+          className="col-span-1 md:col-span-3 flex flex-col gap-10 mb-14 md:m-0 text-xl md:text-2xl font-medium"
+          initial="initial"
+          animate="animate"
+        >
+          <motion.p variants={textRevealMotion(0.5)}>
             Hey there! I&#39;m Yuriy Koshyk, a Product Designer with 4+ years of
             experience, blending creativity and technical expertise to craft
             user-friendly, data-driven digital solutions that drive business
             results. My focus is on creating digital experiences that not only
             look great but also deliver on business and user needs.
-          </p>
-          <p>
+          </motion.p>
+          <motion.p variants={textRevealMotion(0.6)}>
             I&#39;ve had the chance to work on 15+ projects as a freelancer,
             leading full design research cycles—everything from user research to
             prototyping and testing. I&#39;m all about finding innovative
             solutions that drive growth and keep users happy. I love diving into
             data, monitoring KPIs, and tweaking designs based on real feedback
             to get the best possible results.
-          </p>
-          <p>
+          </motion.p>
+          <motion.p variants={textRevealMotion(0.7)}>
             I&#39;ve also had the privilege of leading tech teams, including
             running technical side at DF Druckluft-Fachhandel GmbH as Head of
             Systems & IT (CTO), where I optimized UX processes that bumped
             revenue by 10% in just 3 months. I thrive in agile environments,
             always aiming to bring out the best in cross-functional teams and
             external partners.
-          </p>
+          </motion.p>
           <p>
             I&#39;ve worn quite a few hats across UX/UI design and front-end
             development, allowing me to see the bigger picture in projects and
@@ -87,13 +101,14 @@ export default function About() {
             I’m always up for a chat—feel free to{" "}
             <Link
               href={"/"}
-              className="underline hover:text-fg-secondary transition-colors duration-200"
+              className="underline underline-offset-2 hover:text-fg-secondary transition-colors duration-200"
             >
               drop me a message
             </Link>
             !
           </p>
-        </div>
+        </motion.div>
+        <Divider className="md:hidden" />
       </section>
     </main>
   );

@@ -3,10 +3,6 @@ interface DividerProps {
 }
 
 const Divider: React.FC<DividerProps> = ({ className }) => {
-  return (
-    <div
-      className={`w-full h-[1px] ${className ? className : "bg-sep-primary"}`}
-    />
-  );
+  return <div className={`w-full h-[1px] bg-sep-primary ${className}`} />;
 };
 export default Divider;

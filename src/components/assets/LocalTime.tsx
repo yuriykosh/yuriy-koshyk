@@ -1,9 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Clock from "react-live-clock";
 
 const LocalTime = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null; // or return placeholder content until the client renders
+  }
+
   return (
     <Clock
       format={"HH:mm"}

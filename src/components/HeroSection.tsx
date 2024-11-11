@@ -2,18 +2,19 @@ import * as motion from "framer-motion/client";
 
 import Link from "next/link";
 import { easings, textRevealMotion } from "@/utils/animations";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
     <section className="h-[100vh] min-[376px]:h-[80vh] relative flex flex-col px-6 pt-20 min-[390px]:pt-40">
       <motion.div
-        className="uppercase tracking-wide  mx-auto flex-1 flex flex-col text-5xl leading-snug sm:text-6xl sm:leading-snug md:text-7xl md:leading-tight lg:text-[6.1rem] xl:text-[7.2rem] min-[1308px]:text-[8rem]"
+        className="flex flex-col flex-1 mx-auto uppercase tracking-wide text-5xl leading-snug sm:text-6xl sm:leading-snug md:text-7xl md:leading-tight lg:text-[6.1rem] xl:text-[7.2rem] min-[1308px]:text-[8rem]"
         initial="initial"
         animate="animate"
       >
-        <div className="flex items-center bg-bg-primary z-10">
+        <div className="flex items-center mb-px bg-bg-primary z-10">
           <motion.div
-            className="bg-fg-primary h-[55%] flex-1 mr-8 hidden md:block origin-left"
+            className="bg-fg-primary h-[55%] flex-1 mr-8 block origin-left"
             initial={{ scaleX: 0 }}
             animate={{
               scaleX: 1,
@@ -21,26 +22,43 @@ const HeroSection = () => {
             }}
           />
           <motion.h2
-            className="font-semibold z-20"
+            className="max-sm:font-bold font-semibold z-20"
             variants={textRevealMotion(0)}
           >
             Design
           </motion.h2>
         </div>
-        <div className="bg-bg-primary z-20">
+        <div className="mb-px bg-bg-primary z-20">
           <motion.h2
-            className="font-semibold"
+            className="max-sm:font-bold font-semibold"
             variants={textRevealMotion(0.25)}
           >
             Digital Products
           </motion.h2>
         </div>
-        <motion.h2
-          className="font-semibold md:pl-[10%] relative after:hidden md:after:inline-block after:absolute after:top-1/2 after:-translate-y-1/2 after:h-[1ch] after:w-[1ch] after:ml-8 after:bg-fg-primary after:rounded-full"
-          variants={textRevealMotion(0.5)}
-        >
-          That Matters
-        </motion.h2>
+        <div className="flex gap-4 md:gap-8 items-center mb-px">
+          <motion.h2
+            className="max-sm:font-bold font-semibold md:pl-[10%] relative"
+            variants={textRevealMotion(0.5)}
+          >
+            That Matters
+          </motion.h2>
+
+          <motion.div
+            className="relative inline-block bg-fg-primary w-[1.1ch] h-[1.1ch] rounded-full"
+            variants={textRevealMotion(0.7)}
+          >
+            <Image
+              src={"/videos/hi.gif"}
+              fill
+              sizes="1ch"
+              quality={100}
+              priority
+              alt="Video of Yuriy say hi!"
+              style={{ objectFit: "cover", borderRadius: "9999px" }}
+            />
+          </motion.div>
+        </div>
 
         <div className="bg-bg-primary z-30 flex-1 w-full pt-8 md:pl-[50%] font-medium text-base normal-case tracking-normal leading-normal">
           <motion.p
@@ -61,7 +79,7 @@ const HeroSection = () => {
             goals.{" "}
             <Link
               href={"/"}
-              className="underline-offset-2 hover:text-fg-secondary "
+              className="underline underline-offset-2 hover:text-fg-secondary transition-colors duration-200"
             >
               Let&#39;s connect—
               <span className="inline-block underline">

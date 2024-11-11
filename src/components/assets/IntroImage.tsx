@@ -2,30 +2,40 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface IntroImageProps {
   url: string;
 }
 
 const IntroImage: React.FC<IntroImageProps> = ({ url }) => {
-  const container = useRef<HTMLDivElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      setIsReady(true); // Set the state to true once the ref is ready
+    }
+  }, []);
 
   const { scrollYProgress } = useScroll({
-    target: container,
+    target: isReady ? containerRef : undefined,
     offset: ["start start", "end start"],
+    layoutEffect: false,
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
 
   return (
-    <div className="h-[80vh] overflow-hidden">
+    <div className="h-[76vh] overflow-hidden">
       <motion.div style={{ y }} className="relative h-full">
         <Image
           src={url}
           fill
           sizes="100vw"
           quality={100}
+          priority
           alt="eventPOS case study hero picture"
           style={{ objectFit: "cover" }}
         />

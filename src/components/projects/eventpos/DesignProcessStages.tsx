@@ -9,8 +9,8 @@ const DesignProcessStages = () => {
       image: "/images/eventPOS/user-research.png",
       styles: {
         container:
-          "before:block before:absolute before:w-full before:h-[60%] before:bg-sky-500/10 before:rounded-3xl before:bottom-[8%] before:-translate-x-[10%]",
-        image: "-translate-x-[10%]",
+          "before:block before:absolute before:w-full before:h-[45%] before:bg-sky-500/10 before:rounded-3xl before:scale-110 before:md:scale-100 before:bottom-[2%] before:md:bottom-[8%] before:md:-translate-x-[10%]",
+        image: "md:-translate-x-[10%]",
         title: "",
         description: "",
       },
@@ -22,7 +22,8 @@ const DesignProcessStages = () => {
       image: "/images/eventPOS/wireframing.png",
       styles: {
         container: "",
-        image: "scale-110 translate-x-[5%] -translate-y-[10%]",
+        image:
+          "scale-110 md:translate-x-[5%] -translate-y-[4%] md:-translate-y-[10%]",
         title: "",
         description: "",
       },
@@ -34,7 +35,8 @@ const DesignProcessStages = () => {
       image: "/images/eventPOS/ui-design.png",
       styles: {
         container: "",
-        image: "scale-125 -translate-x-[6.5%]",
+        image:
+          "scale-125 md:-translate-x-[6.5%] -translate-y-[2%] md:-translate-y-0",
         title: "",
         description: "",
       },
@@ -46,7 +48,7 @@ const DesignProcessStages = () => {
       image: "/images/eventPOS/security.png",
       styles: {
         container: "",
-        image: "scale-[120%]",
+        image: "scale-[120%] max-md:-translate-y-[6%]",
         title: "",
         description: "",
       },
@@ -58,7 +60,7 @@ const DesignProcessStages = () => {
       image: "/images/eventPOS/scalability.png",
       styles: {
         container: "",
-        image: "scale-110 -translate-x-[10%]",
+        image: "scale-110 max-md:-translate-y-[4%] md:-translate-x-[10%]",
         title: "",
         description: "",
       },
@@ -66,10 +68,17 @@ const DesignProcessStages = () => {
   ];
 
   return (
-    <ul className="flex flex-col gap-0 -mt-[10%]">
+    <ul className="flex flex-col gap-8 md:gap-0 -mt-[10%]">
       {stages.map((stage, i) => (
-        <li key={i} className={`grid grid-cols-5 gap-8 items-center`}>
-          <div className={`col-span-3 ${~i & 1 ? "" : "order-last"}`}>
+        <li
+          key={i}
+          className="grid grid-cols-1 md:grid-cols-5 gap-0 md:gap-8 items-center"
+        >
+          <div
+            className={`col-span-1 md:col-span-3 ${
+              ~i & 1 ? "" : "md:order-last"
+            }`}
+          >
             <div
               className={`relative w-full h-[70vh] ${stage.styles.container}`}
             >
@@ -78,11 +87,11 @@ const DesignProcessStages = () => {
                 alt={`${stage.title} image`}
                 fill
                 style={{ objectFit: "contain" }}
-                className={`${stage.styles.image}`}
+                className={`${stage.styles.image} max-md:object-bottom`}
               />
             </div>
           </div>
-          <div className="col-span-2">
+          <div className="col-span-1 md:col-span-2">
             <h4 className="leading-tight tracking-normal font-semibold text-2xl mt-6 mb-2">
               {stage.title}
             </h4>

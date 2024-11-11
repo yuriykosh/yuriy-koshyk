@@ -1,13 +1,26 @@
 import { stack } from "@/utils/data";
 import StackItem from "./StackItem";
+import { motion } from "framer-motion";
+import { easings } from "@/utils/animations";
 
 const StackList = () => {
   return (
-    <ul className="col-span-3 flex flex-col justify-between text-sm">
+    <motion.ul
+      className="col-span-1 md:col-span-3 max-md:order-last flex flex-col gap-12 lg:justify-between text-sm"
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: {
+          delay: 1.0,
+          duration: 0.8,
+          ease: easings.easeInOutQuint,
+        },
+      }}
+    >
       {stack.map((item, i) => {
         return <StackItem key={i} {...item} />;
       })}
-    </ul>
+    </motion.ul>
   );
 };
 export default StackList;

@@ -37,10 +37,12 @@ const Footer = () => {
               </p>
             </div>
 
-            <ul className="text-center sm:text-left sm:grid grid-cols-3 items-baseline text-sm font-semibold text-fg-secondary">
-              <li>Made with love by</li>
-              <li className="justify-self-center">Yuriy Koshyk</li>
-              <li className="justify-self-end">Copyright ©2024</li>
+            <ul className="sm:text-left grid grid-cols-3 items-baseline text-xs md:text-sm font-semibold text-fg-secondary">
+              <li className="col-span-3 md:col-span-1">Made with love by</li>
+              <li className="md:justify-self-center">Yuriy Koshyk</li>
+              <li className="col-span-2 md:col-span-1 justify-self-end">
+                Copyright ©2024
+              </li>
             </ul>
           </footer>
         </div>

@@ -9,6 +9,8 @@ import Divider from "@/components/assets/Divider";
 import DesignProcessStages from "@/components/projects/eventpos/DesignProcessStages";
 import Goals from "@/components/projects/eventpos/Goals";
 import KeyFeatures from "@/components/projects/eventpos/KeyFeatures";
+import { motion } from "framer-motion";
+import { dividerMotion, textRevealMotion } from "@/utils/animations";
 
 export default function ProjectEventPOS() {
   const { values } = useTOCContextValues();
@@ -19,58 +21,53 @@ export default function ProjectEventPOS() {
     <TOCContext.Provider value={values}>
       <main>
         <IntroImage url="/images/event-pos.png" />
-        <article className="">
-          <div className="grid grid-cols-[10%_1fr] lg:grid-cols-5 px-6 leading-tight tracking-tight font-medium text-5xl">
-            <h1 className="h-full">
+        <article className="mt-2">
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-12 px-6 leading-tight tracking-tight font-medium text-4xl sm:text-5xl"
+            initial="initial"
+            animate="animate"
+          >
+            <motion.h1
+              className="max-lg:hidden h-full col-span-3"
+              variants={textRevealMotion(0)}
+            >
               event
               <span className={`text-sky-500`}>POS</span>
-            </h1>
-            <div className="col-span-4 flex flex-col gap-8">
-              <h2 className="">
+            </motion.h1>
+            <div className="lg:col-span-9 flex flex-col gap-24">
+              <motion.h2 className="" variants={textRevealMotion(0.4)}>
                 Transforming the onboarding experience to provide telecom
                 services to 1,000+ students
-              </h2>
-              <Divider />
+              </motion.h2>
+              <motion.div
+                className="w-full origin-left"
+                variants={dividerMotion}
+              >
+                <Divider />
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-[10%_1fr_10%] lg:grid-cols-[15%_1fr_5%] mt-10 mb-20">
+          <div className="grid grid-cols-[10%_1fr_10%] lg:grid-cols-[15%_1fr_5%]">
             <TableOfContents />
             <div className="min-h-screen mx-auto max-w-[80ch]">
               <section className="my-8">
-                <ul className="grid grid-cols-2 gap-4 py-2 my-2 text-lg">
-                  <li>
-                    <p>
-                      <b className="text-base font-semibold text-fg-secondary mr-2">
-                        Client:
-                      </b>
-                      Heimdal Data ApS
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <b className="text-base font-semibold text-fg-secondary mr-2">
-                        Sector:
-                      </b>
-                      B2B, Payment Systems
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <b className="text-base font-semibold text-fg-secondary mr-2">
-                        My Role:
-                      </b>
-                      Product Designer, Team Lead
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <b className="text-base font-semibold text-fg-secondary mr-2">
-                        Project Time:
-                      </b>
-                      1,5 month
-                    </p>
-                  </li>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 py-2 my-2 text-lg">
+                  {[
+                    ["Client:", "Heimdal Data ApS"],
+                    ["Sector:", "B2B, Payment Systems"],
+                    ["My Role:", "Product Designer, Team Lead"],
+                    ["Project Time:", "1,5 month"],
+                  ].map(([title, info], i) => (
+                    <li key={i}>
+                      <p className="max-md:flex flex-col gap-1">
+                        <b className="text-base font-semibold text-fg-secondary mr-2">
+                          {title}
+                        </b>
+                        {info}
+                      </p>
+                    </li>
+                  ))}
                 </ul>
                 <p className="leading-normal my-8">
                   EventPOS is a cutting-edge mobile payment application
@@ -83,13 +80,14 @@ export default function ProjectEventPOS() {
                   and the innovative solutions it offers.
                 </p>
               </section>
+
               <TrackedSection
                 sectionId={0}
                 tocTitle="Project Goals"
                 isFirst
                 className="mt-20 mb-10"
               >
-                <h3 className="leading-tight tracking-normal font-medium text-4xl mb-4">
+                <h3 className="leading-tight tracking-normal font-medium text-3xl sm:text-4xl mb-4">
                   Project Goals
                 </h3>
                 <p className="leading-normal  py-2">
@@ -106,7 +104,7 @@ export default function ProjectEventPOS() {
                 tocTitle="Design Process"
                 className="mt-20 mb-10"
               >
-                <h3 className="leading-tight tracking-normal font-medium text-4xl mb-4">
+                <h3 className="leading-tight tracking-normal font-medium text-3xl sm:text-4xl mb-4">
                   Design Process
                 </h3>
                 <p className="leading-normal py-2">
@@ -123,7 +121,7 @@ export default function ProjectEventPOS() {
                 tocTitle="Key Features"
                 className="mt-20 mb-10"
               >
-                <h3 className="leading-tight tracking-normal font-medium text-4xl mb-4">
+                <h3 className="leading-tight tracking-normal font-medium text-3xl sm:text-4xl mb-4">
                   Key Features
                 </h3>
                 <p className="leading-normal py-2">
@@ -138,7 +136,7 @@ export default function ProjectEventPOS() {
                 sectionId={3}
                 tocTitle="Conclusion"
                 isLast
-                className="mt-20 mb-10"
+                className="mt-20 mb-0"
               >
                 <h3 className="leading-tight tracking-tight font-semibold text-xl mb-2 sr-only">
                   Conclusion
@@ -167,16 +165,18 @@ export default function ProjectEventPOS() {
               </TrackedSection>
             </div>
           </div>
-          <div className="px-6">
+
+          <div className="relative flex flex-col px-6 bg-bg-secondary">
             <Divider />
-            <div className="relative w-full h-[80vh]">
+
+            <div className="relative h-[80vh]">
               <Image
-                src={"/images/eventPOS/closeupBottom.png"}
+                src={"/images/eventPOS/closeupBottom1.png"}
                 fill
                 quality={100}
                 alt="image"
                 style={{ objectFit: "contain" }}
-                className="object-top -translate-y-[calc(1.35rem-1px)]"
+                className="object-top"
               />
             </div>
           </div>
