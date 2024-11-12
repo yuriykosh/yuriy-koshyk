@@ -38,14 +38,15 @@ const HeroSection = () => {
         </div>
         <div className="flex gap-4 md:gap-8 items-center mb-px">
           <motion.h2
-            className="max-sm:font-bold font-semibold md:pl-[10%] relative"
+            className="max-sm:font-bold max-[400px]:max-w-[68%] max-[468px]:max-w-[62%] font-semibold md:pl-[10%] relative"
             variants={textRevealMotion(0.5)}
           >
             That Matters
           </motion.h2>
 
           <motion.div
-            className="relative inline-block bg-fg-primary w-[1.1ch] h-[1.1ch] rounded-full"
+            className="relative inline-block max-[468px]:w-[2ch] max-[468px]:h-[2ch] max-[468px]:self-end mb-3 sm:mb-0 w-[1.5ch] h-[1.5ch] sm:w-[1.1ch] sm:h-[1.1ch]
+            rounded-full bg-fg-primary"
             variants={textRevealMotion(0.7)}
           >
             <Image
