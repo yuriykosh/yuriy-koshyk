@@ -26,9 +26,12 @@ const ProjectsSection = () => {
   });
 
   return (
-    <section ref={container} className="relative mt-10 mb-6">
-      <Divider />
-      <h3 className="text-sm text-bg-primary font-semibold sticky m-6 top-6 mix-blend-difference">
+    <section ref={container} className="relative  mb-6">
+      <div className="px-6">
+        <Divider />
+      </div>
+
+      <h3 className="text-sm text-bg-primary font-medium sticky m-6 top-6 mix-blend-difference">
         Selected work
       </h3>
       {projects.map((project, i) => {

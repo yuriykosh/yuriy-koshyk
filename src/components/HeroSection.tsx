@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="h-[100vh] min-[376px]:h-[80vh] relative flex flex-col px-6 pt-20 min-[390px]:pt-40">
+    <section className="min-h-screen h-auto min-[376px]:min-h-[80vh] min-[376px]:h-auto relative flex flex-col px-6 pt-20 sm:pt-40 mb-10">
       <motion.div
         className="flex flex-col flex-1 mx-auto uppercase tracking-wide text-5xl leading-snug sm:text-6xl sm:leading-snug md:text-7xl md:leading-tight lg:text-[6.1rem] xl:text-[7.2rem] min-[1308px]:text-[8rem]"
         initial="initial"
@@ -14,7 +14,7 @@ const HeroSection = () => {
       >
         <div className="flex items-center mb-px bg-bg-primary z-10">
           <motion.div
-            className="bg-fg-primary h-[55%] flex-1 mr-8 block origin-left"
+            className="bg-fg-primary h-[1ch] flex-1 mr-8 block origin-left"
             initial={{ scaleX: 0 }}
             animate={{
               scaleX: 1,

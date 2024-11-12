@@ -74,7 +74,7 @@ const Card: React.FC<CardProps> = ({
               />
             </motion.div>
           </Link>
-          <div className="w-full grid grid-cols-3  grid-rows-2 md:grid-rows-1 gap-4 relative py-2 text-sm font-semibold text-fg-secondary">
+          <div className="w-full grid grid-cols-3  grid-rows-2 md:grid-rows-1 gap-4 relative py-2 text-sm font-medium text-fg-secondary">
             <ul className="col-span-2 md:col-span-1 ">
               <li className="text-fg-primary">{title}</li>
               <li>{tags}</li>

@@ -64,7 +64,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ menuOpen, setMenuOpen }) => {
           transition: { delay: 1, duration: 2, ease: easings.easeOutQuart },
         }}
         exit={{ opacity: 0, transition: { duration: 0 } }}
-        className="flex flex-col gap-1 w-full font-semibold text-fg-secondary"
+        className="flex flex-col gap-1 w-full font-medium text-fg-secondary"
       >
         {contactItems.map((item, i) => (
           <li key={i} className="w-full">

@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="sticky top-[calc(100vh-80vh)] h-[80vh] sm:top-[calc(100vh-65vh)] sm:h-[65vh]">
           <footer className="bg-bg-tertiary py-8 px-6 h-full w-full flex flex-col justify-between">
             <div className="flex flex-col gap-6">
-              <ScrollUp className=" flex justify-center text-sm font-semibold text-bg-primary" />
+              <ScrollUp className=" flex justify-center text-sm font-medium text-bg-primary" />
               <Divider className="bg-sep-tertiary" />
             </div>
 
@@ -37,7 +37,7 @@ const Footer = () => {
               </p>
             </div>
 
-            <ul className="sm:text-left grid grid-cols-3 items-baseline text-xs md:text-sm font-semibold text-fg-secondary">
+            <ul className="sm:text-left grid grid-cols-3 items-baseline text-xs md:text-sm font-medium text-fg-secondary">
               <li className="col-span-3 md:col-span-1">Made with love by</li>
               <li className="md:justify-self-center">Yuriy Koshyk</li>
               <li className="col-span-2 md:col-span-1 justify-self-end">
