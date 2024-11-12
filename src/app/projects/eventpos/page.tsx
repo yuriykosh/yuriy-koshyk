@@ -61,7 +61,7 @@ export default function ProjectEventPOS() {
                   ].map(([title, info], i) => (
                     <li key={i}>
                       <p className="max-md:flex flex-col gap-1">
-                        <b className="text-base font-semibold text-fg-secondary mr-2">
+                        <b className="text-base font-medium text-fg-secondary mr-2">
                           {title}
                         </b>
                         {info}
@@ -138,7 +138,7 @@ export default function ProjectEventPOS() {
                 isLast
                 className="mt-20 mb-0"
               >
-                <h3 className="leading-tight tracking-tight font-semibold text-xl mb-2 sr-only">
+                <h3 className="leading-tight tracking-tight font-medium text-xl mb-2 sr-only">
                   Conclusion
                 </h3>
                 <Divider />

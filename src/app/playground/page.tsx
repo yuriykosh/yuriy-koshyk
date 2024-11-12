@@ -1,8 +1,7 @@
-"use client";
+import * as motion from "framer-motion/client";
 
 import Divider from "@/components/assets/Divider";
 import { dividerMotion, textRevealMotion } from "@/utils/animations";
-import { motion } from "framer-motion";
 
 export default function Playground() {
   return (

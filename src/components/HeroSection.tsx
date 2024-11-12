@@ -22,7 +22,7 @@ const HeroSection = () => {
             }}
           />
           <motion.h2
-            className="max-sm:font-bold font-semibold z-20"
+            className="max-sm:font-bold font-medium z-20"
             variants={textRevealMotion(0)}
           >
             Design
@@ -30,7 +30,7 @@ const HeroSection = () => {
         </div>
         <div className="mb-px bg-bg-primary z-20">
           <motion.h2
-            className="max-sm:font-bold font-semibold"
+            className="max-sm:font-bold font-medium"
             variants={textRevealMotion(0.25)}
           >
             Digital Products
@@ -38,7 +38,7 @@ const HeroSection = () => {
         </div>
         <div className="flex gap-4 md:gap-8 items-center mb-px">
           <motion.h2
-            className="max-sm:font-bold max-[400px]:max-w-[70%] max-[468px]:max-w-[64%] font-semibold md:pl-[10%] relative"
+            className="max-sm:font-bold max-[400px]:max-w-[70%] max-[468px]:max-w-[64%] font-medium md:pl-[10%] relative"
             variants={textRevealMotion(0.5)}
           >
             That Matters

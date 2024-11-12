@@ -12,7 +12,7 @@ export default function ProjectGlieseOne() {
       <main className="grid grid-cols-[10%_1fr_10%] lg:grid-cols-[15%_1fr_15%] mt-20 mb-40">
         <TableOfContents />
         <article className="min-h-screen mx-auto max-w-[80ch]">
-          <h1 className="leading-tight tracking-tight font-semibold text-4xl">
+          <h1 className="leading-tight tracking-tight font-medium text-4xl">
             Introducing SynapseGPT: The Next Generation AI Foundation Model
           </h1>
           <section className="my-8">
@@ -42,7 +42,7 @@ export default function ProjectGlieseOne() {
             isFirst
             className="my-8"
           >
-            <h2 className="leading-tight tracking-tight font-semibold text-xl mb-2">
+            <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
               Unmatched Capabilities and Versatility
             </h2>
             <p className="leading-normal py-2 text-neutral-900">
@@ -87,7 +87,7 @@ export default function ProjectGlieseOne() {
             tocTitle="Cutting-Edge Technology"
             className="my-8"
           >
-            <h2 className="leading-tight tracking-tight font-semibold text-xl mb-2">
+            <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
               Cutting-Edge Technology Under the Hood
             </h2>
             <p className="leading-normal py-2 text-neutral-900">
@@ -120,7 +120,7 @@ export default function ProjectGlieseOne() {
             tocTitle="Applications and Impact"
             className="my-8"
           >
-            <h2 className="leading-tight tracking-tight font-semibold text-xl mb-2">
+            <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
               Real-World Applications and Impact
             </h2>
             <p className="leading-normal py-2 text-neutral-900">
@@ -160,7 +160,7 @@ export default function ProjectGlieseOne() {
             </p>
           </TrackedSection>
           <TrackedSection sectionId={3} tocTitle="Ethical AI" className="my-8">
-            <h2 className="leading-tight tracking-tight font-semibold text-xl mb-2">
+            <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
               Our Commitment to Ethical AI
             </h2>
             <p className="leading-normal py-2 text-neutral-900">
@@ -196,7 +196,7 @@ export default function ProjectGlieseOne() {
             </p>
           </TrackedSection>
           <TrackedSection sectionId={4} tocTitle="" isLast className="my-8">
-            <h2 className="leading-tight tracking-tight font-semibold text-xl mb-2">
+            <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
               A Future Powered by SynapseGPT
             </h2>
             <p className="leading-normal py-2 text-neutral-900">

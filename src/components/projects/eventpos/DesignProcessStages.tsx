@@ -92,7 +92,7 @@ const DesignProcessStages = () => {
             </div>
           </div>
           <div className="col-span-1 md:col-span-2">
-            <h4 className="leading-tight tracking-normal font-semibold text-2xl mt-6 mb-2">
+            <h4 className="leading-tight tracking-normal font-medium text-2xl mt-6 mb-2">
               {stage.title}
             </h4>
             <p className="leading-normal py-2">{stage.details}</p>

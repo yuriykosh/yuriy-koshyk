@@ -11,7 +11,7 @@ const StackItem: React.FC<StackItemProps> = ({ category, skills }) => {
 
   return (
     <li className="flex flex-col gap-4  w-fit">
-      <h2 className=" text-fg-primary font-semibold">{category}</h2>
+      <h2 className=" text-fg-primary font-medium">{category}</h2>
       {/* <Divider /> */}
       <ul
         className={`flex flex-col gap-2 text-sm text-fg-secondary font-medium`}

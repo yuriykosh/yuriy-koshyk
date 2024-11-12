@@ -1,9 +1,8 @@
-"use client";
+import * as motion from "framer-motion/client";
 
 import Divider from "@/components/assets/Divider";
-import Item from "@/components/library/Item";
+import LibraryContent from "@/components/library/LibraryContent";
 import { dividerMotion, textRevealMotion } from "@/utils/animations";
-import { motion } from "framer-motion";
 
 export default function Library() {
   return (
@@ -24,45 +23,12 @@ export default function Library() {
       </motion.section>
 
       <section className="py-6 md:mt-4 mb-24">
-        <div className="flex flex-col md:flex-row gap-6 justify-between w-full p-6">
-          <h2
-            className="flex items-center text-sm text-fg-primary font-semibold 
-          before:inline-block before:w-[1ch] before:h-[1ch] before:mr-2 before:[clip-path:polygon(100%_0%,0%_100%,100%_100%)] before:bg-fg-primary"
-          >
-            Library
-          </h2>
-          <ul className="flex gap-2 max-md:overflow-x-auto no-scrollbar">
-            {[
-              ["All"],
-              ["Design"],
-              ["Engineering"],
-              ["Product"],
-              ["Tools"],
-              ["Books"],
-            ].map(([category], i) => (
-              <li
-                key={i}
-                className="py-1 px-2.5 rounded-full border border-fg-secondary/80 text-sm text-fg-secondary font-semibold  first:text-fg-primary first:border-fg-primary"
-              >
-                {category}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <LibraryContent />
 
-        <ul className="grid grid-cols-1">
-          <Item />
-          <Item />
-          <Item />
-          <Item />
-          <Item />
-          <Item />
-          <Item />
-        </ul>
-
+        {/* Live Playlist */}
         <div className="px-6">
           <Divider className="mb-20" />
-          <h3 className="mb-6 ml-2 text-sm font-semibold text-fg-primary">
+          <h3 className="mb-6 ml-2 text-sm font-medium text-fg-primary">
             Feel free to check out music I like
           </h3>
           <iframe

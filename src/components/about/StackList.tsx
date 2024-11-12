@@ -1,6 +1,7 @@
+import * as motion from "framer-motion/client";
+
 import { stack } from "@/utils/data";
 import StackItem from "./StackItem";
-import { motion } from "framer-motion";
 import { easings } from "@/utils/animations";
 
 const StackList = () => {

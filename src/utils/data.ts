@@ -50,6 +50,7 @@ export const projects = [
   },
 ];
 
+// aboutData
 export const stack = [
   {
     category: "Principles",
@@ -102,5 +103,122 @@ export const stack = [
     category: "Awards",
     skills: ["Best Innovation and Creativity (Big Pitch Competition)"],
     color: "#CD9F2C",
+  },
+];
+
+// libraryData
+export type LibraryItem = {
+  title: string;
+  author: string;
+  description: string;
+  status: "Finished" | "Not Started" | "In Progress";
+  sourceLink: string;
+  tags: string[];
+};
+
+export const tagList = [
+  "All",
+  "Design",
+  "Engineering",
+  "Product",
+  "Tools",
+  "Books",
+];
+
+export const libraryData: LibraryItem[] = [
+  {
+    title: "Designing Interfaces",
+    author: "Jenifer Tidwell",
+    description: "A comprehensive guide to UI patterns and design principles.",
+    status: "Finished",
+    sourceLink: "https://example.com/designing-interfaces",
+    tags: ["Design", "Books"],
+  },
+  {
+    title: "The Lean Product Playbook",
+    author: "Dan Olsen",
+    description: "A practical guide to building products that customers love.",
+    status: "In Progress",
+    sourceLink: "https://example.com/lean-product-playbook",
+    tags: ["Product", "Books"],
+  },
+  {
+    title: "Atomic Design",
+    author: "Brad Frost",
+    description:
+      "A methodology for creating design systems with reusable components.",
+    status: "Not Started",
+    sourceLink: "https://example.com/atomic-design",
+    tags: ["Design", "Tools", "Books"],
+  },
+  {
+    title: "Figma Handbook",
+    author: "Figma",
+    description: "Official guide to mastering Figma for UI/UX design.",
+    status: "Finished",
+    sourceLink: "https://example.com/figma-handbook",
+    tags: ["Tools", "Design"],
+  },
+  {
+    title: "Refactoring UI",
+    author: "Adam Wathan & Steve Schoger",
+    description: "A guide to making your UI look great with practical tips.",
+    status: "In Progress",
+    sourceLink: "https://example.com/refactoring-ui",
+    tags: ["Design", "Books", "Tools"],
+  },
+  {
+    title: "Inspired: How To Create Products Customers Love",
+    author: "Marty Cagan",
+    description:
+      "A guide for product managers on building successful products.",
+    status: "Finished",
+    sourceLink: "https://example.com/inspired",
+    tags: ["Product", "Books"],
+  },
+  {
+    title: "Don’t Make Me Think",
+    author: "Steve Krug",
+    description: "A common-sense approach to web usability.",
+    status: "Finished",
+    sourceLink: "https://example.com/dont-make-me-think",
+    tags: ["Design", "Books"],
+  },
+  {
+    title:
+      "Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days",
+    author: "Jake Knapp",
+    description:
+      "A unique five-day process for solving tough problems and testing new ideas.",
+    status: "Not Started",
+    sourceLink: "https://example.com/sprint",
+    tags: ["Product", "Books"],
+  },
+  {
+    title: "Hooked: How to Build Habit-Forming Products",
+    author: "Nir Eyal",
+    description:
+      "A guide on creating products that engage customers by building habit-forming features.",
+    status: "In Progress",
+    sourceLink: "https://example.com/hooked",
+    tags: ["Product", "Books"],
+  },
+  {
+    title: "Lean UX: Applying Lean Principles to Improve User Experience",
+    author: "Jeff Gothelf & Josh Seiden",
+    description:
+      "A guide to integrating lean principles into the UX design process.",
+    status: "Finished",
+    sourceLink: "https://example.com/lean-ux",
+    tags: ["Design", "Engineering", "Books"],
+  },
+  {
+    title: "Measure What Matters",
+    author: "John Doerr",
+    description:
+      "A handbook for using objectives and key results (OKRs) to set and achieve goals.",
+    status: "Not Started",
+    sourceLink: "https://example.com/measure-what-matters",
+    tags: ["Product", "Books", "Tools"],
   },
 ];
