@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { dividerMotion, textRevealMotion } from "@/utils/animations";
 import { TOCContext, useTOCContextValues } from "@/utils/TOCContext";
 import TableOfContents from "@/components/TableOfContents";
 import TrackedSection from "@/components/TrackedSection";
@@ -9,8 +11,6 @@ import Divider from "@/components/assets/Divider";
 import DesignProcessStages from "@/components/projects/eventpos/DesignProcessStages";
 import Goals from "@/components/projects/eventpos/Goals";
 import KeyFeatures from "@/components/projects/eventpos/KeyFeatures";
-import { motion } from "framer-motion";
-import { dividerMotion, textRevealMotion } from "@/utils/animations";
 
 export default function ProjectEventPOS() {
   const { values } = useTOCContextValues();

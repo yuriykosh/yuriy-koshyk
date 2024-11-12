@@ -2,7 +2,6 @@ import * as motion from "framer-motion/client";
 
 import StackList from "@/components/about/StackList";
 import Divider from "@/components/assets/Divider";
-// import { motion } from "framer-motion";
 import { textRevealMotion, dividerMotion } from "@/utils/animations";
 import Image from "next/image";
 import Link from "next/link";
