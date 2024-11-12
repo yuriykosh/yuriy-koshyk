@@ -38,7 +38,7 @@ const HeroSection = () => {
         </div>
         <div className="flex gap-4 md:gap-8 items-center mb-px">
           <motion.h2
-            className="max-sm:font-bold max-[400px]:max-w-[68%] max-[468px]:max-w-[64%] font-semibold md:pl-[10%] relative"
+            className="max-sm:font-bold max-[400px]:max-w-[70%] max-[468px]:max-w-[64%] font-semibold md:pl-[10%] relative"
             variants={textRevealMotion(0.5)}
           >
             That Matters
