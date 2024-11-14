@@ -7,7 +7,9 @@ import Divider from "@/components/assets/Divider";
 import IntroImage from "@/components/assets/IntroImage";
 import TableOfContents from "@/components/TableOfContents";
 import TrackedSection from "@/components/TrackedSection";
-import Image from "next/image";
+import TopicTitle from "@/components/projects/gliese1/TopicTitle";
+import SinglePicture from "@/components/projects/gliese1/SinglePicture";
+import DoublePicture from "@/components/projects/gliese1/DoublePicture";
 
 export default function ProjectGlieseOne() {
   const { values } = useTOCContextValues();
@@ -45,8 +47,8 @@ export default function ProjectGlieseOne() {
           <div className="grid grid-cols-[10%_1fr_10%] lg:grid-cols-[15%_1fr_5%]">
             <TableOfContents />
             <div className="min-h-screen mx-auto max-w-[80ch]">
-              <section className="my-8">
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 py-2 my-2 text-lg">
+              <section className="mt-10 mb-32">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 py-2 mb-10 text-base font-medium text-sky-500">
                   {[
                     ["Sector:", "B2B, Fintech"],
                     ["Team:", "5 designers"],
@@ -55,7 +57,7 @@ export default function ProjectGlieseOne() {
                   ].map(([title, info], i) => (
                     <li key={i}>
                       <p className="max-md:flex flex-col gap-1">
-                        <b className="text-base font-medium text-fg-secondary mr-2">
+                        <b className="text-sm font-medium text-fg-secondary mr-2">
                           {title}
                         </b>
                         {info}
@@ -63,27 +65,39 @@ export default function ProjectGlieseOne() {
                     </li>
                   ))}
                 </ul>
-                <p className="leading-normal my-8">
-                  Mission of Gliese1 is to make accounting, analysis and
-                  insights of a business fully automated for all kinds of
-                  businesses and business processes worldwide
+                <p className="text-xl md:text-2xl font-medium leading-normal">
+                  The mission of Gliese1 is to fully automate accounting,
+                  analysis, and business insights, providing seamless,
+                  intelligent solutions for businesses of all types and sizes,
+                  across industries worldwide.
                 </p>
               </section>
 
               <TrackedSection
                 sectionId={0}
-                tocTitle="Project Goals"
+                tocTitle="Project Overview"
                 isFirst
-                className="mt-20 mb-10"
+                className="mb-32"
               >
-                <div className="w-full origin-left mb-6">
-                  <Divider />
-                </div>
-                <h3 className="leading-tight tracking-normal font-medium text-3xl sm:text-4xl mb-10">
-                  Project Goals
-                </h3>
+                <TopicTitle title="Project Overview" />
 
-                <ul className="flex flex-col gap-4 py-2 text-lg  leading-normal">
+                <p className="text-xl md:text-2xl font-medium leading-normal mb-32">
+                  In this case study, we worked on designing a financial
+                  reconciliation platform for professionals in the accounting
+                  and finance sectors. The project followed the{" "}
+                  <span className="text-sky-500">
+                    Double Diamond methodology
+                  </span>
+                  , which helped us navigate through the phases of{" "}
+                  <span className="text-sky-500">Discovery</span>,{" "}
+                  <span className="text-sky-500">Define</span>,{" "}
+                  <span className="text-sky-500">Develop</span>, and{" "}
+                  <span className="text-sky-500">Deliver</span>.
+                </p>
+
+                <TopicTitle title="Project Goals" />
+
+                <ul className="flex flex-col gap-4 py-2 text-xl md:text-2xl font-medium leading-normal">
                   {[
                     "Automated reconciliation",
                     "Account management for banking account",
@@ -93,8 +107,11 @@ export default function ProjectGlieseOne() {
                     "Comment and investigation for transaction",
                     "Project management tool",
                   ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <div className="flex items-center justify-center w-[1.8ch] h-[1.8ch] text-sky-500">
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 pl-2 pr-4 py-1 w-fit rounded-full border border-fg-secondary/80"
+                    >
+                      <div className="flex items-center justify-center w-[1.3ch] h-[1.3ch] text-sky-500">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 32 32"
@@ -119,289 +136,619 @@ export default function ProjectGlieseOne() {
 
               <TrackedSection
                 sectionId={1}
-                tocTitle="Design Process"
-                className="mt-32 mb-12"
+                tocTitle="Phase 1: Discovery"
+                className="mb-40 text-xl md:text-2xl font-medium leading-normal"
               >
-                <div className="relative w-full aspect-video scale-110">
-                  <Image
-                    src={"/images/gliese1/design-process.png"}
-                    fill
-                    quality={100}
-                    alt="image"
-                    style={{ objectFit: "contain" }}
-                    className="object-top"
+                {/* -- Project Planning -- */}
+                <div className="mb-48">
+                  <TopicTitle title="Project Planning" />
+
+                  <p className=" mb-16">
+                    The Double Diamond approach, with its clear division into
+                    exploration and refinement phases, allowed us to balance
+                    user discovery with targeted solution development.
+                  </p>
+
+                  <SinglePicture
+                    url="/images/gliese1/design-process.png"
+                    alt="The Double Diamond visual explanation"
                   />
+                </div>
+
+                {/* -- Lean Canvas -- */}
+                <div>
+                  <TopicTitle title="Lean Canvas" />
+
+                  <p className="mb-16">
+                    We visualized the core business idea through a Lean Canvas,
+                    which allowed us to focus on the key aspects of the business
+                    model. This method helped us align the product&#39;s value
+                    proposition with user needs, and it served as a practical
+                    tool for organizing business information in one place.
+                  </p>
+                  <SinglePicture
+                    url="/images/gliese1/lean-canvas.png"
+                    alt="Lean Canvas Table"
+                  />
+
+                  <p className="mb-20">
+                    By organizing information into this single-page format, the
+                    Lean Canvas provided our team and stakeholders with a
+                    shared, comprehensive overview of the business model. This
+                    clarity enabled faster decision-making and kept us focused
+                    on validated assumptions.
+                  </p>
+
+                  <ul className="p-2 rounded-2xl border border-fg-secondary/80">
+                    {[
+                      [
+                        "Identifying the Problem:",
+                        "We identified a significant gap for small to mid-size businesses in managing complex financial transactions efficiently. Current tools require excessive manual input, lack integration, and do not fully meet the needs for streamlined accounting, analytics, and insights.",
+                      ],
+                      [
+                        "Defining the Solution:",
+                        "Our solution offers a fully automated, customizable financial management tool tailored for businesses with high transaction volumes. This tool centralizes budgeting, reporting, reconciliation, and team management in one platform, reducing the need for multiple separate applications and manual work.",
+                      ],
+                      [
+                        "Unique Value Proposition:",
+                        "Our product is the first all-in-one, fully customizable accounting and financial insights platform that integrates seamlessly with a business’s specific needs, delivering simplicity, automation, and transparency in financial processes.",
+                      ],
+                      [
+                        "Customer Segments & Channels:",
+                        "Our primary customers are small to mid-sized businesses, e-commerce platforms, and large companies with high transaction volumes. We plan to reach these segments through a web application and networking at industry events like financial tech exhibitions.",
+                      ],
+                      [
+                        "Key Metrics:",
+                        "To measure success, we track the acquisition of our first 100 clients, system reliability (GDPR-compliant security), and the tool’s ability to handle large data volumes without performance issues.",
+                      ],
+                    ].map(([title, details], i) => (
+                      <li key={i} className="mb-4 px-2 py-4">
+                        <h4 className="inline text-sky-500">{title} </h4>
+                        <p className="inline">{details}</p>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </TrackedSection>
 
               <TrackedSection
                 sectionId={2}
-                tocTitle="Key Features"
-                className="mt-32 mb-10"
+                tocTitle="Phase 2: Competitor Analysis & Functionality Research"
+                className="mb-32 text-xl md:text-2xl font-medium leading-normal"
               >
-                <h3 className="leading-tight tracking-normal font-medium text-3xl sm:text-4xl mb-4">
-                  Key Features
-                </h3>
-                <p className="leading-normal py-2">
-                  EventPOS offers a comprehensive suite of features tailored to
-                  the demands of event environments:
-                </p>
+                {/* -- Competitor Analysis & Functionality Research -- */}
+                <div className="mb-40">
+                  <TopicTitle title="Competitor Analysis & Functionality Research" />
+
+                  <p className="mb-16">
+                    We conducted an in-depth competitor analysis using Jakob
+                    Nielsen&#39;s heuristics to understand how other products in
+                    the market address similar problems.
+                  </p>
+
+                  <DoublePicture
+                    urlLeft="/images/gliese1/functionality-research.png"
+                    urlRight="/images/gliese1/competitor-analysis.png"
+                    alt="Competitor Analysis & Functionality Research Visuals"
+                  />
+
+                  <p className="mb-4">
+                    This analysis led to the following findings:
+                  </p>
+                  <ul className="flex flex-col gap-4 py-2 mb-8 text-xl md:text-2xl font-medium leading-normal">
+                    {[
+                      "Many products fail to provide users with full autonomy.",
+                      "Some competitors have significant issues preventing errors.",
+                      "Several systems lack flexibility, which hinders efficiency.",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 px-4 py-1 w-fit rounded-full border border-fg-secondary/80"
+                      >
+                        <div className="flex items-center justify-center w-[0.6ch] h-[0.6ch] rounded-full bg-fg-secondary opacity-80"></div>
+
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mb-8">
+                    These insights were crucial in differentiating our product
+                    by focusing on user autonomy, flexibility, and error
+                    prevention.
+                  </p>
+                </div>
+
+                {/* -- User Interviews -- */}
+                <div className="mb-40">
+                  <TopicTitle title="User Interviews" />
+
+                  <p className="mb-16">
+                    We conducted interviews with 7 industry specialists
+                    (accountants and financial directors from Ukraine and
+                    Europe).
+                  </p>
+
+                  <SinglePicture
+                    url="/images/gliese1/user-interviews.png"
+                    alt="Pictures from Interviews"
+                  />
+
+                  <p className="mb-8">
+                    Key insights from the interviews included:
+                  </p>
+                  <div className="mb-12 p-2 rounded-2xl border border-fg-secondary/80">
+                    <div className="mb-4 px-2 py-4">
+                      <h4 className="inline text-sky-500">Tools Used: </h4>
+                      <p className="inline">
+                        Users worked with Wise, BAS ERP, WHMCS, and 1C{" "}
+                        <span className="text-fg-secondary">
+                          (unfortunately)
+                        </span>
+                        .
+                      </p>
+                    </div>
+                    <div className="flex flex-col gap-2 p-2 py-4">
+                      <h4 className="text-sky-500">Pain Points:</h4>
+                      <ul className="flex flex-col gap-4 py-2 text-xl md:text-2xl font-medium leading-normal">
+                        {[
+                          "Issues with automating workflows when dealing with external clients.",
+                          "The need for manual input in systems despite automation.",
+                        ].map((item, i) => (
+                          <li
+                            key={i}
+                            className="flex items-center gap-3 px-4 py-1 w-fit rounded-full border border-fg-secondary/80"
+                          >
+                            <div className="flex items-center justify-center w-[0.6ch] h-[0.6ch] rounded-full bg-fg-secondary opacity-60" />
+
+                            {item}
+                          </li>
+                        ))}
+                        <li className="flex items-baseline gap-3 px-4 pt-4 pb-2 w-fit text-pretty rounded-full border border-fg-secondary/80">
+                          <div className="flex items-center justify-center w-[0.6ch] h-[0.6ch] rounded-full bg-fg-secondary opacity-60" />
+                          Difficulty in switching to a new system due to the
+                          complexity and cost of migration.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <p className="">
+                    This feedback was invaluable for shaping the product&#39;s
+                    user experience to address these concerns.
+                  </p>
+                </div>
+
+                {/* -- Personas -- */}
+                <div className="mb-40">
+                  <TopicTitle title="Personas" />
+
+                  <p className="mb-16">
+                    We developed two personas based on our interviews:
+                  </p>
+
+                  <DoublePicture
+                    urlLeft="/images/gliese1/persona-1.png"
+                    urlRight="/images/gliese1/persona-2.png"
+                    alt="Persona"
+                  />
+
+                  <p className="mb-6">
+                    This analysis led to the following findings:
+                  </p>
+                  <ul className="flex flex-col gap-10 py-2 mb-12 text-xl md:text-2xl font-medium leading-normal">
+                    {(
+                      [
+                        [
+                          "Lesya",
+                          "Accountant",
+                          [
+                            "Making manual errors, fixing system glitches manually, missing deadlines.",
+                            "Simplify routine tasks, improve workflow efficiency.",
+                          ],
+                        ],
+                        [
+                          "Valentyn",
+                          "Financial Director",
+                          [
+                            "Inefficient software affecting team performance and company reputation.",
+                            "Use efficient software to improve reconciliation and payment processing.",
+                          ],
+                        ],
+                      ] as [string, string, [string, string]][]
+                    ).map(([name, role, [fears, wants]], i) => (
+                      <li key={i} className="flex flex-col gap-4">
+                        <h4 className="text-sky-500">
+                          {name},{" "}
+                          <span className="text-fg-primary">{role}</span>
+                        </h4>
+                        <ul className="flex flex-col gap-2">
+                          <li className="text-lg md:text-xl">
+                            <span className="text-fg-secondary">Fears: </span>
+                            {fears}
+                          </li>
+                          <li className="text-lg md:text-xl">
+                            <span className="text-fg-secondary">Wants: </span>
+                            {wants}
+                          </li>
+                        </ul>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <p className="">
+                    These personas helped us empathize with our users and
+                    prioritize features.
+                  </p>
+                </div>
+
+                {/* -- Customer Journey Mapping (CJM) -- */}
+                <div className="mb-40">
+                  <TopicTitle title="Customer Journey Mapping (CJM)" />
+
+                  <p className="mb-16">
+                    We created customer journey maps to visualize the user
+                    experience and identify key frustration points.
+                  </p>
+
+                  <DoublePicture
+                    urlLeft="/images/gliese1/cjm-1.png"
+                    urlRight="/images/gliese1/cjm-2.png"
+                    alt="Customer Journey Map (CJM)"
+                  />
+
+                  <ul className="mb-12 p-2 rounded-2xl border border-fg-secondary/80">
+                    {[
+                      [
+                        "Lesya:",
+                        "Key frustrations during reconciliation were identifying payment discrepancies and fixing errors.",
+                      ],
+                      [
+                        "Valentyn:",
+                        "Key concerns were ensuring team efficiency and identifying discrepancies that could impact company metrics.",
+                      ],
+                    ].map(([title, details], i) => (
+                      <li key={i} className="mb-4 px-2 py-4">
+                        <h4 className="inline text-sky-500">{title} </h4>
+                        <p className="inline">{details}</p>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <p className="">
+                    This helped us identify areas where we could streamline the
+                    process.
+                  </p>
+                </div>
+
+                {/* -- Value Proposition & Validation -- */}
+                <div className="">
+                  <TopicTitle title="Value Proposition & Validation" />
+
+                  <p className="mb-16">
+                    We used a Value Canvas to ensure the product&#39;s value
+                    proposition aligned with user expectations.
+                  </p>
+
+                  <SinglePicture
+                    url="/images/gliese1/value-proposition-canvas.png"
+                    alt="Value-Proposition Canvas"
+                  />
+
+                  <p className="mb-8">Our findings showed that:</p>
+                  <p className="mb-4">
+                    The product&#39;s core features (payment reconciliation,
+                    report generation) aligned with user needs.
+                  </p>
+                  <p className="mb-8">
+                    It addressed pain points such as manual reporting and lack
+                    of transaction status visibility.
+                  </p>
+                  <p className="">
+                    We conducted a survey to triangulate our qualitative
+                    findings, confirming the presence of similar issues among
+                    the target audience.
+                  </p>
+                </div>
               </TrackedSection>
 
               <TrackedSection
                 sectionId={3}
-                tocTitle="Conclusion"
-                isLast
-                className="mt-20 mb-0"
+                tocTitle="Phase 3: Ideation & Prototyping"
+                className="mb-32 text-xl md:text-2xl font-medium leading-normal"
               >
-                <h3 className="leading-tight tracking-tight font-medium text-xl mb-2 sr-only">
-                  Conclusion
-                </h3>
-                <Divider />
-                <p className="leading-normal py-2 mt-20">
-                  Since its launch, EventPOS has garnered widespread acclaim for
-                  its innovative approach to event payment solutions. Event
-                  organizers have reported significant improvements in
-                  transaction efficiency, vendor management, and overall
-                  attendee satisfaction. The app&#39;s intuitive design and
-                  robust security measures have instilled confidence among
-                  users, leading to widespread adoption across a diverse range
-                  of events.
+                {/* -- Ideation & Prototyping -- */}
+                <div className="mb-40">
+                  <TopicTitle title="Ideation & Prototyping" />
+
+                  <p className="mb-16">
+                    In the <span className="text-sky-500">Ideation Phase</span>{" "}
+                    , we revisited our competitor research to see how others
+                    solved similar problems. After analyzing different
+                    solutions, we ideated and refined our approach:
+                  </p>
+
+                  <SinglePicture
+                    url="/images/gliese1/ideation.png"
+                    alt="Ideation Flow"
+                  />
+
+                  <ul className=" p-2 rounded-2xl border border-fg-secondary/80">
+                    {[
+                      [
+                        "Wireframes:",
+                        "We sketched out early designs to test different ideas for UI components.",
+                      ],
+                      [
+                        "Prototyping:",
+                        "Interactive prototypes were created to demonstrate the flow of tasks in the reconciliation process and show how users would interact with the tool.",
+                      ],
+                    ].map(([title, details], i) => (
+                      <li key={i} className="mb-4 px-2 py-4">
+                        <h4 className="inline text-sky-500">{title} </h4>
+                        <p className="inline">{details}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* -- Architecture Design -- */}
+                <div className="">
+                  <TopicTitle title="Architecture Design" />
+
+                  <p className="mb-16">
+                    The design architecture was developed with a focus on
+                    intuitive usability and scalability.
+                  </p>
+
+                  <SinglePicture
+                    url="/images/gliese1/architecture.png"
+                    alt="Architecture Map"
+                  />
+
+                  <p className="mb-6">Key aspects of the design included:</p>
+
+                  <ul className=" p-2 rounded-2xl border border-fg-secondary/80">
+                    {[
+                      [
+                        "Intuitive Interface:",
+                        "We designed a clean, modern UI for users to perform reconciliations quickly.",
+                      ],
+                      [
+                        "Advanced Analytics Tools:",
+                        "Interactive charts and graphs for financial analysis.",
+                      ],
+                      [
+                        "Microservice Architecture:",
+                        "Ensured scalability and easy integration with other systems.",
+                      ],
+                      [
+                        "Security:",
+                        "Implemented strong data protection standards.",
+                      ],
+                    ].map(([title, details], i) => (
+                      <li key={i} className="mb-2 px-2 py-4">
+                        <h4 className="inline text-sky-500">{title} </h4>
+                        <p className="inline">{details}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </TrackedSection>
+
+              <TrackedSection
+                sectionId={4}
+                tocTitle="Phase 4: Testing & Iteration"
+                className="mb-32 text-xl md:text-2xl font-medium leading-normal"
+              >
+                <TopicTitle title="Phase 4: Testing & Iteration" />
+
+                <p className="mb-16">
+                  Testing was a key part of refining the design, with{" "}
+                  <span className="text-sky-500">3 rounds of iteration</span>{" "}
+                  based on user feedback.
                 </p>
 
-                <p className="leading-normal py-2 mb-20">
-                  EventPOS stands as a testament to the power of user-centered
-                  design and technological innovation in addressing the complex
-                  challenges of event management and payment processing. By
-                  seamlessly integrating mobile payments, vendor management, and
-                  analytics capabilities, EventPOS has emerged as a game-changer
-                  in the events industry, setting new standards for efficiency,
-                  security, and user experience.
+                <div className="mb-12 p-2 rounded-2xl border border-fg-secondary/80">
+                  <div className="mb-4 px-2 py-4">
+                    <h4 className="inline  text-fg-secondary">Challenges: </h4>
+                    <p className="inline">
+                      Users were often focused on their own workflows, which
+                      made testing difficult. However, these insights revealed a
+                      major barrier:{" "}
+                      <span className="text-sky-500">
+                        the difficulty of transitioning to a new tool.
+                      </span>
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col gap-2 p-2 py-4">
+                    <h4 className="text-fg-secondary">Pain Points:</h4>
+                    <ul className="p-2 text-l md:text-xl rounded-2xl border border-fg-secondary/80">
+                      {[
+                        [
+                          "Onboarding:",
+                          "We enhanced the onboarding process using tooltips and tutorials to guide users through the platform.",
+                        ],
+                        [
+                          "Call-to-Action (CTA):",
+                          "We optimized CTAs based on user preferences.",
+                        ],
+                        [
+                          "Workflow Refinements:",
+                          `We adjusted the reconciliation flow and how users interact with "unreconciled" and "investigation" items.`,
+                        ],
+                      ].map(([title, details], i) => (
+                        <li key={i} className="px-2 py-4">
+                          <h4 className="inline text-sky-500">{title} </h4>
+                          <p className="inline">{details}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </TrackedSection>
+
+              <TrackedSection
+                sectionId={5}
+                tocTitle="Final Designs"
+                className="mb-32 text-xl md:text-2xl font-medium leading-normal"
+              >
+                {/* -- Dashboard -- */}
+                <div className="mb-48">
+                  <TopicTitle title="Dashboard" />
+
+                  <p className="mb-16">
+                    The final design focused on user-centered features,
+                    including a customizable dashboard
+                  </p>
+
+                  <SinglePicture
+                    url="/images/gliese1/dashboard.png"
+                    alt="Dashboard screens"
+                  />
+                </div>
+
+                {/* -- Onboarding -- */}
+                <div className="mb-48">
+                  <TopicTitle title="Onboarding" />
+
+                  <p className="mb-16">
+                    The onboarding experience has been redesigned to help new
+                    users quickly understand how to use the platform and its
+                    core features.
+                  </p>
+
+                  <SinglePicture
+                    url="/images/gliese1/onboarding.png"
+                    alt="image"
+                  />
+                </div>
+
+                {/* -- Transactions -- */}
+                <div className="mb-48">
+                  <TopicTitle title="Transactions" />
+
+                  <p className="mb-16">
+                    A streamlined interface for managing transactions, making it
+                    easier for users to add, edit, and categorize financial
+                    entries.
+                  </p>
+                  <SinglePicture
+                    url="/images/gliese1/transactions.png"
+                    alt="image"
+                  />
+                </div>
+
+                {/* -- Manual Journal -- */}
+                <div className="mb-48">
+                  <TopicTitle title="Manual Journal" />
+
+                  <p className="mb-16">
+                    The Manual Journal interface allows users to make manual
+                    entries and adjustments to their financial records.
+                  </p>
+                  <SinglePicture
+                    url="/images/gliese1/manual-journal.png"
+                    alt="image"
+                  />
+                </div>
+
+                {/* -- Banking -- */}
+                <div className="mb-48">
+                  <TopicTitle title="Banking" />
+
+                  <p className="mb-16">
+                    The Banking section provides an overview of linked bank
+                    accounts, transaction history, and reconciliation tools.
+                  </p>
+                  <SinglePicture
+                    url="/images/gliese1/banking.png"
+                    alt="image"
+                  />
+                </div>
+
+                {/* -- Reconciliation -- */}
+                <div className="mb-48">
+                  <TopicTitle title="Reconciliation" />
+
+                  <p className="mb-16">
+                    The Reconciliation section enables users to match their
+                    financial records with external bank statements.
+                  </p>
+                  <SinglePicture
+                    url="/images/gliese1/reconciliation-1.png"
+                    alt="image"
+                  />
+                  <SinglePicture
+                    url="/images/gliese1/reconciliation-2.png"
+                    alt="image"
+                  />
+                </div>
+
+                {/* -- Projects -- */}
+                <div className="mb-48">
+                  <TopicTitle title="Projects" />
+
+                  <p className="mb-16">
+                    This section allows users to manage financial data for
+                    specific projects or initiatives.
+                  </p>
+                  <SinglePicture
+                    url="/images/gliese1/projects.png"
+                    alt="image"
+                  />
+                </div>
+
+                {/* -- Team -- */}
+                <div className="">
+                  <TopicTitle title="Team" />
+
+                  <p className="mb-16">
+                    The Team section is designed for multi-user management,
+                    allowing team leads and managers to assign roles and monitor
+                    team members&#39; access to financial data.
+                  </p>
+                  <SinglePicture url="/images/gliese1/team.png" alt="image" />
+                </div>
+              </TrackedSection>
+
+              <TrackedSection
+                sectionId={6}
+                tocTitle="Conclusion"
+                isLast
+                className="mb-32 text-xl md:text-2xl font-medium leading-normal"
+              >
+                <TopicTitle title="Conclusion" />
+
+                <p className="mb-16">
+                  Through careful user research, competitor analysis, iterative
+                  testing, and design thinking, we created a product that not
+                  only meets user needs but also offers a unique solution in the
+                  market for financial reconciliation.
                 </p>
+                <SinglePicture
+                  url="/images/gliese1/conclusion.png"
+                  alt="image"
+                />
+                <ul className="p-2 rounded-2xl border border-fg-secondary/80">
+                  {[
+                    [
+                      "Impact:",
+                      "The new design improved overall user satisfaction, reduced task completion times, and minimized user errors during data entry and reconciliation.",
+                    ],
+                    [
+                      "Next Steps:",
+                      "Ongoing user feedback and iterative improvements based on real-world usage.",
+                    ],
+                  ].map(([title, details], i) => (
+                    <li key={i} className="mb-4 px-2 py-4">
+                      <h4 className="inline text-sky-500">{title} </h4>
+                      <p className="inline">{details}</p>
+                    </li>
+                  ))}
+                </ul>
               </TrackedSection>
             </div>
           </div>
-
-          {/* <div className="grid grid-cols-[10%_1fr_10%] lg:grid-cols-[15%_1fr_15%] mt-20 mb-40">
-            <TableOfContents />
-            <article className="min-h-screen mx-auto max-w-[80ch]">
-              <h1 className="leading-tight tracking-tight font-medium text-4xl">
-                Introducing SynapseGPT: The Next Generation AI Foundation Model
-              </h1>
-              <section className="my-8">
-                <p className="leading-normal py-2 text-neutral-900">
-                  We are thrilled to announce the launch of SynapseGPT, our
-                  groundbreaking AI foundation model that promises to redefine
-                  the landscape of artificial intelligence. SynapseGPT
-                  represents the culmination of years of cutting-edge research
-                  and development in deep learning and natural language
-                  processing. This model is designed to push the boundaries of
-                  what AI can achieve, offering unprecedented capabilities and
-                  flexibility across a multitude of applications.
-                </p>
-                <p className="leading-normal py-2 text-neutral-900">
-                  Our team has worked tirelessly to build a model that not only
-                  meets the current needs of various industries but also
-                  anticipates future advancements. SynapseGPT is poised to
-                  become an indispensable tool for businesses, researchers, and
-                  developers alike. Whether you are looking to enhance customer
-                  interactions, automate complex processes, or generate
-                  insightful data analyses, SynapseGPT is equipped to deliver
-                  exceptional results.
-                </p>
-              </section>
-              <TrackedSection
-                sectionId={0}
-                tocTitle="Unmatched Capabilities"
-                isFirst
-                className="my-8"
-              >
-                <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
-                  Unmatched Capabilities and Versatility
-                </h2>
-                <p className="leading-normal py-2 text-neutral-900">
-                  SynapseGPT sets a new standard for versatility in AI, offering
-                  capabilities that go far beyond traditional language
-                  processing. At its core, SynapseGPT excels in language
-                  understanding, enabling it to grasp nuanced meanings and
-                  contextual subtleties across different languages and dialects.
-                  This makes it an invaluable asset for global companies that
-                  operate in diverse linguistic environments.
-                </p>
-                <p className="leading-normal py-2 text-neutral-900">
-                  In addition to its language processing prowess, SynapseGPT is
-                  a powerful tool for content generation. It can produce
-                  high-quality, coherent, and contextually relevant content
-                  tailored to any purpose, whether it&#39;s crafting engaging
-                  marketing copy, creating detailed technical documentation, or
-                  writing personalized emails. This versatility makes SynapseGPT
-                  a vital resource for content creators, marketers, and
-                  communicators.
-                </p>
-                <p className="leading-normal py-2 text-neutral-900">
-                  Furthermore, SynapseGPT&#39;s data analysis capabilities allow
-                  users to extract meaningful insights from complex datasets. By
-                  leveraging advanced analytical tools, businesses can uncover
-                  hidden patterns, predict future trends, and make data-driven
-                  decisions with confidence. SynapseGPT&#39;s ability to process
-                  and integrate data from various sources, including text,
-                  images, and audio, ensures a comprehensive approach to
-                  problem-solving.
-                </p>
-                <p className="leading-normal py-2 text-neutral-900">
-                  Another notable feature of SynapseGPT is its proficiency in
-                  powering conversational agents. It enables intelligent,
-                  human-like interactions in chatbots and virtual assistants,
-                  significantly enhancing customer service experiences. By
-                  understanding and responding to user queries with accuracy and
-                  empathy, SynapseGPT helps businesses build stronger
-                  relationships with their customers.
-                </p>
-              </TrackedSection>
-              <TrackedSection
-                sectionId={1}
-                tocTitle="Cutting-Edge Technology"
-                className="my-8"
-              >
-                <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
-                  Cutting-Edge Technology Under the Hood
-                </h2>
-                <p className="leading-normal py-2 text-neutral-900">
-                  The power of SynapseGPT lies in its state-of-the-art
-                  architecture and training methodology. At its foundation is a
-                  highly optimized version of the transformer architecture,
-                  which ensures superior performance and scalability. This
-                  architecture allows SynapseGPT to handle vast amounts of data
-                  and complex tasks with ease, making it suitable for
-                  large-scale deployments.
-                </p>
-                <p className="leading-normal py-2 text-neutral-900">
-                  SynapseGPT also features multi-modal integration, enabling it
-                  to seamlessly process and combine data from various sources.
-                  This capability is particularly valuable in applications that
-                  require a holistic approach, such as analyzing customer
-                  feedback across different channels or integrating visual and
-                  textual information for comprehensive insights.
-                </p>
-                <p className="leading-normal py-2 text-neutral-900">
-                  One of the standout features of SynapseGPT is its ability to
-                  be fine-tuned and customized. Businesses and developers can
-                  easily adapt the model to meet specific industry needs with
-                  minimal data. Whether you&#39;re in healthcare, finance,
-                  education, or entertainment, SynapseGPT can be tailored to
-                  provide solutions that address your unique challenges and
-                  requirements.
-                </p>
-              </TrackedSection>
-              <TrackedSection
-                sectionId={2}
-                tocTitle="Applications and Impact"
-                className="my-8"
-              >
-                <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
-                  Real-World Applications and Impact
-                </h2>
-                <p className="leading-normal py-2 text-neutral-900">
-                  SynapseGPT is already making a significant impact across a
-                  wide range of industries. In healthcare, for example, it
-                  enhances diagnostic accuracy and patient care by providing
-                  AI-driven medical insights and predictive analytics. By
-                  analyzing patient data and medical literature, SynapseGPT can
-                  assist healthcare professionals in making more informed
-                  decisions and identifying potential health risks early on.
-                </p>
-                <p className="leading-normal py-2 text-neutral-900">
-                  In the financial sector, SynapseGPT streamlines operations,
-                  detects fraud, and offers personalized financial advice. Its
-                  ability to analyze large datasets in real-time allows
-                  financial institutions to identify fraudulent activities more
-                  quickly and accurately. Additionally, SynapseGPT can provide
-                  tailored financial recommendations based on individual
-                  customer profiles, improving customer satisfaction and
-                  loyalty.
-                </p>
-                <p className="leading-normal py-2 text-neutral-900">
-                  The education industry also benefits from SynapseGPT&#39;s
-                  capabilities. It personalizes learning experiences, automates
-                  administrative tasks, and supports educators with AI-generated
-                  content. By understanding students&#39; unique learning needs
-                  and preferences, SynapseGPT helps create customized
-                  educational materials and learning paths, enhancing the
-                  overall learning experience.
-                </p>
-                <p className="leading-normal py-2 text-neutral-900">
-                  In the entertainment industry, SynapseGPT revolutionizes
-                  content creation. It can write scripts, generate music, and
-                  create immersive virtual environments, opening up new
-                  possibilities for creative professionals. By leveraging AI to
-                  handle repetitive and time-consuming tasks, artists and
-                  creators can focus on what they do best: creating compelling
-                  and original content.
-                </p>
-              </TrackedSection>
-              <TrackedSection
-                sectionId={3}
-                tocTitle="Ethical AI"
-                className="my-8"
-              >
-                <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
-                  Our Commitment to Ethical AI
-                </h2>
-                <p className="leading-normal py-2 text-neutral-900">
-                  At [Company Name], we understand that with great power comes
-                  great responsibility. The development of SynapseGPT has been
-                  guided by a strong emphasis on ethical considerations. We are
-                  committed to ensuring that our AI solutions are fair,
-                  transparent, and accountable.
-                </p>
-                <p className="leading-normal py-2 text-neutral-900">
-                  One of our primary goals is to mitigate biases in AI outputs.
-                  We have implemented advanced techniques to detect and reduce
-                  biases, ensuring that SynapseGPT provides fair and equitable
-                  results. This is particularly important in applications that
-                  impact people&#39;s lives, such as hiring decisions, loan
-                  approvals, and medical diagnoses.
-                </p>
-                <p className="leading-normal py-2 text-neutral-900">
-                  We also prioritize data privacy and security. SynapseGPT
-                  adheres to the highest standards of data protection, ensuring
-                  that user information is safeguarded at all times. We believe
-                  that maintaining user trust is crucial to the success of our
-                  AI solutions.
-                </p>
-                <p className="leading-normal py-2 text-neutral-900">
-                  Transparency and accountability are also key components of our
-                  ethical framework. We strive to promote transparency in AI
-                  decision-making processes, making it easier for users to
-                  understand how SynapseGPT arrives at its conclusions.
-                  Additionally, we maintain accountability in the deployment of
-                  our AI solutions, ensuring that any issues or concerns are
-                  promptly addressed.
-                </p>
-              </TrackedSection>
-              <TrackedSection sectionId={4} tocTitle="" isLast className="my-8">
-                <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
-                  A Future Powered by SynapseGPT
-                </h2>
-                <p className="leading-normal py-2 text-neutral-900">
-                  The launch of SynapseGPT marks a significant milestone in our
-                  journey towards creating intelligent systems that enhance
-                  human capabilities and drive innovation. We are excited to see
-                  how SynapseGPT will transform industries, create new
-                  opportunities, and unlock the full potential of artificial
-                  intelligence.
-                </p>
-                <p className="leading-normal py-2 text-neutral-900">
-                  We invite you to explore the possibilities with SynapseGPT and
-                  join us in shaping the future of AI. Stay tuned for more
-                  updates and insights into how SynapseGPT is making a
-                  difference across various sectors. Together, let&#39;s harness
-                  the power of AI to achieve greater heights and build a better
-                  tomorrow.
-                </p>
-              </TrackedSection>
-            </article>
-          </div> */}
         </article>
       </main>
     </TOCContext.Provider>
