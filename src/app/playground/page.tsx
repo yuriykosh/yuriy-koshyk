@@ -2,6 +2,8 @@ import * as motion from "framer-motion/client";
 
 import Divider from "@/components/assets/Divider";
 import { dividerMotion, textRevealMotion } from "@/utils/animations";
+import { playgroundItems } from "@/utils/data";
+import Image from "next/image";
 
 export default function Playground() {
   return (
@@ -20,22 +22,28 @@ export default function Playground() {
       </motion.section>
 
       <section className="p-6 mt-4 mb-24">
-        <ul className="grid grid-cols-2 gap-4">
-          <li className="w-full aspect-[5/4] bg-bg-secondary flex items-center justify-center">
-            item
-          </li>
-          <li className="w-full aspect-[5/4] bg-bg-secondary flex items-center justify-center">
-            item
-          </li>
-          <li className="w-full aspect-[5/4] bg-bg-secondary flex items-center justify-center">
-            item
-          </li>
-          <li className="w-full aspect-[5/4] bg-bg-secondary flex items-center justify-center">
-            item
-          </li>
-          <li className="w-full aspect-[5/4] bg-bg-secondary flex items-center justify-center">
-            item
-          </li>
+        <ul className="grid grid-cols-2 gap-x-4 gap-y-8">
+          {playgroundItems.map((item, i) => {
+            return (
+              <li key={i} className="flex flex-col w-full aspect-[5/4] ">
+                <div className="relative w-full h-full">
+                  <Image
+                    src={item.src}
+                    fill
+                    alt={item.description}
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-2">
+                  {" "}
+                  <h2 className="text-sm font-medium">{item.title}</h2>
+                  <p className="text-sm font-medium text-fg-secondary">
+                    {item.tags}
+                  </p>
+                </div>
+              </li>
+            );
+          })}
         </ul>
       </section>
     </main>

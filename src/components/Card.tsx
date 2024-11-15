@@ -14,6 +14,7 @@ interface CardProps {
   src: string;
   url: string;
   color: string;
+  linkStyles?: string;
   progress: MotionValue<number>;
   range: number[];
   targetScale: number;
@@ -28,6 +29,7 @@ const Card: React.FC<CardProps> = ({
   src,
   url,
   // color,
+  linkStyles,
   progress,
   range,
   targetScale,
@@ -58,7 +60,7 @@ const Card: React.FC<CardProps> = ({
           <Link
             href={url}
             onClick={() => window.scrollTo(0, 0)}
-            className="relative w-full h-full overflow-hidden"
+            className={`relative w-full h-full overflow-hidden ${linkStyles}`}
           >
             <motion.div
               className="relative w-full h-full"

@@ -15,8 +15,9 @@ export const projects = [
       "Multimillion-dollar e-commerce for complete compressed air solutions (a part of Atlas Copco Group)",
     year: 2024,
     src: "df.webp",
-    url: "/projects",
+    url: "https://www.druckluft-fachhandel.de/",
     color: "#977F6D",
+    linkStyles: "cursor-alias",
   },
   {
     title: "EventPOS",
@@ -47,6 +48,63 @@ export const projects = [
     src: "dream-net.png",
     url: "/projects",
     color: "#88A28D",
+  },
+];
+
+// playgroundData
+export const playgroundItems = [
+  {
+    title: "DreamNet Telecom.",
+    tags: "iOS, B2C SaaS",
+    description:
+      "Telecommunication company that provides internet and television for thousands users.",
+    year: 2022,
+    src: "/images/dream-net.png",
+    url: "/",
+  },
+  {
+    title: "ABROY Law Firm",
+    tags: "Desktop & Mobile Web, B2B, B2C",
+    description: "Finance SaaS solution for all kinds of businesses.",
+    year: 2024,
+    src: "/images/playground/abroy.png",
+    url: "/",
+  },
+  {
+    title: "Mallony Urban Brand",
+    tags: "Minimalism, Custom grids",
+    description:
+      "Telecommunication company that provides internet and television for thousands users.",
+    year: 2020,
+    src: "/images/playground/mallony.png",
+    url: "/",
+  },
+  {
+    title: `"Save the Planet" Project`,
+    tags: "Marketing Campaign",
+    description:
+      "Telecommunication company that provides internet and television for thousands users.",
+    year: 2020,
+    src: "/images/playground/save-the-planet.png",
+    url: "/",
+  },
+  {
+    title: "02.20",
+    tags: "Neumorphism, UI components",
+    description:
+      "Telecommunication company that provides internet and television for thousands users.",
+    year: 2020,
+    src: "/images/playground/neumorphism.png",
+    url: "/",
+  },
+  {
+    title: "Samsung Earbuds mallony",
+    tags: "Desktop, B2C, Concept ",
+    description:
+      "Telecommunication company that provides internet and television for thousands users.",
+    year: 2022,
+    src: "/images/playground/samsung.png",
+    url: "/",
   },
 ];
 
