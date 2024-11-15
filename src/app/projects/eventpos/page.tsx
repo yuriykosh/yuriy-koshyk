@@ -20,7 +20,10 @@ export default function ProjectEventPOS() {
   return (
     <TOCContext.Provider value={values}>
       <main>
-        <IntroImage url="/images/event-pos.png" />
+        <IntroImage
+          url="/images/event-pos.png"
+          alt="eventPOS case study hero picture"
+        />
         <article className="mt-2">
           <motion.div
             className="grid grid-cols-1 lg:grid-cols-12 px-6 leading-tight tracking-tight font-medium text-4xl sm:text-5xl"

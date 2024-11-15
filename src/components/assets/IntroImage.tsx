@@ -6,9 +6,10 @@ import { useEffect, useRef, useState } from "react";
 
 interface IntroImageProps {
   url: string;
+  alt: string;
 }
 
-const IntroImage: React.FC<IntroImageProps> = ({ url }) => {
+const IntroImage: React.FC<IntroImageProps> = ({ url, alt }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   const [isReady, setIsReady] = useState(false);
@@ -36,7 +37,7 @@ const IntroImage: React.FC<IntroImageProps> = ({ url }) => {
           sizes="100vw"
           quality={100}
           priority
-          alt="eventPOS case study hero picture"
+          alt={alt}
           style={{ objectFit: "cover" }}
         />
       </motion.div>

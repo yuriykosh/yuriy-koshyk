@@ -17,7 +17,10 @@ export default function ProjectGlieseOne() {
   return (
     <TOCContext.Provider value={values}>
       <main>
-        <IntroImage url="/images/gliese1.jpg" />
+        <IntroImage
+          url="/images/gliese1.jpg"
+          alt="Gliese1 case study hero picture"
+        />
         <article className="mt-2">
           <motion.div
             className="grid grid-cols-1 lg:grid-cols-12 px-6 leading-tight tracking-tight font-medium text-4xl sm:text-5xl"
@@ -213,7 +216,7 @@ export default function ProjectGlieseOne() {
 
               <TrackedSection
                 sectionId={2}
-                tocTitle="Phase 2: Competitor Analysis & Functionality Research"
+                tocTitle="Phase 2: Definition"
                 className="mb-32 text-xl md:text-2xl font-medium leading-normal"
               >
                 {/* -- Competitor Analysis & Functionality Research -- */}
@@ -235,23 +238,22 @@ export default function ProjectGlieseOne() {
                   <p className="mb-4">
                     This analysis led to the following findings:
                   </p>
-                  <ul className="flex flex-col gap-4 py-2 mb-8 text-xl md:text-2xl font-medium leading-normal">
+                  <ul className="flex flex-col gap-4 py-2 mb-12 text-lg md:text-xl font-medium leading-normal">
                     {[
                       "Many products fail to provide users with full autonomy.",
                       "Some competitors have significant issues preventing errors.",
                       "Several systems lack flexibility, which hinders efficiency.",
                     ].map((item, i) => (
-                      <li
-                        key={i}
-                        className="flex items-center gap-3 px-4 py-1 w-fit rounded-full border border-fg-secondary/80"
-                      >
-                        <div className="flex items-center justify-center w-[0.6ch] h-[0.6ch] rounded-full bg-fg-secondary opacity-80"></div>
+                      <li key={i} className="flex items-baseline gap-3 w-fit">
+                        <div className="flex">
+                          <div className="w-2 h-2 -translate-y-0.5 rounded-full bg-fg-secondary opacity-60" />
+                        </div>
 
                         {item}
                       </li>
                     ))}
                   </ul>
-                  <p className="mb-8">
+                  <p className="">
                     These insights were crucial in differentiating our product
                     by focusing on user autonomy, flexibility, and error
                     prevention.
@@ -289,25 +291,23 @@ export default function ProjectGlieseOne() {
                     </div>
                     <div className="flex flex-col gap-2 p-2 py-4">
                       <h4 className="text-sky-500">Pain Points:</h4>
-                      <ul className="flex flex-col gap-4 py-2 text-xl md:text-2xl font-medium leading-normal">
+                      <ul className="flex flex-col gap-8 py-2 text-l md:text-xl font-medium leading-normal">
                         {[
                           "Issues with automating workflows when dealing with external clients.",
                           "The need for manual input in systems despite automation.",
+                          "Difficulty in switching to a new system due to the complexity and cost of migration.",
                         ].map((item, i) => (
                           <li
                             key={i}
-                            className="flex items-center gap-3 px-4 py-1 w-fit rounded-full border border-fg-secondary/80"
+                            className="flex items-baseline gap-3 w-fit"
                           >
-                            <div className="flex items-center justify-center w-[0.6ch] h-[0.6ch] rounded-full bg-fg-secondary opacity-60" />
+                            <div className="flex">
+                              <div className="w-2 h-2 -translate-y-0.5 rounded-full bg-fg-secondary opacity-60" />
+                            </div>
 
                             {item}
                           </li>
                         ))}
-                        <li className="flex items-baseline gap-3 px-4 pt-4 pb-2 w-fit text-pretty rounded-full border border-fg-secondary/80">
-                          <div className="flex items-center justify-center w-[0.6ch] h-[0.6ch] rounded-full bg-fg-secondary opacity-60" />
-                          Difficulty in switching to a new system due to the
-                          complexity and cost of migration.
-                        </li>
                       </ul>
                     </div>
                   </div>
@@ -433,15 +433,22 @@ export default function ProjectGlieseOne() {
                     alt="Value-Proposition Canvas"
                   />
 
-                  <p className="mb-8">Our findings showed that:</p>
-                  <p className="mb-4">
-                    The product&#39;s core features (payment reconciliation,
-                    report generation) aligned with user needs.
-                  </p>
-                  <p className="mb-8">
-                    It addressed pain points such as manual reporting and lack
-                    of transaction status visibility.
-                  </p>
+                  <p className="mb-4">Our findings showed that:</p>
+                  <ul className="flex flex-col gap-4 py-2 mb-12 text-lg md:text-xl font-medium leading-normal">
+                    {[
+                      "The product's core features (payment reconciliation, report generation) aligned with user needs.",
+                      "It addressed pain points such as manual reporting and lack of transaction status visibility.",
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-baseline gap-3 w-fit">
+                        <div className="flex">
+                          <div className="w-2 h-2 -translate-y-0.5 rounded-full bg-sky-500 opacity-60" />
+                        </div>
+
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+
                   <p className="">
                     We conducted a survey to triangulate our qualitative
                     findings, confirming the presence of similar issues among
@@ -452,7 +459,7 @@ export default function ProjectGlieseOne() {
 
               <TrackedSection
                 sectionId={3}
-                tocTitle="Phase 3: Ideation & Prototyping"
+                tocTitle="Phase 3: Development"
                 className="mb-32 text-xl md:text-2xl font-medium leading-normal"
               >
                 {/* -- Ideation & Prototyping -- */}
@@ -536,7 +543,7 @@ export default function ProjectGlieseOne() {
 
               <TrackedSection
                 sectionId={4}
-                tocTitle="Phase 4: Testing & Iteration"
+                tocTitle="Phase 4: Delivery"
                 className="mb-32 text-xl md:text-2xl font-medium leading-normal"
               >
                 <TopicTitle title="Phase 4: Testing & Iteration" />
@@ -619,7 +626,7 @@ export default function ProjectGlieseOne() {
 
                   <SinglePicture
                     url="/images/gliese1/onboarding.png"
-                    alt="image"
+                    alt="Onboarding screens"
                   />
                 </div>
 
@@ -634,7 +641,7 @@ export default function ProjectGlieseOne() {
                   </p>
                   <SinglePicture
                     url="/images/gliese1/transactions.png"
-                    alt="image"
+                    alt="Transactions screens"
                   />
                 </div>
 
@@ -648,7 +655,7 @@ export default function ProjectGlieseOne() {
                   </p>
                   <SinglePicture
                     url="/images/gliese1/manual-journal.png"
-                    alt="image"
+                    alt="Manual Journal screens"
                   />
                 </div>
 
@@ -662,7 +669,7 @@ export default function ProjectGlieseOne() {
                   </p>
                   <SinglePicture
                     url="/images/gliese1/banking.png"
-                    alt="image"
+                    alt="Banking screens"
                   />
                 </div>
 
@@ -676,11 +683,11 @@ export default function ProjectGlieseOne() {
                   </p>
                   <SinglePicture
                     url="/images/gliese1/reconciliation-1.png"
-                    alt="image"
+                    alt="Reconciliation screens"
                   />
                   <SinglePicture
                     url="/images/gliese1/reconciliation-2.png"
-                    alt="image"
+                    alt="Reconciliation screens"
                   />
                 </div>
 
@@ -694,7 +701,7 @@ export default function ProjectGlieseOne() {
                   </p>
                   <SinglePicture
                     url="/images/gliese1/projects.png"
-                    alt="image"
+                    alt="Projects screens"
                   />
                 </div>
 
@@ -707,7 +714,10 @@ export default function ProjectGlieseOne() {
                     allowing team leads and managers to assign roles and monitor
                     team members&#39; access to financial data.
                   </p>
-                  <SinglePicture url="/images/gliese1/team.png" alt="image" />
+                  <SinglePicture
+                    url="/images/gliese1/team.png"
+                    alt="Team screens"
+                  />
                 </div>
               </TrackedSection>
 
@@ -727,7 +737,7 @@ export default function ProjectGlieseOne() {
                 </p>
                 <SinglePicture
                   url="/images/gliese1/conclusion.png"
-                  alt="image"
+                  alt="Gliese1 is on the way to the market"
                 />
                 <ul className="p-2 rounded-2xl border border-fg-secondary/80">
                   {[
