@@ -46,7 +46,7 @@ export const projects = [
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2022,
     src: "dream-net.png",
-    url: "/projects",
+    url: "/playground",
     color: "#88A28D",
   },
 ];
@@ -60,7 +60,6 @@ export const playgroundItems = [
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2022,
     src: "/images/dream-net.png",
-    url: "/",
   },
   {
     title: "ABROY Law Firm",
@@ -68,7 +67,7 @@ export const playgroundItems = [
     description: "Finance SaaS solution for all kinds of businesses.",
     year: 2024,
     src: "/images/playground/abroy.png",
-    url: "/",
+    url: "https://www.behance.net/gallery/146846905/UXUI-Design-Branding-Case-Study-(ABROY-Consult)",
   },
   {
     title: "Mallony Urban Brand",
@@ -77,7 +76,6 @@ export const playgroundItems = [
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2020,
     src: "/images/playground/mallony.png",
-    url: "/",
   },
   {
     title: `"Save the Planet" Project`,
@@ -86,7 +84,15 @@ export const playgroundItems = [
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2020,
     src: "/images/playground/save-the-planet.png",
-    url: "/",
+  },
+  {
+    title: "Sony",
+    tags: "Marketing Plan",
+    description:
+      "Telecommunication company that provides internet and television for thousands users.",
+    year: 2020,
+    src: "/images/playground/sony-marketing-plan.png",
+    url: "/files/playground/sony-marketing-plan.pdf",
   },
   {
     title: "02.20",
@@ -95,7 +101,6 @@ export const playgroundItems = [
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2020,
     src: "/images/playground/neumorphism.png",
-    url: "/",
   },
   {
     title: "Samsung Earbuds mallony",
@@ -104,7 +109,6 @@ export const playgroundItems = [
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2022,
     src: "/images/playground/samsung.png",
-    url: "/",
   },
 ];
 
