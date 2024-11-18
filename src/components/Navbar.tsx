@@ -13,7 +13,7 @@ const Navbar: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
       <Link
         href={"/"}
         onClick={() => setMenuOpen(false)}
-        className="flex items-baseline gap-1 col-span-1 md:col-span-3 w-fit text-sm text-bg-primary font-medium"
+        className="flex items-baseline gap-1 col-span-1 md:col-span-3 w-fit text-sm text-bg-primary font-medium outline-offset-4 focus:outline-2 focus:outline-dashed active:outline-none"
       >
         Yuriy Koshyk
         <svg

@@ -36,7 +36,7 @@ export const projects = [
       "Software development agency specializes in creating products for the payment, fintech, gamedev and other fields.",
     year: 2023,
     src: "heimdal-data.jpg",
-    url: "/projects",
+    url: "/projects/heimdal-data-aps",
     color: "#B62429",
   },
   {
@@ -68,6 +68,7 @@ export const playgroundItems = [
     year: 2024,
     src: "/images/playground/abroy.png",
     url: "https://www.behance.net/gallery/146846905/UXUI-Design-Branding-Case-Study-(ABROY-Consult)",
+    color: "bright",
   },
   {
     title: "Mallony Urban Brand",
@@ -78,12 +79,24 @@ export const playgroundItems = [
     src: "/images/playground/mallony.png",
   },
   {
+    title: "Motion Challenge",
+    tags: "Animation, UI components",
+    description:
+      "Telecommunication company that provides internet and television for thousands users.",
+    year: 2022,
+    src: "/images/playground/motion-challenge.png",
+    url: "https://www.figma.com/proto/2BsfrBrmbJscL4zaR8zCYH/09.%2BExercise%2B-%2BDelight?page-id=108%3A2&node-id=201-114&node-type=canvas&viewport=685%2C706%2C0.32&t=uTpf0BBNYsO1wbmL-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=201%3A3&show-proto-sidebar=1",
+    color: "dark",
+  },
+  {
     title: `"Save the Planet" Project`,
     tags: "Marketing Campaign",
     description:
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2020,
     src: "/images/playground/save-the-planet.png",
+    url: "/files/playground/save-the-planet.pdf",
+    color: "light",
   },
   {
     title: "Sony",
@@ -93,6 +106,7 @@ export const playgroundItems = [
     year: 2020,
     src: "/images/playground/sony-marketing-plan.png",
     url: "/files/playground/sony-marketing-plan.pdf",
+    color: "dark",
   },
   {
     title: "02.20",
@@ -101,6 +115,15 @@ export const playgroundItems = [
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2020,
     src: "/images/playground/neumorphism.png",
+  },
+  {
+    title: "PlayStation 5",
+    tags: "Desktop, B2C, Concept",
+    description: "PlayStation 5 Concept",
+    year: 2020,
+    src: "/images/playground/ps5-concept.png",
+    url: "https://www.figma.com/proto/k0WXsbP51uICWSIag5MesT/Landing-Page-Sony-(Concept)?page-id=401%3A2&node-id=410-0&node-type=canvas&viewport=1712%2C-1422%2C0.21&t=KEUBGBN74cEukw9j-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=410%3A0",
+    color: "dark",
   },
   {
     title: "Samsung Earbuds mallony",

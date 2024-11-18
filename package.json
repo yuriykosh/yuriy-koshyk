@@ -16,8 +16,7 @@
     "react-dom": "^18",
     "react-live-clock": "^6.1.23-beta",
     "react-scroll-up": "^1.4.0",
-    "typed.js": "^2.1.0",
-    "vivus": "^0.4.6"
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "@types/node": "^20",

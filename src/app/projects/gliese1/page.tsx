@@ -10,6 +10,7 @@ import TrackedSection from "@/components/TrackedSection";
 import TopicTitle from "@/components/projects/gliese1/TopicTitle";
 import SinglePicture from "@/components/projects/gliese1/SinglePicture";
 import DoublePicture from "@/components/projects/gliese1/DoublePicture";
+import CarbonCheckmarkOutline from "@/components/assets/icons/CarbonCheckmarkOutline";
 
 export default function ProjectGlieseOne() {
   const { values } = useTOCContextValues();
@@ -115,20 +116,7 @@ export default function ProjectGlieseOne() {
                       className="flex items-center gap-2 pl-2 pr-4 py-1 w-fit rounded-full border border-fg-secondary/80"
                     >
                       <div className="flex items-center justify-center w-[1.3ch] h-[1.3ch] text-sky-500">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          className="w-full h-full"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="m14 21.414l-5-5.001L10.413 15L14 18.586L21.585 11L23 12.415z"
-                          ></path>
-                          <path
-                            fill="currentColor"
-                            d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2m0 26a12 12 0 1 1 12-12a12 12 0 0 1-12 12"
-                          ></path>
-                        </svg>
+                        <CarbonCheckmarkOutline />
                       </div>
 
                       {item}
