@@ -6,6 +6,7 @@ import { ReactLenis } from "@/utils/lenis";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { CSPostHogProvider } from "@/providers/ph-provider";
 
 const satoshi = localFont({
   src: [
@@ -35,9 +36,11 @@ export default function RootLayout({
     <html lang="en">
       <ReactLenis root>
         <body className={`${satoshi.className} antialiased`}>
-          <Header />
-          {children}
-          <Footer />
+          <CSPostHogProvider>
+            <Header />
+            {children}
+            <Footer />
+          </CSPostHogProvider>
         </body>
       </ReactLenis>
     </html>

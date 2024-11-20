@@ -190,7 +190,7 @@ export const stack = [
       "React",
       "Next.js",
       "GSAP",
-      "Famer Motion",
+      "Framer Motion",
       "Tailwind",
     ],
     color: "#CA2CCD",
