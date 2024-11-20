@@ -13,17 +13,17 @@ import GoalsList from "@/components/projects/heimdal-data-aps/GoalsList";
 import Wireframes from "@/components/projects/heimdal-data-aps/Wireframes";
 import DevTech from "@/components/projects/heimdal-data-aps/DevTech";
 import Results from "@/components/projects/heimdal-data-aps/Results";
-import PostHogPageView from "@/components/posthog/post-hog-page-view";
-import { Suspense } from "react";
+// import { Suspense } from "react";
+// import PostHogPageView from "@/components/posthog/post-hog-page-view";
 
 export default function ProjectHeimdalDataApS() {
   const { values } = useTOCContextValues();
 
   return (
     <>
-      <Suspense fallback={null}>
+      {/* <Suspense fallback={null}>
         <PostHogPageView />
-      </Suspense>
+      </Suspense> */}
       <TOCContext.Provider value={values}>
         <main>
           <IntroImage

@@ -5,15 +5,15 @@ import Divider from "@/components/assets/Divider";
 import { textRevealMotion, dividerMotion } from "@/utils/animations";
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
-import PostHogPageView from "@/components/posthog/post-hog-page-view";
+// import { Suspense } from "react";
+// import PostHogPageView from "@/components/posthog/post-hog-page-view";
 
 export default function About() {
   return (
     <>
-      <Suspense fallback={null}>
+      {/* <Suspense fallback={null}>
         <PostHogPageView />
-      </Suspense>
+      </Suspense> */}
       <main>
         <motion.section
           className="w-full mt-[35vh] px-6 text-4xl md:text-[3.5rem] leading-tight tracking-tight font-medium"

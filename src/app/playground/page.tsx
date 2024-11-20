@@ -4,15 +4,15 @@ import Divider from "@/components/assets/Divider";
 import { dividerMotion, textRevealMotion } from "@/utils/animations";
 import { playgroundItems } from "@/utils/data";
 import Item from "@/components/playground/Item";
-import { Suspense } from "react";
-import PostHogPageView from "@/components/posthog/post-hog-page-view";
+// import { Suspense } from "react";
+// import PostHogPageView from "@/components/posthog/post-hog-page-view";
 
 export default function Playground() {
   return (
     <>
-      <Suspense fallback={null}>
+      {/* <Suspense fallback={null}>
         <PostHogPageView />
-      </Suspense>
+      </Suspense> */}
       <main>
         <motion.section
           className="w-full mt-[35vh] px-6 text-4xl md:text-[3.5rem] leading-tight tracking-tight font-medium"

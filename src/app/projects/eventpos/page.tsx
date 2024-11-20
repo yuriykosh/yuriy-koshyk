@@ -11,8 +11,8 @@ import Divider from "@/components/assets/Divider";
 import DesignProcessStages from "@/components/projects/eventpos/DesignProcessStages";
 import Goals from "@/components/projects/eventpos/Goals";
 import KeyFeatures from "@/components/projects/eventpos/KeyFeatures";
-import { Suspense } from "react";
-import PostHogPageView from "@/components/posthog/post-hog-page-view";
+// import { Suspense } from "react";
+// import PostHogPageView from "@/components/posthog/post-hog-page-view";
 
 export default function ProjectEventPOS() {
   const { values } = useTOCContextValues();
@@ -21,9 +21,9 @@ export default function ProjectEventPOS() {
 
   return (
     <>
-      <Suspense fallback={null}>
+      {/* <Suspense fallback={null}>
         <PostHogPageView />
-      </Suspense>
+      </Suspense> */}
       <TOCContext.Provider value={values}>
         <main>
           <IntroImage

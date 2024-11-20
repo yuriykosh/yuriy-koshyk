@@ -1,15 +1,15 @@
-import IntroVideo from "@/components/assets/IntroVideo";
-import PostHogPageView from "@/components/posthog/post-hog-page-view";
+// import { Suspense } from "react";
+// import PostHogPageView from "@/components/posthog/post-hog-page-view";
 import { projects } from "@/utils/data";
+import IntroVideo from "@/components/assets/IntroVideo";
 import Link from "next/link";
-import { Suspense } from "react";
 
 export default function Projects() {
   return (
     <>
-      <Suspense fallback={null}>
+      {/* <Suspense fallback={null}>
         <PostHogPageView />
-      </Suspense>
+      </Suspense> */}
       <main className="h-screen w-full p-6">
         <IntroVideo url="https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/bubbles" />
         <h1 className="mb-2 font-medium">Projects:</h1>

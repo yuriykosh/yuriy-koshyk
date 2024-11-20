@@ -11,17 +11,17 @@ import TopicTitle from "@/components/projects/gliese1/TopicTitle";
 import SinglePicture from "@/components/projects/gliese1/SinglePicture";
 import DoublePicture from "@/components/projects/gliese1/DoublePicture";
 import CarbonCheckmarkOutline from "@/components/assets/icons/CarbonCheckmarkOutline";
-import { Suspense } from "react";
-import PostHogPageView from "@/components/posthog/post-hog-page-view";
+// import { Suspense } from "react";
+// import PostHogPageView from "@/components/posthog/post-hog-page-view";
 
 export default function ProjectGlieseOne() {
   const { values } = useTOCContextValues();
 
   return (
     <>
-      <Suspense fallback={null}>
+      {/* <Suspense fallback={null}>
         <PostHogPageView />
-      </Suspense>
+      </Suspense> */}
       <TOCContext.Provider value={values}>
         <main>
           <IntroImage
