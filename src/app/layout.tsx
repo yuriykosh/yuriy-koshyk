@@ -7,8 +7,8 @@ import { ReactLenis } from "@/utils/lenis";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { PHProvider } from "@/providers/ph-provider";
-import { Suspense } from "react";
-import PostHogPageView from "@/components/posthog/post-hog-page-view";
+// import { Suspense } from "react";
+// import PostHogPageView from "@/components/posthog/post-hog-page-view";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const satoshi = localFont({
@@ -41,9 +41,6 @@ export default function RootLayout({
         <body className={`${satoshi.className} antialiased`}>
           <PHProvider>
             <Header />
-            <Suspense fallback={null}>
-              <PostHogPageView />
-            </Suspense>
             <SpeedInsights />
             {children}
             <Footer />
