@@ -6,7 +6,9 @@ import { ReactLenis } from "@/utils/lenis";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { CSPostHogProvider } from "@/providers/ph-provider";
+import { PHProvider } from "@/providers/ph-provider";
+import { Suspense } from "react";
+import PostHogPageView from "@/components/posthog/post-hog-page-view";
 
 const satoshi = localFont({
   src: [
@@ -36,11 +38,14 @@ export default function RootLayout({
     <html lang="en">
       <ReactLenis root>
         <body className={`${satoshi.className} antialiased`}>
-          <CSPostHogProvider>
+          <PHProvider>
             <Header />
+            <Suspense fallback={null}>
+              <PostHogPageView />
+            </Suspense>
             {children}
             <Footer />
-          </CSPostHogProvider>
+          </PHProvider>
         </body>
       </ReactLenis>
     </html>
