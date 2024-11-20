@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { PHProvider } from "@/providers/ph-provider";
 import { Suspense } from "react";
 import PostHogPageView from "@/components/posthog/post-hog-page-view";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const satoshi = localFont({
   src: [
@@ -43,6 +44,7 @@ export default function RootLayout({
             <Suspense fallback={null}>
               <PostHogPageView />
             </Suspense>
+            <SpeedInsights />
             {children}
             <Footer />
           </PHProvider>
