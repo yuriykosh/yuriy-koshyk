@@ -28,7 +28,7 @@ const Item: React.FC<ItemProps> = ({
       <Link
         href={sourceLink}
         className="block relative py-2 px-6 
-        bg-bg-primary hover:bg-bg-secondary focus:bg-bg-secondary cursor-alias transition-colors duration-200 hover:transition-colors hover:duration-200 focus:transition-colors focus:duration-200 -outline-offset-1"
+        bg-bg-primary hover:bg-bg-secondary focus-visible:bg-bg-secondary cursor-alias transition-colors duration-200 hover:transition-colors hover:duration-200 focus-visible:transition-colors focus-visible:duration-200 -outline-offset-1"
       >
         <ul className="md:grid md:grid-cols-12 gap-6 py-6">
           <li className="max-md:mb-6 max-md:text-fg-primary">{index}</li>

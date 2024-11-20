@@ -20,14 +20,14 @@ export const projects = [
     linkStyles: "cursor-alias",
   },
   {
-    title: "EventPOS",
-    tags: "iOS & Android, B2C SaaS",
+    title: "Gios School",
+    tags: "B2B, B2C, EdTech",
     description:
-      "A cutting-edge mobile payment app crafted specifically for events.",
-    year: 2023,
-    src: "event-pos.png",
-    url: "/projects/eventpos",
-    color: "#C2491D",
+      "AI-powered interactive platform for learning mathematics and developing critical thinking skills among school students.",
+    year: 2024,
+    src: "gios-school.png",
+    url: "/projects/gios-school",
+    color: "#BBACAF",
   },
   {
     title: "Heimdal Data",
@@ -40,15 +40,26 @@ export const projects = [
     color: "#B62429",
   },
   {
-    title: "DreamNet Telecom.",
-    tags: "iOS, B2C SaaS",
+    title: "EventPOS",
+    tags: "iOS & Android, B2C SaaS",
     description:
-      "Telecommunication company that provides internet and television for thousands users.",
-    year: 2022,
-    src: "dream-net.png",
-    url: "/playground",
-    color: "#88A28D",
+      "A cutting-edge mobile payment app crafted specifically for events.",
+    year: 2023,
+    src: "event-pos.png",
+    url: "/projects/eventpos",
+    color: "#C2491D",
   },
+
+  // {
+  //   title: "DreamNet Telecom.",
+  //   tags: "iOS, B2C SaaS",
+  //   description:
+  //     "Telecommunication company that provides internet and television for thousands users.",
+  //   year: 2022,
+  //   src: "dream-net.png",
+  //   url: "/playground",
+  //   color: "#88A28D",
+  // },
 ];
 
 // playgroundData

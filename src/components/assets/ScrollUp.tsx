@@ -25,7 +25,7 @@ const ScrollUp: React.FC<ScrollUpProps> = ({ className }) => {
           type="button"
           ref={inputRef}
           onFocus={handleFocus}
-          className="w-fit opacity-60 hover:opacity-100 focus:opacity-100 transition-opacity outline-offset-4 focus:outline-2 focus:outline-dashed"
+          className="w-fit opacity-60 hover:opacity-100 focus-visible:opacity-100 transition-opacity outline-offset-4 focus-visible:outline-2 focus-visible:outline-dashed"
         >
           Back to Top
         </button>

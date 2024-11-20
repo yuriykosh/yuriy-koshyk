@@ -1,219 +1,545 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { dividerMotion, textRevealMotion } from "@/utils/animations";
+import { TOCContext, useTOCContextValues } from "@/utils/TOCContext";
+import Divider from "@/components/assets/Divider";
+import IntroImage from "@/components/assets/IntroImage";
 import TableOfContents from "@/components/TableOfContents";
 import TrackedSection from "@/components/TrackedSection";
-import { TOCContext, useTOCContextValues } from "@/utils/TOCContext";
+import TopicTitle from "@/components/projects/gliese1/TopicTitle";
+import SinglePicture from "@/components/projects/gliese1/SinglePicture";
+// import DoublePicture from "@/components/projects/gliese1/DoublePicture";
+import CarbonCheckmarkOutline from "@/components/assets/icons/CarbonCheckmarkOutline";
+import Image from "next/image";
+import DoublePicture from "@/components/projects/gliese1/DoublePicture";
 
 export default function ProjectGiosSchool() {
   const { values } = useTOCContextValues();
 
   return (
     <TOCContext.Provider value={values}>
-      <main className="grid grid-cols-[10%_1fr_10%] lg:grid-cols-[15%_1fr_15%] mt-20 mb-40">
-        <TableOfContents />
-        <article className="min-h-screen mx-auto max-w-[80ch]">
-          <h1 className="leading-tight tracking-tight font-medium text-4xl">
-            Introducing SynapseGPT: The Next Generation AI Foundation Model
-          </h1>
-          <section className="my-8">
-            <p className="leading-normal py-2 text-neutral-900">
-              We are thrilled to announce the launch of SynapseGPT, our
-              groundbreaking AI foundation model that promises to redefine the
-              landscape of artificial intelligence. SynapseGPT represents the
-              culmination of years of cutting-edge research and development in
-              deep learning and natural language processing. This model is
-              designed to push the boundaries of what AI can achieve, offering
-              unprecedented capabilities and flexibility across a multitude of
-              applications.
-            </p>
-            <p className="leading-normal py-2 text-neutral-900">
-              Our team has worked tirelessly to build a model that not only
-              meets the current needs of various industries but also anticipates
-              future advancements. SynapseGPT is poised to become an
-              indispensable tool for businesses, researchers, and developers
-              alike. Whether you are looking to enhance customer interactions,
-              automate complex processes, or generate insightful data analyses,
-              SynapseGPT is equipped to deliver exceptional results.
-            </p>
-          </section>
-          <TrackedSection
-            sectionId={0}
-            tocTitle="Unmatched Capabilities"
-            isFirst
-            className="my-8"
+      <main>
+        <IntroImage
+          url="/images/gios-school.png"
+          alt="Gios School case study hero picture"
+        />
+        <article className="mt-2">
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-12 px-6 leading-tight tracking-tight font-medium text-4xl sm:text-5xl"
+            initial="initial"
+            animate="animate"
           >
-            <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
-              Unmatched Capabilities and Versatility
-            </h2>
-            <p className="leading-normal py-2 text-neutral-900">
-              SynapseGPT sets a new standard for versatility in AI, offering
-              capabilities that go far beyond traditional language processing.
-              At its core, SynapseGPT excels in language understanding, enabling
-              it to grasp nuanced meanings and contextual subtleties across
-              different languages and dialects. This makes it an invaluable
-              asset for global companies that operate in diverse linguistic
-              environments.
-            </p>
-            <p className="leading-normal py-2 text-neutral-900">
-              In addition to its language processing prowess, SynapseGPT is a
-              powerful tool for content generation. It can produce high-quality,
-              coherent, and contextually relevant content tailored to any
-              purpose, whether it&#39;s crafting engaging marketing copy,
-              creating detailed technical documentation, or writing personalized
-              emails. This versatility makes SynapseGPT a vital resource for
-              content creators, marketers, and communicators.
-            </p>
-            <p className="leading-normal py-2 text-neutral-900">
-              Furthermore, SynapseGPT&#39;s data analysis capabilities allow
-              users to extract meaningful insights from complex datasets. By
-              leveraging advanced analytical tools, businesses can uncover
-              hidden patterns, predict future trends, and make data-driven
-              decisions with confidence. SynapseGPT&#39;s ability to process and
-              integrate data from various sources, including text, images, and
-              audio, ensures a comprehensive approach to problem-solving.
-            </p>
-            <p className="leading-normal py-2 text-neutral-900">
-              Another notable feature of SynapseGPT is its proficiency in
-              powering conversational agents. It enables intelligent, human-like
-              interactions in chatbots and virtual assistants, significantly
-              enhancing customer service experiences. By understanding and
-              responding to user queries with accuracy and empathy, SynapseGPT
-              helps businesses build stronger relationships with their
-              customers.
-            </p>
-          </TrackedSection>
-          <TrackedSection
-            sectionId={1}
-            tocTitle="Cutting-Edge Technology"
-            className="my-8"
-          >
-            <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
-              Cutting-Edge Technology Under the Hood
-            </h2>
-            <p className="leading-normal py-2 text-neutral-900">
-              The power of SynapseGPT lies in its state-of-the-art architecture
-              and training methodology. At its foundation is a highly optimized
-              version of the transformer architecture, which ensures superior
-              performance and scalability. This architecture allows SynapseGPT
-              to handle vast amounts of data and complex tasks with ease, making
-              it suitable for large-scale deployments.
-            </p>
-            <p className="leading-normal py-2 text-neutral-900">
-              SynapseGPT also features multi-modal integration, enabling it to
-              seamlessly process and combine data from various sources. This
-              capability is particularly valuable in applications that require a
-              holistic approach, such as analyzing customer feedback across
-              different channels or integrating visual and textual information
-              for comprehensive insights.
-            </p>
-            <p className="leading-normal py-2 text-neutral-900">
-              One of the standout features of SynapseGPT is its ability to be
-              fine-tuned and customized. Businesses and developers can easily
-              adapt the model to meet specific industry needs with minimal data.
-              Whether you&#39;re in healthcare, finance, education, or
-              entertainment, SynapseGPT can be tailored to provide solutions
-              that address your unique challenges and requirements.
-            </p>
-          </TrackedSection>
-          <TrackedSection
-            sectionId={2}
-            tocTitle="Applications and Impact"
-            className="my-8"
-          >
-            <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
-              Real-World Applications and Impact
-            </h2>
-            <p className="leading-normal py-2 text-neutral-900">
-              SynapseGPT is already making a significant impact across a wide
-              range of industries. In healthcare, for example, it enhances
-              diagnostic accuracy and patient care by providing AI-driven
-              medical insights and predictive analytics. By analyzing patient
-              data and medical literature, SynapseGPT can assist healthcare
-              professionals in making more informed decisions and identifying
-              potential health risks early on.
-            </p>
-            <p className="leading-normal py-2 text-neutral-900">
-              In the financial sector, SynapseGPT streamlines operations,
-              detects fraud, and offers personalized financial advice. Its
-              ability to analyze large datasets in real-time allows financial
-              institutions to identify fraudulent activities more quickly and
-              accurately. Additionally, SynapseGPT can provide tailored
-              financial recommendations based on individual customer profiles,
-              improving customer satisfaction and loyalty.
-            </p>
-            <p className="leading-normal py-2 text-neutral-900">
-              The education industry also benefits from SynapseGPT&#39;s
-              capabilities. It personalizes learning experiences, automates
-              administrative tasks, and supports educators with AI-generated
-              content. By understanding students&#39; unique learning needs and
-              preferences, SynapseGPT helps create customized educational
-              materials and learning paths, enhancing the overall learning
-              experience.
-            </p>
-            <p className="leading-normal py-2 text-neutral-900">
-              In the entertainment industry, SynapseGPT revolutionizes content
-              creation. It can write scripts, generate music, and create
-              immersive virtual environments, opening up new possibilities for
-              creative professionals. By leveraging AI to handle repetitive and
-              time-consuming tasks, artists and creators can focus on what they
-              do best: creating compelling and original content.
-            </p>
-          </TrackedSection>
-          <TrackedSection sectionId={3} tocTitle="Ethical AI" className="my-8">
-            <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
-              Our Commitment to Ethical AI
-            </h2>
-            <p className="leading-normal py-2 text-neutral-900">
-              At [Company Name], we understand that with great power comes great
-              responsibility. The development of SynapseGPT has been guided by a
-              strong emphasis on ethical considerations. We are committed to
-              ensuring that our AI solutions are fair, transparent, and
-              accountable.
-            </p>
-            <p className="leading-normal py-2 text-neutral-900">
-              One of our primary goals is to mitigate biases in AI outputs. We
-              have implemented advanced techniques to detect and reduce biases,
-              ensuring that SynapseGPT provides fair and equitable results. This
-              is particularly important in applications that impact people&#39;s
-              lives, such as hiring decisions, loan approvals, and medical
-              diagnoses.
-            </p>
-            <p className="leading-normal py-2 text-neutral-900">
-              We also prioritize data privacy and security. SynapseGPT adheres
-              to the highest standards of data protection, ensuring that user
-              information is safeguarded at all times. We believe that
-              maintaining user trust is crucial to the success of our AI
-              solutions.
-            </p>
-            <p className="leading-normal py-2 text-neutral-900">
-              Transparency and accountability are also key components of our
-              ethical framework. We strive to promote transparency in AI
-              decision-making processes, making it easier for users to
-              understand how SynapseGPT arrives at its conclusions.
-              Additionally, we maintain accountability in the deployment of our
-              AI solutions, ensuring that any issues or concerns are promptly
-              addressed.
-            </p>
-          </TrackedSection>
-          <TrackedSection sectionId={4} tocTitle="" isLast className="my-8">
-            <h2 className="leading-tight tracking-tight font-medium text-xl mb-2">
-              A Future Powered by SynapseGPT
-            </h2>
-            <p className="leading-normal py-2 text-neutral-900">
-              The launch of SynapseGPT marks a significant milestone in our
-              journey towards creating intelligent systems that enhance human
-              capabilities and drive innovation. We are excited to see how
-              SynapseGPT will transform industries, create new opportunities,
-              and unlock the full potential of artificial intelligence.
-            </p>
-            <p className="leading-normal py-2 text-neutral-900">
-              We invite you to explore the possibilities with SynapseGPT and
-              join us in shaping the future of AI. Stay tuned for more updates
-              and insights into how SynapseGPT is making a difference across
-              various sectors. Together, let&#39;s harness the power of AI to
-              achieve greater heights and build a better tomorrow.
-            </p>
-          </TrackedSection>
+            <motion.h1
+              className="max-lg:hidden h-full col-span-3"
+              variants={textRevealMotion(0)}
+            >
+              Gios
+              <span className={`text-purple-500`}>School</span>
+            </motion.h1>
+            <div className="lg:col-span-9 flex flex-col gap-24">
+              <motion.h2 className="" variants={textRevealMotion(0.4)}>
+                Transforming Math Education: Engaging, Gamified, and Scalable
+                Solutions
+              </motion.h2>
+              <motion.div
+                className="w-full origin-left"
+                variants={dividerMotion}
+              >
+                <Divider />
+              </motion.div>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-[10%_1fr_10%] lg:grid-cols-[15%_1fr_5%]">
+            <TableOfContents />
+            <div className="min-h-screen mx-auto max-w-[80ch]">
+              <section className="mt-10 mb-32">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 py-2 mb-10 text-base font-medium text-purple-500">
+                  {[
+                    ["Sector:", "B2B, B2C, EdTech"],
+                    ["Team:", "5 designers"],
+                    ["My Role:", "Product Designer"],
+                    ["Project Time:", "1,5 month"],
+                  ].map(([title, info], i) => (
+                    <li key={i}>
+                      <p className="max-md:flex flex-col gap-1">
+                        <b className="text-sm font-medium text-fg-secondary mr-2">
+                          {title}
+                        </b>
+                        {info}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mb-8 text-xl md:text-2xl font-medium leading-normal">
+                  GIOS is an{" "}
+                  <span className="text-purple-500">
+                    AI-powered interactive platform
+                  </span>{" "}
+                  for learning mathematics and developing critical thinking
+                  skills among school students. It offers a comprehensive
+                  ecosystem with gamified TikTok-style content for children,
+                  progress tracking for parents, digital tools for teachers, and
+                  a marketplace for verified STEM tutors.
+                </p>
+                <p className="text-xl md:text-2xl font-medium leading-normal">
+                  Our mission is to create a brighter future for children by
+                  providing accessible, engaging, and interactive{" "}
+                  <span className="text-purple-500">
+                    education to millions of students
+                  </span>{" "}
+                  worldwide.
+                </p>
+              </section>
+
+              <TrackedSection
+                sectionId={0}
+                tocTitle="Project Overview"
+                isFirst
+                className="mb-32"
+              >
+                <TopicTitle title="Challenges Identified" />
+
+                <p className="text-xl md:text-2xl font-medium leading-normal mb-32">
+                  The current website does not effectively convert users or sell
+                  services. Users lack a clear understanding of the value
+                  proposition, leading to additional sales funnels and landing
+                  pages.
+                </p>
+
+                <TopicTitle title="Goals" />
+
+                <ul className="flex flex-col gap-4 py-2 mb-12 text-xl md:text-2xl font-medium leading-normal">
+                  {[
+                    "Redesign the website to highlight all product features in a user-friendly manner.",
+                    "Clearly communicate the value proposition to each target audience segment.",
+                    "Explore whether separate websites are needed for different directions (B2C, B2B, Marketplace).",
+                    "Enhance the platform’s simplicity and clarity to outperform competitors.",
+                  ].map((item, i) => (
+                    <li
+                      key={i}
+                      className="flex items-baseline gap-3 w-fit min-h-11"
+                    >
+                      {/* <div className="flex">
+                        <div className="w-2 h-2 -translate-y-0.5 rounded-full bg-green-500 opacity-60" />
+                      </div> */}
+                      <div className="flex items-center justify-center w-6 h-6 min-w-6 min-h-6 translate-y-1.5 md:translate-y-0.5 text-purple-500">
+                        <CarbonCheckmarkOutline />
+                      </div>
+
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </TrackedSection>
+
+              <TrackedSection
+                sectionId={1}
+                tocTitle="Design Process"
+                className="mb-40 text-xl md:text-2xl font-medium leading-normal"
+              >
+                <TopicTitle title="Our Design Process" />
+
+                <p className=" mb-16">
+                  We structured our work into seven critical phases, ensuring a
+                  systematic approach to solving problems and delivering
+                  impactful solutions:
+                </p>
+
+                <SinglePicture
+                  url="/images/gios-school/design-process.png"
+                  alt="Project stages graph"
+                />
+
+                <ul className="flex flex-col gap-2 p-4 rounded-2xl border border-fg-secondary/80">
+                  {[
+                    ["Kick-off Meeting:", "Understanding project goals."],
+                    ["Competitive Analysis:", "Identifying opportunities."],
+                    ["User Research & Persona:", "Empathy-driven design."],
+                    ["Customer Journey Mapping (CJM):", "Deep user insight."],
+                    ["Ideation (HMW):", "Generating creative solutions."],
+                    ["Prototyping:", "Testing concepts."],
+                    ["Design Iteration & Testing:", "Refining solutions."],
+                  ].map(([title, details], i) => (
+                    <li key={i} className="px-2 py-4 text-l md:text-xl">
+                      <p className="inline text-purple-500">{i + 1}.</p>{" "}
+                      <h4 className="inline ">{title} </h4>
+                      <p className="inline text-fg-secondary">{details}</p>
+                    </li>
+                  ))}
+                </ul>
+              </TrackedSection>
+
+              <TrackedSection
+                sectionId={2}
+                tocTitle="Identifying the Problem"
+                className="mb-32 text-xl md:text-2xl font-medium leading-normal"
+              >
+                <TopicTitle title="Identifying the Problem" />
+
+                <p className="mb-8">
+                  During our initial{" "}
+                  <span className="text-purple-500">Kick-off Meeting</span>, we
+                  collaborated closely with the stakeholders to uncover the
+                  unique selling points, user demographics, and primary
+                  challenges of GIOS.
+                </p>
+                <p className="mb-6">The key takeaways included:</p>
+
+                <ul className="flex flex-col gap-4 mb-8 py-2 text-xl md:text-2xl font-medium leading-normal">
+                  {[
+                    "The need to simplify user onboarding.",
+                    "Addressing trust issues for new users.",
+                    "Enhancing the discoverability of key features like courses and tutors.",
+                  ].map((item, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-3 pl-2 pr-4 py-1 w-fit rounded-full border border-sep-primary"
+                    >
+                      <div className="flex items-center justify-center w-[0.7ch] h-[0.7ch] bg-purple-300 rounded-full"></div>
+
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </TrackedSection>
+
+              <TrackedSection
+                sectionId={3}
+                tocTitle="Research Highlights"
+                className="mb-32 text-xl md:text-2xl font-medium leading-normal"
+              >
+                {/* -- Competitive Analysis -- */}
+                <div className="mb-40">
+                  <TopicTitle title="Competitive Analysis" />
+
+                  <p className="mb-16">
+                    We reviewed{" "}
+                    <span className="text-purple-500">15 competitors</span>{" "}
+                    (e.g., <span className="text-orange-400">Khan Academy</span>
+                    , <span className="text-orange-400">Prodigy</span>,{" "}
+                    <span className="text-orange-400">Duolingo</span>) to
+                    identify strengths, weaknesses, and opportunities in
+                    usability and design.
+                  </p>
+
+                  <SinglePicture
+                    url="/images/gios-school/competitor-analysis.png"
+                    alt="Competitor logos"
+                  />
+                </div>
+
+                {/* -- User Interviews -- */}
+                <div className="mb-40">
+                  <TopicTitle title="User Interviews" />
+
+                  <p className="mb-16">
+                    We conducted{" "}
+                    <span className="text-purple-500">10 user interviews</span>{" "}
+                    to understand pain points, such as:
+                  </p>
+
+                  <SinglePicture
+                    url="/images/gios-school/user-interviews.png"
+                    alt="User Interview screenshots"
+                  />
+
+                  <ul className="flex flex-col gap-4 mb-8 py-2 text-xl md:text-2xl font-medium leading-normal">
+                    {[
+                      "Difficulty finding trustworthy tutors.",
+                      "Lack of clarity in course offerings.",
+                      "Limited engagement with platform features.",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 pl-2 pr-4 py-1 w-fit rounded-full border border-sep-primary"
+                      >
+                        <div className="flex items-center justify-center w-[0.7ch] h-[0.7ch] bg-purple-300 rounded-full"></div>
+
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* -- User Persona -- */}
+                <div className="mb-40">
+                  <TopicTitle title="User Persona" />
+
+                  <p className="mb-16">
+                    Larisa, 45, mother of a 13-year-old student in Kyiv.
+                  </p>
+
+                  <SinglePicture
+                    url="/images/gios-school/persona.png"
+                    alt="Persona details"
+                  />
+
+                  <ul className="flex flex-col p-2 rounded-2xl border border-fg-secondary/80">
+                    {[
+                      ["Goals:", "Improve her child’s math skills."],
+                      [
+                        "Fears:",
+                        "Choosing ineffective additional education methods.",
+                      ],
+                      [
+                        "Needs:",
+                        "Clear guidance, engaging materials, and trustworthy tutors.",
+                      ],
+                    ].map(([title, details], i) => (
+                      <li key={i} className="px-2 py-4">
+                        <h4 className="inline text-purple-500">{title} </h4>
+                        <p className="inline">{details}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* -- Customer Journey Map (CJM) -- */}
+                <div className="">
+                  <TopicTitle title="Customer Journey Map (CJM)" />
+
+                  <p className="mb-16">
+                    We mapped the user journey to identify:
+                  </p>
+
+                  <SinglePicture
+                    url="/images/gios-school/cjm.png"
+                    alt="Customer Journey Map (CJM) details"
+                  />
+
+                  <ul className="flex flex-col gap-4 mb-8 py-2 text-xl md:text-2xl font-medium leading-normal">
+                    {[
+                      "Dissatisfaction with current online learning quality.",
+                      "Confusion in selecting additional courses.",
+                      "Lack of transparency in tutor credentials.",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 pl-2 pr-4 py-1 w-fit rounded-full border border-sep-primary"
+                      >
+                        <div className="flex items-center justify-center w-[0.7ch] h-[0.7ch] bg-purple-300 rounded-full"></div>
+
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </TrackedSection>
+
+              <TrackedSection
+                sectionId={4}
+                tocTitle="Ideation & Planning"
+                className="mb-32 text-xl md:text-2xl font-medium leading-normal"
+              >
+                <TopicTitle title="Ideation & Planning" />
+                <p className="mb-16">
+                  Using tools like{" "}
+                  <span className="text-purple-500">Crazy 8s</span> and{" "}
+                  <span className="text-purple-500">How Might We (HMW)</span>,
+                  we developed solutions:
+                </p>
+                <ul className="flex flex-col gap-2 p-4 rounded-2xl border border-fg-secondary/80">
+                  {[
+                    [
+                      "Tutor Page Redesign:",
+                      "Added video introductions and improved filtering.",
+                    ],
+                    [
+                      "Home Page Optimization:",
+                      "Highlighted gamification and streamlined navigation.",
+                    ],
+                    [
+                      "Feedback Section Upgrade:",
+                      "Integrated video testimonials to enhance credibility.",
+                    ],
+                    [
+                      "Course Structure Revamp:",
+                      "Consolidated subjects by grade level for better accessibility.",
+                    ],
+                  ].map(([title, details], i) => (
+                    <li key={i} className="px-2 py-4 text-l md:text-xl">
+                      <p className="inline text-orange-400">{i + 1}.</p>{" "}
+                      <h4 className="inline ">{title} </h4>
+                      <p className="inline text-fg-secondary">{details}</p>
+                    </li>
+                  ))}
+                </ul>
+              </TrackedSection>
+
+              <TrackedSection
+                sectionId={5}
+                tocTitle="Execution and Iteration"
+                className="mb-32 text-xl md:text-2xl font-medium leading-normal"
+              >
+                {/* -- Prototyping and Testing -- */}
+                <div className="">
+                  <TopicTitle title="Prototyping and Testing" />
+
+                  <p className="mb-16">
+                    We tested early designs with{" "}
+                    <span className="text-purple-500">18 users</span>, leading
+                    to valuable insights and changes:
+                  </p>
+
+                  <ul className="flex flex-col p-2 rounded-2xl border border-fg-secondary/80">
+                    {[
+                      [
+                        "Booking Demo Lessons:",
+                        "Added a prominent “Try Free” button in the header.",
+                      ],
+                      [
+                        "Purchasing Courses:",
+                        "Enabled bundling multiple lessons in one transaction.",
+                      ],
+                      [
+                        "Tutor Selection:",
+                        "Introduced video profiles for better tutor evaluation.",
+                      ],
+                    ].map(([title, details], i) => (
+                      <li key={i} className="px-2 py-4 text-l md:text-xl">
+                        <h4 className="inline text-purple-500">{title} </h4>
+                        <p className="inline">{details}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </TrackedSection>
+
+              <TrackedSection
+                sectionId={6}
+                tocTitle="Key Improvements"
+                isLast
+                className="mb-32 text-xl md:text-2xl font-medium leading-normal"
+              >
+                <div className="mb-32">
+                  <TopicTitle title="Homepage" />
+
+                  <div className="my-32 md:my-48 relative w-full aspect-[640/1901] scale-110 rounded-xl overflow-clip">
+                    <Image
+                      src="/images/gios-school/home-page.png"
+                      fill
+                      quality={100}
+                      sizes="75vw"
+                      alt="image"
+                      className="object-cover"
+                    />
+                  </div>
+                  <ul className="flex flex-col gap-4 mb-8 py-2 text-xl md:text-2xl font-medium leading-normal">
+                    {[
+                      "Revamped hero section for better onboarding.",
+                      "Added an engaging feedback form with step-by-step instructions.",
+                      "Enhanced personalization features for quick access to relevant information.",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 pl-2 pr-4 py-1 w-fit rounded-full border border-sep-primary"
+                      >
+                        <div className="flex items-center justify-center w-[0.7ch] h-[0.7ch] bg-purple-300 rounded-full"></div>
+
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-32">
+                  <TopicTitle title="Tutor Page" />
+
+                  <DoublePicture
+                    urlLeft="/images/gios-school/tutor-page-1.png"
+                    urlRight="/images/gios-school/tutor-page-2.png"
+                    alt="Tutor page screen"
+                    className="mt-20"
+                  />
+
+                  <ul className="flex flex-col gap-4 mb-8 py-2 text-xl md:text-2xl font-medium leading-normal">
+                    {[
+                      "Introduced video resumes to increase trust.",
+                      "Improved filtering options for seamless tutor search.",
+                      "Highlighted exam success rates of tutor students.",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 pl-2 pr-4 py-1 w-fit rounded-full border border-sep-primary"
+                      >
+                        <div className="flex items-center justify-center w-[0.7ch] h-[0.7ch] bg-purple-300 rounded-full"></div>
+
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="">
+                  <TopicTitle title="Course Navigation" />
+
+                  <DoublePicture
+                    urlLeft="/images/gios-school/architecture.png"
+                    urlRight="/images/gios-school/navigation.png"
+                    alt="Architecture and Navigation new structure"
+                    className="mt-20"
+                  />
+
+                  <ul className="flex flex-col gap-4 mb-8 py-2 text-xl md:text-2xl font-medium leading-normal">
+                    {[
+                      "Introduced video resumes to increase trust.",
+                      "Improved filtering options for seamless tutor search.",
+                      "Highlighted exam success rates of tutor students.",
+                    ].map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 pl-2 pr-4 py-1 w-fit rounded-full border border-sep-primary"
+                      >
+                        <div className="flex items-center justify-center w-[0.7ch] h-[0.7ch] bg-purple-300 rounded-full"></div>
+
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </TrackedSection>
+
+              <TrackedSection
+                sectionId={7}
+                tocTitle="Outcomes and Reflections"
+                isLast
+                className="mb-32 text-xl md:text-2xl font-medium leading-normal"
+              >
+                <TopicTitle title="Outcomes and Reflections" />
+
+                <p className="mb-6">
+                  Our approach preserved the essence of GIOS while addressing
+                  critical usability issues. Key results:
+                </p>
+
+                <ul className="flex flex-col gap-4 mb-12 py-2 text-xl md:text-2xl font-medium leading-normal">
+                  {[
+                    "Simplified navigation enhanced user engagement.",
+                    "Trust-building features (e.g., video profiles) improved conversion rates.",
+                    "A more intuitive structure allowed users to find information faster.",
+                  ].map((item, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-3 pl-2 pr-4 py-1 w-fit rounded-full border border-sep-primary"
+                    >
+                      <div className="flex items-center justify-center w-[0.7ch] h-[0.7ch] bg-purple-300 rounded-full"></div>
+
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="">
+                  This project underscored the importance of iterative testing
+                  and maintaining alignment with user needs. It was a
+                  collaborative effort that demonstrated the impact of
+                  user-centered design.
+                </p>
+              </TrackedSection>
+            </div>
+          </div>
         </article>
       </main>
     </TOCContext.Provider>

@@ -38,7 +38,7 @@ const NavMenuToggle: React.FC<NavMenuToggleProps> = ({
   return (
     <button
       type="button"
-      className="fixed justify-self-end top-6 right-6 flex flex-col gap-2 cursor-pointer stroke-white stroke-2 outline-offset-4 focus:outline-2 focus:outline-dashed"
+      className="fixed justify-self-end top-6 right-6 flex flex-col gap-2 cursor-pointer stroke-white stroke-2 outline-offset-4 focus-visible:outline-2 focus-visible:outline-dashed"
       onClick={() => setMenuOpen(!menuOpen)}
     >
       <svg width="24" height="24" viewBox="0 0 24 24">
