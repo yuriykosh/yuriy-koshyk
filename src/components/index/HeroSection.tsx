@@ -22,7 +22,7 @@ const HeroSection = () => {
             }}
           />
           <motion.h2
-            className="max-sm:font-bold font-medium z-20"
+            className="max-sm:font-semibold font-medium z-20"
             variants={textRevealMotion(0)}
           >
             Design
@@ -30,7 +30,7 @@ const HeroSection = () => {
         </div>
         <div className="mb-px bg-bg-primary z-20">
           <motion.h2
-            className="max-sm:font-bold font-medium"
+            className="max-sm:font-semibold font-medium"
             variants={textRevealMotion(0.25)}
           >
             Digital Products
@@ -38,7 +38,7 @@ const HeroSection = () => {
         </div>
         <div className="flex gap-4 md:gap-8 items-center mb-px">
           <motion.h2
-            className="max-sm:font-bold max-[400px]:max-w-[70%] max-[468px]:max-w-[64%] font-medium md:pl-[10%] relative"
+            className="max-sm:font-semibold max-[400px]:max-w-[70%] max-[468px]:max-w-[64%] font-medium md:pl-[10%] relative"
             variants={textRevealMotion(0.5)}
           >
             That Matters
@@ -46,11 +46,11 @@ const HeroSection = () => {
 
           <motion.div
             className="relative inline-block max-[468px]:w-[2ch] max-[468px]:h-[2ch] max-[468px]:self-end mb-3 sm:mb-0 w-[1.5ch] h-[1.5ch] sm:w-[1.1ch] sm:h-[1.1ch]
-            rounded-full bg-fg-primary"
+            rounded-full overflow-hidden ring-1 md:ring ring-fg-primary bg-fg-primary"
             variants={textRevealMotion(0.7)}
           >
             <Image
-              src={"/videos/hi.gif"}
+              src={"/videos/intro.gif"}
               fill
               sizes="1ch"
               quality={100}
