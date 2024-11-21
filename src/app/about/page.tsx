@@ -44,7 +44,37 @@ export default function About() {
               business results. My focus is on creating digital experiences that
               not only look great but also deliver on business and user needs.
             </motion.p>
-            <motion.p variants={textRevealMotion(0.6)}>
+            <ul className="grid grid-cols-3 gap-4">
+              <motion.li
+                className="relative col-span-1"
+                variants={textRevealMotion(0.6)}
+              >
+                <Image
+                  src={"/images/about2.webp"}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={100}
+                  alt="Yuriy Koshyk portrait"
+                  style={{ objectFit: "cover" }}
+                />
+              </motion.li>
+              <motion.li
+                className="col-span-2 relative w-full h-full aspect-video overflow-hidden"
+                variants={textRevealMotion(0.65)}
+              >
+                <video
+                  src={
+                    "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/qm0k22kyeqom7i8iyogq"
+                  }
+                  autoPlay
+                  muted
+                  playsInline
+                  loop
+                  className="object-cover"
+                />
+              </motion.li>
+            </ul>
+            <motion.p variants={textRevealMotion(0.7)}>
               I&#39;ve had the chance to work on 15+ projects as a freelancer,
               leading full design research cycles—everything from user research
               to prototyping and testing. I&#39;m all about finding innovative
@@ -52,7 +82,7 @@ export default function About() {
               into data, monitoring KPIs, and tweaking designs based on real
               feedback to get the best possible results.
             </motion.p>
-            <motion.p variants={textRevealMotion(0.7)}>
+            <motion.p variants={textRevealMotion(0.8)}>
               I&#39;ve also had the privilege of leading tech teams, including
               running technical side at DF Druckluft-Fachhandel GmbH as Head of
               Systems & IT (CTO), where I optimized UX processes that bumped
@@ -73,14 +103,13 @@ export default function About() {
               <li className="col-span-2 relative w-full h-fit aspect-video overflow-hidden">
                 <video
                   src={
-                    "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/ddeffcvyciubbykggka9"
+                    "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/opvwdwziyejgh3zfafuq"
                   }
                   autoPlay
                   muted
                   playsInline
                   loop
-                  style={{ objectFit: "cover" }}
-                  className="object-top -translate-y-[8%]"
+                  className="object-cover"
                 />
               </li>
               <li className="relative col-span-1">
@@ -91,7 +120,7 @@ export default function About() {
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   quality={100}
-                  alt="basketball gif"
+                  alt="Photography showcase"
                   style={{ objectFit: "cover" }}
                 />
               </li>
