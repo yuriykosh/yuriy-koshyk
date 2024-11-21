@@ -49,16 +49,21 @@ const HeroSection = () => {
             rounded-full overflow-hidden ring-1 md:ring ring-fg-primary bg-fg-primary"
             variants={textRevealMotion(0.7)}
           >
-            <Image
-              src={"/videos/intro.gif"}
-              fill
-              sizes="1ch"
-              quality={100}
-              priority
-              unoptimized
-              alt="Video of Yuriy say hi!"
-              style={{ objectFit: "cover", borderRadius: "9999px" }}
-            />
+            <motion.div
+              className="w-full h-full"
+              variants={textRevealMotion(0.8)}
+            >
+              <Image
+                src={"/videos/intro.gif"}
+                fill
+                sizes="1ch"
+                quality={100}
+                priority
+                unoptimized
+                alt="Video of Yuriy say hi!"
+                style={{ objectFit: "cover", borderRadius: "9999px" }}
+              />
+            </motion.div>
           </motion.div>
         </div>
 
