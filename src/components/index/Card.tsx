@@ -43,6 +43,8 @@ const Card: React.FC<CardProps> = ({
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const scale = useTransform(progress, range, [1, targetScale]);
 
+  const isExternal = url.includes("http");
+
   return (
     <div
       ref={container}
@@ -60,6 +62,10 @@ const Card: React.FC<CardProps> = ({
           <Link
             href={url}
             onClick={() => window.scrollTo(0, 0)}
+            {...(isExternal && {
+              rel: "noopener noreferrer",
+              target: "_blank",
+            })}
             className={`relative w-full h-full overflow-hidden ${linkStyles}`}
           >
             <motion.div

@@ -5,15 +5,11 @@ import Divider from "@/components/assets/Divider";
 import { textRevealMotion, dividerMotion } from "@/utils/animations";
 import Image from "next/image";
 import Link from "next/link";
-// import { Suspense } from "react";
-// import PostHogPageView from "@/components/posthog/post-hog-page-view";
+import CarbonMailAll from "@/components/assets/icons/CarbonMailAll";
 
 export default function About() {
   return (
     <>
-      {/* <Suspense fallback={null}>
-        <PostHogPageView />
-      </Suspense> */}
       <main>
         <motion.section
           className="w-full mt-[35vh] px-6 text-4xl md:text-[3.5rem] leading-tight tracking-tight font-medium"
@@ -50,12 +46,12 @@ export default function About() {
                 variants={textRevealMotion(0.6)}
               >
                 <Image
-                  src={"/images/about2.webp"}
+                  src={"/images/about.webp"}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 33vw"
                   quality={100}
                   alt="Yuriy Koshyk portrait"
-                  style={{ objectFit: "cover" }}
+                  className="object-cover bg-bg-secondary border border-sep-primary"
                 />
               </motion.li>
               <motion.li
@@ -70,7 +66,7 @@ export default function About() {
                   muted
                   playsInline
                   loop
-                  className="object-cover"
+                  className="object-cover bg-bg-secondary border border-sep-primary"
                 />
               </motion.li>
             </ul>
@@ -109,7 +105,7 @@ export default function About() {
                   muted
                   playsInline
                   loop
-                  className="object-cover"
+                  className="object-cover bg-bg-secondary border border-sep-primary"
                 />
               </li>
               <li className="relative col-span-1">
@@ -121,7 +117,7 @@ export default function About() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   quality={100}
                   alt="Photography showcase"
-                  style={{ objectFit: "cover" }}
+                  className="object-cover bg-bg-secondary border border-sep-primary"
                 />
               </li>
             </ul>
@@ -132,14 +128,22 @@ export default function About() {
             </p>
 
             <p>
-              I’m always up for a chat—feel free to{" "}
-              <Link
-                href={"/"}
-                className="underline underline-offset-2 hover:text-fg-secondary transition-colors duration-200"
-              >
-                drop me a message
-              </Link>
-              !
+              I&#39;m always up for a chat—feel free to{" "}
+              <span className="group inline-flex items-center">
+                <Link
+                  href={"mailto:yuriy.koshyk@gmail.com"}
+                  className="inline-flex items-center gap-1.5 underline underline-offset-2 hover:text-fg-secondary transition-all duration-200"
+                >
+                  drop me a message
+                </Link>
+                !
+                <span
+                  className="inline-flex items-center justify-center ml-2 underline w-[1.5ch] h-[1.5ch] text-fg-secondary
+              opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-200"
+                >
+                  <CarbonMailAll />
+                </span>
+              </span>
             </p>
           </motion.div>
           <Divider className="md:hidden" />

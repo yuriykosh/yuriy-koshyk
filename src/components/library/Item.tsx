@@ -27,6 +27,8 @@ const Item: React.FC<ItemProps> = ({
 
       <Link
         href={sourceLink}
+        rel="noopener noreferrer"
+        target="_blank"
         className="block relative py-2 px-6 
         bg-bg-primary hover:bg-bg-secondary focus-visible:bg-bg-secondary cursor-alias transition-colors duration-200 hover:transition-colors hover:duration-200 focus-visible:transition-colors focus-visible:duration-200 -outline-offset-1"
       >

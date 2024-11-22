@@ -70,6 +70,8 @@ const NavMenu: React.FC<NavMenuProps> = ({ menuOpen, setMenuOpen }) => {
           <li key={i} className="w-full">
             <Link
               href={item.url}
+              rel="noopener noreferrer"
+              target="_blank"
               className="inline-block w-full transition-all duration-200 
               hover:duration-200 hover:transition-all hover:underline hover:underline-offset-2 hover:text-bg-primary
               focus-visible:duration-200 focus-visible:transition-all focus-visible:underline focus-visible:underline-offset-2 focus-visible:text-bg-primary
