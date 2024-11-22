@@ -38,7 +38,6 @@ const ProjectsSection = () => {
         const targetScale = 1 - (projects.length - i) * 0.05;
         return (
           <Card
-            // url={""}
             key={`p_${i}`}
             i={i}
             {...project}

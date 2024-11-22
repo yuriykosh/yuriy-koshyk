@@ -9,14 +9,14 @@ const ScrollReset = () => {
   const lenis = useLenis(); // Assuming you have a hook to access Lenis
 
   useEffect(() => {
-    if (lenis) {
-      // Fixed scrollTo call with correct arguments
+    if (lenis && pathname !== "/") {
+      // Only reset scroll on the homepage
       lenis.scrollTo(0, {
         duration: 0,
-        easing: (t: number) => t, // Explicitly type `t` as number
+        // easing: (t: number) => t, // Explicitly type `t` as number
       });
     }
-  }, [pathname, lenis]); // Trigger scroll reset on route change
+  }, [pathname, lenis]); // Trigger scroll reset on route change, but only on the homepage
 
   return null;
 };

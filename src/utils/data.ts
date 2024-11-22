@@ -4,7 +4,7 @@ export const projects = [
     tags: "Desktop Web, B2C SaaS",
     description: "Finance SaaS solution for all kinds of businesses.",
     year: 2024,
-    src: "gliese1.jpg",
+    src: "/images/gliese1.jpg",
     url: "/projects/gliese1",
     color: "#BBACAF",
   },
@@ -14,7 +14,7 @@ export const projects = [
     description:
       "Multimillion-dollar e-commerce for complete compressed air solutions (a part of Atlas Copco Group)",
     year: 2024,
-    src: "df.webp",
+    src: "/images/df.webp",
     url: "https://www.druckluft-fachhandel.de/",
     color: "#977F6D",
     linkStyles: "cursor-alias",
@@ -25,7 +25,7 @@ export const projects = [
     description:
       "AI-powered interactive platform for learning mathematics and developing critical thinking skills among school students.",
     year: 2024,
-    src: "gios-school.png",
+    src: "/images/gios-school.png",
     url: "/projects/gios-school",
     color: "#BBACAF",
   },
@@ -35,7 +35,7 @@ export const projects = [
     description:
       "Software development agency specializes in creating products for the payment, fintech, gamedev and other fields.",
     year: 2023,
-    src: "heimdal-data.jpg",
+    src: "/images/heimdal-data.jpg",
     url: "/projects/heimdal-data-aps",
     color: "#B62429",
   },
@@ -45,7 +45,7 @@ export const projects = [
     description:
       "A cutting-edge mobile payment app crafted specifically for events.",
     year: 2023,
-    src: "event-pos.png",
+    src: "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/d5xso2m4flftbc3hrlss",
     url: "/projects/eventpos",
     color: "#C2491D",
   },

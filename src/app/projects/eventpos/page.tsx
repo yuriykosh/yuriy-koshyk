@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { dividerMotion, textRevealMotion } from "@/utils/animations";
+import { dividerMotion, easings, textRevealMotion } from "@/utils/animations";
 import { TOCContext, useTOCContextValues } from "@/utils/TOCContext";
 import TableOfContents from "@/components/TableOfContents";
 import TrackedSection from "@/components/TrackedSection";
@@ -11,21 +11,28 @@ import Divider from "@/components/assets/Divider";
 import DesignProcessStages from "@/components/projects/eventpos/DesignProcessStages";
 import Goals from "@/components/projects/eventpos/Goals";
 import KeyFeatures from "@/components/projects/eventpos/KeyFeatures";
-// import { Suspense } from "react";
-// import PostHogPageView from "@/components/posthog/post-hog-page-view";
+import TransitionOverlay from "@/components/assets/TransitionOverlay";
 
 export default function ProjectEventPOS() {
   const { values } = useTOCContextValues();
 
-  // const projectColor = "00adf5";
-
   return (
     <>
-      {/* <Suspense fallback={null}>
-        <PostHogPageView />
-      </Suspense> */}
       <TOCContext.Provider value={values}>
-        <main>
+        <TransitionOverlay />
+
+        <motion.main
+          className=""
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: {
+              duration: 0.8,
+              delay: 1.5,
+              ease: easings.easeInOutQuint,
+            },
+          }}
+        >
           <IntroImage
             url="/images/event-pos.png"
             alt="eventPOS case study hero picture"
@@ -38,13 +45,13 @@ export default function ProjectEventPOS() {
             >
               <motion.h1
                 className="max-lg:hidden h-full col-span-3"
-                variants={textRevealMotion(0)}
+                variants={textRevealMotion(1.5)}
               >
                 event
                 <span className={`text-sky-500`}>POS</span>
               </motion.h1>
               <div className="lg:col-span-9 flex flex-col gap-24">
-                <motion.h2 className="" variants={textRevealMotion(0.4)}>
+                <motion.h2 className="" variants={textRevealMotion(1.9)}>
                   Transforming the onboarding experience to provide telecom
                   services to 1,000+ students
                 </motion.h2>
@@ -190,7 +197,7 @@ export default function ProjectEventPOS() {
               </div>
             </div>
           </article>
-        </main>
+        </motion.main>
       </TOCContext.Provider>
     </>
   );

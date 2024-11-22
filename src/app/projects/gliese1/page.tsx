@@ -1,29 +1,38 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { dividerMotion, textRevealMotion } from "@/utils/animations";
+import { dividerMotion, easings, textRevealMotion } from "@/utils/animations";
 import { TOCContext, useTOCContextValues } from "@/utils/TOCContext";
 import Divider from "@/components/assets/Divider";
 import IntroImage from "@/components/assets/IntroImage";
 import TableOfContents from "@/components/TableOfContents";
 import TrackedSection from "@/components/TrackedSection";
-import TopicTitle from "@/components/projects/gliese1/TopicTitle";
-import SinglePicture from "@/components/projects/gliese1/SinglePicture";
-import DoublePicture from "@/components/projects/gliese1/DoublePicture";
+import TopicTitle from "@/components/projects/TopicTitle";
+import SinglePicture from "@/components/projects/SinglePicture";
+import DoublePicture from "@/components/projects/DoublePicture";
 import CarbonCheckmarkOutline from "@/components/assets/icons/CarbonCheckmarkOutline";
-// import { Suspense } from "react";
-// import PostHogPageView from "@/components/posthog/post-hog-page-view";
+import TransitionOverlay from "@/components/assets/TransitionOverlay";
 
 export default function ProjectGlieseOne() {
   const { values } = useTOCContextValues();
 
   return (
     <>
-      {/* <Suspense fallback={null}>
-        <PostHogPageView />
-      </Suspense> */}
       <TOCContext.Provider value={values}>
-        <main>
+        <TransitionOverlay />
+
+        <motion.main
+          className=""
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: {
+              duration: 0.8,
+              delay: 1.5,
+              ease: easings.easeInOutQuint,
+            },
+          }}
+        >
           <IntroImage
             url="/images/gliese1.jpg"
             alt="Gliese1 case study hero picture"
@@ -36,13 +45,13 @@ export default function ProjectGlieseOne() {
             >
               <motion.h1
                 className="max-lg:hidden h-full col-span-3"
-                variants={textRevealMotion(0)}
+                variants={textRevealMotion(1.5)}
               >
                 Gliese
                 <span className={`text-sky-500`}>1</span>
               </motion.h1>
               <div className="lg:col-span-9 flex flex-col gap-24">
-                <motion.h2 className="" variants={textRevealMotion(0.4)}>
+                <motion.h2 className="" variants={textRevealMotion(1.9)}>
                   Finance SaaS solution for all kinds of businesses
                 </motion.h2>
                 <motion.div
@@ -758,7 +767,7 @@ export default function ProjectGlieseOne() {
               </div>
             </div>
           </article>
-        </main>
+        </motion.main>
       </TOCContext.Provider>
     </>
   );

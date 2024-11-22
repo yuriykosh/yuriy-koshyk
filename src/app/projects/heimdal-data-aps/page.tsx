@@ -1,31 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { dividerMotion, textRevealMotion } from "@/utils/animations";
+import { dividerMotion, easings, textRevealMotion } from "@/utils/animations";
 import { TOCContext, useTOCContextValues } from "@/utils/TOCContext";
-import Divider from "@/components/assets/Divider";
+import TransitionOverlay from "@/components/assets/TransitionOverlay";
 import IntroImage from "@/components/assets/IntroImage";
+import Divider from "@/components/assets/Divider";
 import TableOfContents from "@/components/TableOfContents";
 import TrackedSection from "@/components/TrackedSection";
-import TopicTitle from "@/components/projects/gliese1/TopicTitle";
-import SinglePicture from "@/components/projects/gliese1/SinglePicture";
+import TopicTitle from "@/components/projects/TopicTitle";
+import SinglePicture from "@/components/projects/SinglePicture";
 import GoalsList from "@/components/projects/heimdal-data-aps/GoalsList";
 import Wireframes from "@/components/projects/heimdal-data-aps/Wireframes";
 import DevTech from "@/components/projects/heimdal-data-aps/DevTech";
 import Results from "@/components/projects/heimdal-data-aps/Results";
-// import { Suspense } from "react";
-// import PostHogPageView from "@/components/posthog/post-hog-page-view";
 
 export default function ProjectHeimdalDataApS() {
   const { values } = useTOCContextValues();
 
   return (
     <>
-      {/* <Suspense fallback={null}>
-        <PostHogPageView />
-      </Suspense> */}
       <TOCContext.Provider value={values}>
-        <main>
+        <TransitionOverlay />
+
+        <motion.main
+          className=""
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: {
+              duration: 0.8,
+              delay: 1.5,
+              ease: easings.easeInOutQuint,
+            },
+          }}
+        >
           <IntroImage
             url="/images/heimdal-data.jpg"
             alt="Heimdal Data ApS Redesign case study hero picture"
@@ -38,13 +47,13 @@ export default function ProjectHeimdalDataApS() {
             >
               <motion.h1
                 className="max-lg:hidden h-full col-span-3"
-                variants={textRevealMotion(0)}
+                variants={textRevealMotion(1.5)}
               >
                 Heimdal {""}
                 <span className={`text-green-500`}>Data</span>
               </motion.h1>
               <div className="lg:col-span-9 flex flex-col gap-24">
-                <motion.h2 className="" variants={textRevealMotion(0.4)}>
+                <motion.h2 className="" variants={textRevealMotion(1.9)}>
                   Website Redesign - UX/UI Case Study
                 </motion.h2>
                 <motion.div
@@ -274,7 +283,7 @@ export default function ProjectHeimdalDataApS() {
               </div>
             </div>
           </article>
-        </main>
+        </motion.main>
       </TOCContext.Provider>
     </>
   );
