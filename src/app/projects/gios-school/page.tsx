@@ -12,17 +12,12 @@ import SinglePicture from "@/components/projects/gliese1/SinglePicture";
 import CarbonCheckmarkOutline from "@/components/assets/icons/CarbonCheckmarkOutline";
 import Image from "next/image";
 import DoublePicture from "@/components/projects/gliese1/DoublePicture";
-// import { Suspense } from "react";
-// import PostHogPageView from "@/components/posthog/post-hog-page-view";
 
 export default function ProjectGiosSchool() {
   const { values } = useTOCContextValues();
 
   return (
     <>
-      {/* <Suspense fallback={null}>
-        <PostHogPageView />
-      </Suspense> */}
       <TOCContext.Provider value={values}>
         <main>
           <IntroImage

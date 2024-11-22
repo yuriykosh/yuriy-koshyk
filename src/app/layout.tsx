@@ -11,6 +11,7 @@ import { PHProvider } from "@/providers/ph-provider";
 import { Suspense } from "react";
 import PostHogPageView from "@/components/posthog/post-hog-page-view";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import ScrollReset from "@/utils/ScrollReset";
 
 const satoshi = localFont({
   src: [
@@ -38,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ReactLenis root>
+      <ReactLenis root autoRaf={true} options={{ smoothWheel: true }}>
         <body className={`${satoshi.className} antialiased`}>
           <PHProvider>
             <Header />
@@ -48,6 +49,8 @@ export default function RootLayout({
             </Suspense>
 
             <SpeedInsights />
+
+            <ScrollReset />
 
             {children}
 
