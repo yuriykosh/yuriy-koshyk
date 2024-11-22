@@ -2,16 +2,16 @@ import * as motion from "framer-motion/client";
 
 import Divider from "@/components/assets/Divider";
 import LibraryContent from "@/components/library/LibraryContent";
-import { dividerMotion, textRevealMotion } from "@/utils/animations";
-// import { Suspense } from "react";
-// import PostHogPageView from "@/components/posthog/post-hog-page-view";
+import {
+  dividerMotion,
+  textRevealMotion,
+  textRevealInViewportMotion,
+  easings,
+} from "@/utils/animations";
 
 export default function Library() {
   return (
     <>
-      {/* <Suspense fallback={null}>
-        <PostHogPageView />
-      </Suspense> */}
       <main>
         <motion.section
           className="w-full mt-[35vh] px-6 text-4xl md:text-[3.5rem] leading-tight tracking-tight font-medium"
@@ -33,18 +33,46 @@ export default function Library() {
 
           {/* Live Playlist */}
           <div className="px-6">
-            <Divider className="mb-20" />
-            <h3 className="mb-6 ml-2 text-sm font-medium text-fg-primary">
+            <motion.div
+              className="w-full origin-left mb-20"
+              initial={{
+                scaleX: 0,
+              }}
+              whileInView={{
+                scaleX: 1,
+                transition: {
+                  delay: 0.3,
+                  duration: 0.8,
+                  ease: easings.easeInOutQuint,
+                },
+              }}
+              viewport={{
+                once: true,
+              }}
+            >
+              <Divider />
+            </motion.div>
+
+            <motion.h3
+              className="mb-6 ml-2 text-sm font-medium text-fg-primary"
+              variants={textRevealInViewportMotion(0.3)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+              }}
+            >
               Feel free to check out music I like
-            </h3>
-            <iframe
+            </motion.h3>
+            <motion.iframe
               title="deezer-widget"
               src="https://widget.deezer.com/widget/dark/playlist/3415322182"
-              // frameborder="0"
-              // allowtransparency="true"
               allow="encrypted-media; clipboard-write"
-              className="w-full h-[75vh] md:h-[45vh]"
-            ></iframe>
+              className="w-full h-[75vh] md:h-[45vh] rounded-2xl bg-bg-secondary"
+              variants={textRevealInViewportMotion(0)}
+              initial="hidden"
+              whileInView="visible"
+            />
           </div>
         </section>
       </main>

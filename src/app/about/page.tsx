@@ -2,7 +2,11 @@ import * as motion from "framer-motion/client";
 
 import StackList from "@/components/about/StackList";
 import Divider from "@/components/assets/Divider";
-import { textRevealMotion, dividerMotion } from "@/utils/animations";
+import {
+  textRevealMotion,
+  dividerMotion,
+  textRevealInViewportMotion,
+} from "@/utils/animations";
 import Image from "next/image";
 import Link from "next/link";
 import CarbonMailAll from "@/components/assets/icons/CarbonMailAll";
@@ -70,7 +74,12 @@ export default function About() {
                 />
               </motion.li>
             </ul>
-            <motion.p variants={textRevealMotion(0.7)}>
+            <motion.p
+              variants={textRevealInViewportMotion(0)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               I&#39;ve had the chance to work on 15+ projects as a freelancer,
               leading full design research cycles—everything from user research
               to prototyping and testing. I&#39;m all about finding innovative
@@ -78,7 +87,12 @@ export default function About() {
               into data, monitoring KPIs, and tweaking designs based on real
               feedback to get the best possible results.
             </motion.p>
-            <motion.p variants={textRevealMotion(0.8)}>
+            <motion.p
+              variants={textRevealInViewportMotion(0)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               I&#39;ve also had the privilege of leading tech teams, including
               running technical side at DF Druckluft-Fachhandel GmbH as Head of
               Systems & IT (CTO), where I optimized UX processes that bumped
@@ -86,7 +100,12 @@ export default function About() {
               always aiming to bring out the best in cross-functional teams and
               external partners.
             </motion.p>
-            <p>
+            <motion.p
+              variants={textRevealInViewportMotion(0)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               I&#39;ve worn quite a few hats across UX/UI design and front-end
               development, allowing me to see the bigger picture in projects and
               bridge the gap between design and development. Tools like Figma,
@@ -94,9 +113,15 @@ export default function About() {
               trends to push boundaries in design. My process is all about
               user-centered design—making sure every iteration is shaped by real
               feedback and business goals.
-            </p>
+            </motion.p>
             <ul className="grid grid-cols-3 gap-4">
-              <li className="col-span-2 relative w-full h-fit aspect-video overflow-hidden">
+              <motion.li
+                className="col-span-2 relative w-full h-fit aspect-video overflow-hidden"
+                variants={textRevealInViewportMotion(0)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
                 <video
                   src={
                     "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/opvwdwziyejgh3zfafuq"
@@ -105,10 +130,16 @@ export default function About() {
                   muted
                   playsInline
                   loop
-                  className="object-cover bg-bg-secondary border border-sep-primary"
+                  className="w-full h-full object-cover object-center bg-bg-secondary border border-sep-primary"
                 />
-              </li>
-              <li className="relative col-span-1">
+              </motion.li>
+              <motion.li
+                className="relative col-span-1"
+                variants={textRevealInViewportMotion(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
                 <Image
                   src={
                     "https://res.cloudinary.com/dfyj2bzi7/image/upload/f_auto,q_auto/o2b3jicfnzazkfs6alhq"
@@ -119,15 +150,25 @@ export default function About() {
                   alt="Photography showcase"
                   className="object-cover bg-bg-secondary border border-sep-primary"
                 />
-              </li>
+              </motion.li>
             </ul>
-            <p>
+            <motion.p
+              variants={textRevealInViewportMotion(0)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               When I&#39;m not immersed in design, you can catch me enjoying
               basketball, snapping street photography, or diving into a good
               movie or book.
-            </p>
+            </motion.p>
 
-            <p>
+            <motion.p
+              variants={textRevealInViewportMotion(0)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               I&#39;m always up for a chat—feel free to{" "}
               <span className="group inline-flex items-center">
                 <Link
@@ -144,7 +185,7 @@ export default function About() {
                   <CarbonMailAll />
                 </span>
               </span>
-            </p>
+            </motion.p>
           </motion.div>
           <Divider className="md:hidden" />
         </section>

@@ -29,8 +29,11 @@ const Item: React.FC<ItemProps> = ({
         href={sourceLink}
         rel="noopener noreferrer"
         target="_blank"
-        className="block relative py-2 px-6 
-        bg-bg-primary hover:bg-bg-secondary focus-visible:bg-bg-secondary cursor-alias transition-colors duration-200 hover:transition-colors hover:duration-200 focus-visible:transition-colors focus-visible:duration-200 -outline-offset-1"
+        className="block relative py-2 px-6 -outline-offset-1 cursor-alias bg-bg-primary
+      hover:bg-gray-500/5 focus-visible:bg-gray-500/5 md:hover:translate-x-1 md:focus-visible:translate-x-1 transition-all duration-200 hover:transition-all hover:duration-200 focus-visible:transition-all focus-visible:duration-200
+        before:hidden md:before:block before:absolute before:top-0 before:-left-3 before:h-full before:w-3 before:bg-fg-secondary before:opacity-0 before:transition-all before:duration-200
+        hover:before:opacity-100 hover:before:translate-x-2 focus-visible:before:opacity-100 focus-visible:before:translate-x-2
+        "
       >
         <ul className="md:grid md:grid-cols-12 gap-6 py-6">
           <li className="max-md:mb-6 max-md:text-fg-primary">{index}</li>

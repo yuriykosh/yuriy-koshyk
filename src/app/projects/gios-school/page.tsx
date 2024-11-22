@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import {
-  caseContentMotion,
   dividerMotion,
   easings,
+  textRevealInViewportMotion,
   textRevealMotion,
 } from "@/utils/animations";
 import { TOCContext, useTOCContextValues } from "@/utils/TOCContext";
@@ -21,7 +21,6 @@ import TransitionOverlay from "@/components/assets/TransitionOverlay";
 
 export default function ProjectGiosSchool() {
   const { values } = useTOCContextValues();
-  const viewportMarginMotion = "-128px";
 
   return (
     <>
@@ -84,13 +83,10 @@ export default function ProjectGiosSchool() {
                     ].map(([title, info], i) => (
                       <motion.li
                         key={i}
-                        variants={caseContentMotion}
+                        variants={textRevealInViewportMotion(0)}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{
-                          margin: viewportMarginMotion,
-                          once: true,
-                        }}
+                        viewport={{ once: true }}
                       >
                         <p className="max-md:flex flex-col gap-1">
                           <b className="text-sm font-medium text-fg-secondary mr-2">
@@ -103,13 +99,10 @@ export default function ProjectGiosSchool() {
                   </ul>
                   <motion.p
                     className="mb-8 text-xl md:text-2xl font-medium leading-normal"
-                    variants={caseContentMotion}
+                    variants={textRevealInViewportMotion(0)}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{
-                      margin: viewportMarginMotion,
-                      once: true,
-                    }}
+                    viewport={{ once: true }}
                   >
                     GIOS is an{" "}
                     <span className="text-purple-500">
@@ -123,13 +116,10 @@ export default function ProjectGiosSchool() {
                   </motion.p>
                   <motion.p
                     className="text-xl md:text-2xl font-medium leading-normal"
-                    variants={caseContentMotion}
+                    variants={textRevealInViewportMotion(0)}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{
-                      margin: viewportMarginMotion,
-                      once: true,
-                    }}
+                    viewport={{ once: true }}
                   >
                     Our mission is to create a brighter future for children by
                     providing accessible, engaging, and interactive{" "}
@@ -150,13 +140,10 @@ export default function ProjectGiosSchool() {
 
                   <motion.p
                     className="text-xl md:text-2xl font-medium leading-normal mb-32"
-                    variants={caseContentMotion}
+                    variants={textRevealInViewportMotion(0)}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{
-                      margin: viewportMarginMotion,
-                      once: true,
-                    }}
+                    viewport={{ once: true }}
                   >
                     The current website does not effectively convert users or
                     sell services. Users lack a clear understanding of the value
@@ -168,13 +155,10 @@ export default function ProjectGiosSchool() {
 
                   <motion.ul
                     className="flex flex-col gap-4 py-2 mb-12 text-xl md:text-2xl font-medium leading-normal"
-                    variants={caseContentMotion}
+                    variants={textRevealInViewportMotion(0)}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{
-                      margin: viewportMarginMotion,
-                      once: true,
-                    }}
+                    viewport={{ once: true }}
                   >
                     {[
                       "Redesign the website to highlight all product features in a user-friendly manner.",
@@ -185,13 +169,10 @@ export default function ProjectGiosSchool() {
                       <motion.li
                         key={i}
                         className="flex items-baseline gap-3 w-fit min-h-11"
-                        variants={caseContentMotion}
+                        variants={textRevealInViewportMotion(0)}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{
-                          margin: viewportMarginMotion,
-                          once: true,
-                        }}
+                        viewport={{ once: true }}
                       >
                         <div className="flex items-center justify-center w-6 h-6 min-w-6 min-h-6 translate-y-1.5 md:translate-y-0.5 text-purple-500">
                           <CarbonCheckmarkOutline />
@@ -212,13 +193,10 @@ export default function ProjectGiosSchool() {
 
                   <motion.p
                     className="mb-16"
-                    variants={caseContentMotion}
+                    variants={textRevealInViewportMotion(0)}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{
-                      margin: viewportMarginMotion,
-                      once: true,
-                    }}
+                    viewport={{ once: true }}
                   >
                     We structured our work into seven critical phases, ensuring
                     a systematic approach to solving problems and delivering
@@ -232,13 +210,10 @@ export default function ProjectGiosSchool() {
 
                   <motion.ul
                     className="flex flex-col gap-2 p-4 rounded-2xl border border-fg-secondary/80"
-                    variants={caseContentMotion}
+                    variants={textRevealInViewportMotion(0)}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{
-                      margin: viewportMarginMotion,
-                      once: true,
-                    }}
+                    viewport={{ once: true }}
                   >
                     {[
                       ["Kick-off Meeting:", "Understanding project goals."],
@@ -252,13 +227,10 @@ export default function ProjectGiosSchool() {
                       <motion.li
                         key={i}
                         className="px-2 py-4 text-l md:text-xl"
-                        variants={caseContentMotion}
+                        variants={textRevealInViewportMotion(0)}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{
-                          margin: viewportMarginMotion,
-                          once: true,
-                        }}
+                        viewport={{ once: true }}
                       >
                         <p className="inline text-purple-500">{i + 1}.</p>{" "}
                         <h4 className="inline ">{title} </h4>
@@ -277,13 +249,10 @@ export default function ProjectGiosSchool() {
 
                   <motion.p
                     className="mb-8"
-                    variants={caseContentMotion}
+                    variants={textRevealInViewportMotion(0)}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{
-                      margin: viewportMarginMotion,
-                      once: true,
-                    }}
+                    viewport={{ once: true }}
                   >
                     During our initial{" "}
                     <span className="text-purple-500">Kick-off Meeting</span>,
@@ -293,26 +262,20 @@ export default function ProjectGiosSchool() {
                   </motion.p>
                   <motion.p
                     className="mb-6"
-                    variants={caseContentMotion}
+                    variants={textRevealInViewportMotion(0)}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{
-                      margin: viewportMarginMotion,
-                      once: true,
-                    }}
+                    viewport={{ once: true }}
                   >
                     The key takeaways included:
                   </motion.p>
 
                   <motion.ul
                     className="flex flex-col gap-4 mb-8 py-2 text-xl md:text-2xl font-medium leading-normal"
-                    variants={caseContentMotion}
+                    variants={textRevealInViewportMotion(0)}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{
-                      margin: viewportMarginMotion,
-                      once: true,
-                    }}
+                    viewport={{ once: true }}
                   >
                     {[
                       "The need to simplify user onboarding.",
@@ -322,13 +285,10 @@ export default function ProjectGiosSchool() {
                       <motion.li
                         key={i}
                         className="flex items-center gap-3 pl-2 pr-4 py-1 w-fit rounded-full border border-sep-primary"
-                        variants={caseContentMotion}
+                        variants={textRevealInViewportMotion(0)}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{
-                          margin: viewportMarginMotion,
-                          once: true,
-                        }}
+                        viewport={{ once: true }}
                       >
                         <div className="flex items-center justify-center w-[0.7ch] h-[0.7ch] bg-purple-300 rounded-full"></div>
 
@@ -349,13 +309,10 @@ export default function ProjectGiosSchool() {
 
                     <motion.p
                       className="mb-16"
-                      variants={caseContentMotion}
+                      variants={textRevealInViewportMotion(0)}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{
-                        margin: viewportMarginMotion,
-                        once: true,
-                      }}
+                      viewport={{ once: true }}
                     >
                       We reviewed{" "}
                       <span className="text-purple-500">15 competitors</span>{" "}
@@ -379,13 +336,10 @@ export default function ProjectGiosSchool() {
 
                     <motion.p
                       className="mb-16"
-                      variants={caseContentMotion}
+                      variants={textRevealInViewportMotion(0)}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{
-                        margin: viewportMarginMotion,
-                        once: true,
-                      }}
+                      viewport={{ once: true }}
                     >
                       We conducted{" "}
                       <span className="text-purple-500">
@@ -401,13 +355,10 @@ export default function ProjectGiosSchool() {
 
                     <motion.ul
                       className="flex flex-col gap-4 mb-8 py-2 text-xl md:text-2xl font-medium leading-normal"
-                      variants={caseContentMotion}
+                      variants={textRevealInViewportMotion(0)}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{
-                        margin: viewportMarginMotion,
-                        once: true,
-                      }}
+                      viewport={{ once: true }}
                     >
                       {[
                         "Difficulty finding trustworthy tutors.",
@@ -417,13 +368,10 @@ export default function ProjectGiosSchool() {
                         <motion.li
                           key={i}
                           className="flex items-center gap-3 pl-2 pr-4 py-1 w-fit rounded-full border border-sep-primary"
-                          variants={caseContentMotion}
+                          variants={textRevealInViewportMotion(0)}
                           initial="hidden"
                           whileInView="visible"
-                          viewport={{
-                            margin: viewportMarginMotion,
-                            once: true,
-                          }}
+                          viewport={{ once: true }}
                         >
                           <div className="flex items-center justify-center w-[0.7ch] h-[0.7ch] bg-purple-300 rounded-full"></div>
 
@@ -439,13 +387,10 @@ export default function ProjectGiosSchool() {
 
                     <motion.p
                       className="mb-16"
-                      variants={caseContentMotion}
+                      variants={textRevealInViewportMotion(0)}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{
-                        margin: viewportMarginMotion,
-                        once: true,
-                      }}
+                      viewport={{ once: true }}
                     >
                       Larisa, 45, mother of a 13-year-old student in Kyiv.
                     </motion.p>
@@ -457,13 +402,10 @@ export default function ProjectGiosSchool() {
 
                     <motion.ul
                       className="flex flex-col p-2 rounded-2xl border border-fg-secondary/80"
-                      variants={caseContentMotion}
+                      variants={textRevealInViewportMotion(0)}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{
-                        margin: viewportMarginMotion,
-                        once: true,
-                      }}
+                      viewport={{ once: true }}
                     >
                       {[
                         ["Goals:", "Improve her child’s math skills."],
@@ -479,13 +421,10 @@ export default function ProjectGiosSchool() {
                         <motion.li
                           key={i}
                           className="px-2 py-4"
-                          variants={caseContentMotion}
+                          variants={textRevealInViewportMotion(0)}
                           initial="hidden"
                           whileInView="visible"
-                          viewport={{
-                            margin: viewportMarginMotion,
-                            once: true,
-                          }}
+                          viewport={{ once: true }}
                         >
                           <h4 className="inline text-purple-500">{title} </h4>
                           <p className="inline">{details}</p>
@@ -500,13 +439,10 @@ export default function ProjectGiosSchool() {
 
                     <motion.p
                       className="mb-16"
-                      variants={caseContentMotion}
+                      variants={textRevealInViewportMotion(0)}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{
-                        margin: viewportMarginMotion,
-                        once: true,
-                      }}
+                      viewport={{ once: true }}
                     >
                       We mapped the user journey to identify:
                     </motion.p>
@@ -518,13 +454,10 @@ export default function ProjectGiosSchool() {
 
                     <motion.ul
                       className="flex flex-col gap-4 mb-8 py-2 text-xl md:text-2xl font-medium leading-normal"
-                      variants={caseContentMotion}
+                      variants={textRevealInViewportMotion(0)}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{
-                        margin: viewportMarginMotion,
-                        once: true,
-                      }}
+                      viewport={{ once: true }}
                     >
                       {[
                         "Dissatisfaction with current online learning quality.",
@@ -534,6 +467,10 @@ export default function ProjectGiosSchool() {
                         <motion.li
                           key={i}
                           className="flex items-center gap-3 pl-2 pr-4 py-1 w-fit rounded-full border border-sep-primary"
+                          variants={textRevealInViewportMotion(0)}
+                          initial="hidden"
+                          whileInView="visible"
+                          viewport={{ once: true }}
                         >
                           <div className="flex items-center justify-center w-[0.7ch] h-[0.7ch] bg-purple-300 rounded-full"></div>
 
@@ -552,13 +489,10 @@ export default function ProjectGiosSchool() {
                   <TopicTitle title="Ideation & Planning" />
                   <motion.p
                     className="mb-16"
-                    variants={caseContentMotion}
+                    variants={textRevealInViewportMotion(0)}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{
-                      margin: viewportMarginMotion,
-                      once: true,
-                    }}
+                    viewport={{ once: true }}
                   >
                     Using tools like{" "}
                     <span className="text-purple-500">Crazy 8s</span> and{" "}
@@ -567,13 +501,10 @@ export default function ProjectGiosSchool() {
                   </motion.p>
                   <motion.ul
                     className="flex flex-col gap-2 p-4 rounded-2xl border border-fg-secondary/80"
-                    variants={caseContentMotion}
+                    variants={textRevealInViewportMotion(0)}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{
-                      margin: viewportMarginMotion,
-                      once: true,
-                    }}
+                    viewport={{ once: true }}
                   >
                     {[
                       [
@@ -596,6 +527,10 @@ export default function ProjectGiosSchool() {
                       <motion.li
                         key={i}
                         className="px-2 py-4 text-l md:text-xl"
+                        variants={textRevealInViewportMotion(0)}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
                       >
                         <p className="inline text-orange-400">{i + 1}.</p>{" "}
                         <h4 className="inline ">{title} </h4>
@@ -616,13 +551,10 @@ export default function ProjectGiosSchool() {
 
                     <motion.p
                       className="mb-16"
-                      variants={caseContentMotion}
+                      variants={textRevealInViewportMotion(0)}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{
-                        margin: viewportMarginMotion,
-                        once: true,
-                      }}
+                      viewport={{ once: true }}
                     >
                       We tested early designs with{" "}
                       <span className="text-purple-500">18 users</span>, leading
@@ -631,13 +563,10 @@ export default function ProjectGiosSchool() {
 
                     <motion.ul
                       className="flex flex-col p-2 rounded-2xl border border-fg-secondary/80"
-                      variants={caseContentMotion}
+                      variants={textRevealInViewportMotion(0)}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{
-                        margin: viewportMarginMotion,
-                        once: true,
-                      }}
+                      viewport={{ once: true }}
                     >
                       {[
                         [
@@ -656,13 +585,10 @@ export default function ProjectGiosSchool() {
                         <motion.li
                           key={i}
                           className="px-2 py-4 text-l md:text-xl"
-                          variants={caseContentMotion}
+                          variants={textRevealInViewportMotion(0)}
                           initial="hidden"
                           whileInView="visible"
-                          viewport={{
-                            margin: viewportMarginMotion,
-                            once: true,
-                          }}
+                          viewport={{ once: true }}
                         >
                           <h4 className="inline text-purple-500">{title} </h4>
                           <p className="inline">{details}</p>
@@ -683,13 +609,10 @@ export default function ProjectGiosSchool() {
 
                     <motion.div
                       className="my-32 md:my-48 relative w-full aspect-[640/1901] scale-110 rounded-xl overflow-clip"
-                      variants={caseContentMotion}
+                      variants={textRevealInViewportMotion(0)}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{
-                        margin: "-200px",
-                        once: true,
-                      }}
+                      viewport={{ once: true }}
                     >
                       <Image
                         src="/images/gios-school/home-page.png"
@@ -702,13 +625,10 @@ export default function ProjectGiosSchool() {
                     </motion.div>
                     <motion.ul
                       className="flex flex-col gap-4 mb-8 py-2 text-xl md:text-2xl font-medium leading-normal"
-                      variants={caseContentMotion}
+                      variants={textRevealInViewportMotion(0)}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{
-                        margin: viewportMarginMotion,
-                        once: true,
-                      }}
+                      viewport={{ once: true }}
                     >
                       {[
                         "Revamped hero section for better onboarding.",
@@ -718,13 +638,10 @@ export default function ProjectGiosSchool() {
                         <motion.li
                           key={i}
                           className="flex items-center gap-3 pl-2 pr-4 py-1 w-fit rounded-full border border-sep-primary"
-                          variants={caseContentMotion}
+                          variants={textRevealInViewportMotion(0)}
                           initial="hidden"
                           whileInView="visible"
-                          viewport={{
-                            margin: viewportMarginMotion,
-                            once: true,
-                          }}
+                          viewport={{ once: true }}
                         >
                           <div className="flex items-center justify-center w-[0.7ch] h-[0.7ch] bg-purple-300 rounded-full"></div>
 
@@ -746,13 +663,10 @@ export default function ProjectGiosSchool() {
 
                     <motion.ul
                       className="flex flex-col gap-4 mb-8 py-2 text-xl md:text-2xl font-medium leading-normal"
-                      variants={caseContentMotion}
+                      variants={textRevealInViewportMotion(0)}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{
-                        margin: viewportMarginMotion,
-                        once: true,
-                      }}
+                      viewport={{ once: true }}
                     >
                       {[
                         "Introduced video resumes to increase trust.",
@@ -762,13 +676,10 @@ export default function ProjectGiosSchool() {
                         <motion.li
                           key={i}
                           className="flex items-center gap-3 pl-2 pr-4 py-1 w-fit rounded-full border border-sep-primary"
-                          variants={caseContentMotion}
+                          variants={textRevealInViewportMotion(0)}
                           initial="hidden"
                           whileInView="visible"
-                          viewport={{
-                            margin: viewportMarginMotion,
-                            once: true,
-                          }}
+                          viewport={{ once: true }}
                         >
                           <div className="flex items-center justify-center w-[0.7ch] h-[0.7ch] bg-purple-300 rounded-full"></div>
 
@@ -797,13 +708,10 @@ export default function ProjectGiosSchool() {
                         <motion.li
                           key={i}
                           className="flex items-center gap-3 pl-2 pr-4 py-1 w-fit rounded-full border border-sep-primary"
-                          variants={caseContentMotion}
+                          variants={textRevealInViewportMotion(0)}
                           initial="hidden"
                           whileInView="visible"
-                          viewport={{
-                            margin: viewportMarginMotion,
-                            once: true,
-                          }}
+                          viewport={{ once: true }}
                         >
                           <div className="flex items-center justify-center w-[0.7ch] h-[0.7ch] bg-purple-300 rounded-full"></div>
 
@@ -824,13 +732,10 @@ export default function ProjectGiosSchool() {
 
                   <motion.p
                     className="mb-6"
-                    variants={caseContentMotion}
+                    variants={textRevealInViewportMotion(0)}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{
-                      margin: viewportMarginMotion,
-                      once: true,
-                    }}
+                    viewport={{ once: true }}
                   >
                     Our approach preserved the essence of GIOS while addressing
                     critical usability issues. Key results:
@@ -838,13 +743,10 @@ export default function ProjectGiosSchool() {
 
                   <motion.ul
                     className="flex flex-col gap-4 mb-12 py-2 text-xl md:text-2xl font-medium leading-normal"
-                    variants={caseContentMotion}
+                    variants={textRevealInViewportMotion(0)}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{
-                      margin: viewportMarginMotion,
-                      once: true,
-                    }}
+                    viewport={{ once: true }}
                   >
                     {[
                       "Simplified navigation enhanced user engagement.",
@@ -854,6 +756,10 @@ export default function ProjectGiosSchool() {
                       <motion.li
                         key={i}
                         className="flex items-center gap-3 pl-2 pr-4 py-1 w-fit rounded-full border border-sep-primary"
+                        variants={textRevealInViewportMotion(0)}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
                       >
                         <div className="flex items-center justify-center w-[0.7ch] h-[0.7ch] bg-purple-300 rounded-full"></div>
 
@@ -864,13 +770,10 @@ export default function ProjectGiosSchool() {
 
                   <motion.p
                     className=""
-                    variants={caseContentMotion}
+                    variants={textRevealInViewportMotion(0)}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{
-                      margin: viewportMarginMotion,
-                      once: true,
-                    }}
+                    viewport={{ once: true }}
                   >
                     This project underscored the importance of iterative testing
                     and maintaining alignment with user needs. It was a

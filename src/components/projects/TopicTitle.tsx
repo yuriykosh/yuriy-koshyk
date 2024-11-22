@@ -18,13 +18,12 @@ const TopicTitle: React.FC<TopicTitleProps> = ({ title }) => {
         whileInView={{
           scaleX: 1,
           transition: {
-            delay: 0.5,
+            delay: 0.3,
             duration: 0.8,
             ease: easings.easeInOutQuint,
           },
         }}
         viewport={{
-          margin: "-128px",
           once: true,
         }}
       >
@@ -36,7 +35,6 @@ const TopicTitle: React.FC<TopicTitleProps> = ({ title }) => {
         initial="hidden"
         whileInView="visible"
         viewport={{
-          margin: "-128px",
           once: true,
         }}
       >

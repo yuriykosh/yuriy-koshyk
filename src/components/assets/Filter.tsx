@@ -1,5 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { textRevealInViewportMotion } from "@/utils/animations";
+
 interface FilterProps {
   activeTag: string;
   handleTag: (tag: string) => void;
@@ -8,9 +11,15 @@ interface FilterProps {
 
 const Filter: React.FC<FilterProps> = ({ activeTag, handleTag, tagList }) => {
   return (
-    <ul className="flex gap-2 max-md:overflow-x-auto no-scrollbar">
+    <motion.ul className="flex gap-2 max-md:overflow-x-auto no-scrollbar">
       {tagList.map((tag, i) => (
-        <li key={i}>
+        <motion.li
+          key={i}
+          variants={textRevealInViewportMotion(0.3)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <button
             type="button"
             onClick={() => handleTag(tag)}
@@ -23,9 +32,9 @@ const Filter: React.FC<FilterProps> = ({ activeTag, handleTag, tagList }) => {
           >
             {tag}
           </button>
-        </li>
+        </motion.li>
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 export default Filter;

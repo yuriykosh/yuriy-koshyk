@@ -1,5 +1,5 @@
 import * as motion from "framer-motion/client";
-import { caseContentMotion } from "@/utils/animations";
+import { textRevealInViewportMotion } from "@/utils/animations";
 
 import Image from "next/image";
 
@@ -19,23 +19,13 @@ const DoublePicture: React.FC<DoublePictureProps> = ({
   return (
     <motion.ul
       className={`flex gap-4 w-full mb-20 aspect-video scale-110 ${className}`}
-      variants={caseContentMotion}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{
-        margin: "-200px",
-        once: true,
-      }}
     >
       <motion.li
         className="relative w-full h-full rounded-xl overflow-clip"
-        variants={caseContentMotion}
+        variants={textRevealInViewportMotion(0)}
         initial="hidden"
         whileInView="visible"
-        viewport={{
-          margin: "-200px",
-          once: true,
-        }}
+        viewport={{ once: true }}
       >
         <Image
           src={urlLeft}
@@ -48,13 +38,10 @@ const DoublePicture: React.FC<DoublePictureProps> = ({
       </motion.li>
       <motion.li
         className="relative w-full h-full rounded-xl overflow-clip"
-        variants={caseContentMotion}
+        variants={textRevealInViewportMotion(0.3)}
         initial="hidden"
         whileInView="visible"
-        viewport={{
-          margin: "-200px",
-          once: true,
-        }}
+        viewport={{ once: true }}
       >
         <Image
           src={urlRight}

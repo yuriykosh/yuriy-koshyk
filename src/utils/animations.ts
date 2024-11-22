@@ -18,6 +18,21 @@ export const textRevealMotion = (delay: number) => {
   };
 };
 
+export const textRevealInViewportMotion = (delay: number) => {
+  return {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay,
+        duration: 0.8,
+        ease: easings.easeOutQuart,
+      },
+    },
+  };
+};
+
 export const dividerMotion = {
   initial: {
     scaleX: 0,
@@ -38,14 +53,10 @@ export const caseContentMotion = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.8,
       // delay: 0.2,
-      ease: easings.easeInOutQuint,
+      ease: easings.easeOutQuart,
     },
-  },
-  margin: {
-    margin: "-128px",
-    once: true,
   },
 };
 
