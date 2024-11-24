@@ -35,7 +35,7 @@ const Card: React.FC<CardProps> = ({
   range,
   targetScale,
 }) => {
-  const container = useRef(null);
+  const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start end", "start start"],
@@ -52,20 +52,42 @@ const Card: React.FC<CardProps> = ({
   ]);
 
   const pathname = usePathname(); // Track pathname for scroll reset
-
   useEffect(() => {
     // Scroll to top when pathname changes
     window.scrollTo(0, 0);
   }, [pathname]);
 
   const isExternal = url.includes("http");
+
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const handlePlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
+  useEffect(() => {
+    if (!videoRef.current) return;
+
+    const video = videoRef.current;
+
+    // Observer for autoplay on smaller screens
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the video is visible
+    );
+
+    if (video.parentElement) {
+      observer.observe(video.parentElement);
     }
-  };
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div
@@ -83,19 +105,13 @@ const Card: React.FC<CardProps> = ({
           <Link
             href={url}
             onClick={() => window.scrollTo(0, 0)} // Ensure scroll is reset on click
-            onMouseOver={handlePlay}
-            onFocus={handlePlay}
             {...(isExternal && {
               rel: "noopener noreferrer",
               target: "_blank",
             })}
             className={`relative w-full h-full overflow-hidden ${linkStyles}`}
           >
-            {/* <motion.div
-              className="relative w-full h-full"
-              style={{ scale: imageScale }}
-            > */}
-            {src.includes("http") ? (
+            {src.startsWith("http") ? (
               <motion.div
                 className="relative w-full h-full bg-bg-secondary"
                 style={{ scale: imageScale }}
@@ -106,7 +122,38 @@ const Card: React.FC<CardProps> = ({
                   playsInline
                   className="w-full h-full object-cover object-center"
                 >
-                  <source src={src} type="video/webm" />
+                  <source
+                    src={`${src}-hd`}
+                    type="video/mp4"
+                    media="(max-width:639px)"
+                  />
+                  <source
+                    src={`${src}-hd`}
+                    type="video/webm"
+                    media="(max-width:639px)"
+                  />
+                  <source
+                    src={`${src}-x1`}
+                    type="video/mp4"
+                    media="(max-width:1279px)"
+                  />
+                  <source
+                    src={`${src}-x1`}
+                    type="video/webm"
+                    media="(max-width:1279px)"
+                  />
+                  <source
+                    src={`${src}-x2`}
+                    type="video/mp4"
+                    media="(max-width:1919px)"
+                  />
+                  <source
+                    src={`${src}-x2`}
+                    type="video/webm"
+                    media="(max-width:1919px)"
+                  />
+                  <source src={`${src}-x4`} type="video/mp4" />
+                  <source src={`${src}-x4`} type="video/webm" />
                   Your browser does not support the video tag.
                 </video>
               </motion.div>
@@ -125,7 +172,6 @@ const Card: React.FC<CardProps> = ({
                 />
               </motion.div>
             )}
-            {/* </motion.div> */}
           </Link>
           <div className="w-full grid grid-cols-3 grid-rows-2 md:grid-rows-1 gap-4 relative py-2 text-sm font-medium text-fg-secondary">
             <ul className="col-span-2 md:col-span-1 ">

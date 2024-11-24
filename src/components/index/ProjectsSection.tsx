@@ -26,7 +26,7 @@ const ProjectsSection = () => {
   });
 
   return (
-    <section ref={container} className="relative  mb-6">
+    <section ref={container} className="relative mb-6">
       <div className="px-6">
         <Divider />
       </div>

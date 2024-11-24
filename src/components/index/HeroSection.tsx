@@ -2,7 +2,6 @@ import * as motion from "framer-motion/client";
 
 import Link from "next/link";
 import { easings, textRevealMotion } from "@/utils/animations";
-import Image from "next/image";
 import CarbonMailAll from "../assets/icons/CarbonMailAll";
 
 const HeroSection = () => {
@@ -51,19 +50,20 @@ const HeroSection = () => {
             variants={textRevealMotion(0.7)}
           >
             <motion.div
-              className="w-full h-full"
+              className="relative w-full h-full"
               variants={textRevealMotion(0.8)}
             >
-              <Image
-                src={"/videos/intro.gif"}
-                fill
-                sizes="1ch"
-                quality={100}
-                priority
-                unoptimized
-                alt="Video of Yuriy say hi!"
-                style={{ objectFit: "cover", borderRadius: "9999px" }}
-              />
+              <video
+                muted
+                autoPlay
+                loop
+                playsInline
+                className="absolute w-full h-full object-cover object-center rounded-full"
+              >
+                <source src="/videos/intro.mp4" type="video/mp4" />
+                <source src="/videos/intro.webm" type="video/webm" />
+                Video of Yuriy say hi!
+              </video>
             </motion.div>
           </motion.div>
         </div>
