@@ -35,7 +35,7 @@ export const projects = [
     description:
       "Software development agency specializes in creating products for the payment, fintech, gamedev and other fields.",
     year: 2023,
-    src: "/images/heimdal-data.jpg",
+    src: "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/v1/heimdal-cover",
     url: "/projects/heimdal-data-aps",
     color: "#B62429",
   },
