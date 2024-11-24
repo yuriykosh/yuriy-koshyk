@@ -32,6 +32,8 @@ const DoublePicture: React.FC<DoublePictureProps> = ({
           fill
           quality={100}
           sizes="40vw"
+          placeholder="blur"
+          blurDataURL={urlLeft}
           alt={`${alt} 1`}
           className="object-cover"
         />
@@ -48,6 +50,8 @@ const DoublePicture: React.FC<DoublePictureProps> = ({
           fill
           quality={100}
           sizes="40vw"
+          placeholder="blur"
+          blurDataURL={urlRight}
           alt={`${alt} 2`}
           className="object-cover"
         />

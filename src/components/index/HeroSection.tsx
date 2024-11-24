@@ -60,8 +60,28 @@ const HeroSection = () => {
                 playsInline
                 className="absolute w-full h-full object-cover object-center rounded-full"
               >
-                <source src="/videos/intro.mp4" type="video/mp4" />
-                <source src="/videos/intro.webm" type="video/webm" />
+                <source
+                  src="/videos/intro/480.mp4"
+                  type="video/mp4"
+                  media="(max-width:1023px)"
+                />
+                <source
+                  src="/videos/intro/480.webm"
+                  type="video/webm"
+                  media="(max-width:1023px)"
+                />
+                <source
+                  src="/videos/intro/640.mp4"
+                  type="video/mp4"
+                  media="(max-width:1919px)"
+                />
+                <source
+                  src="/videos/intro/640.webm"
+                  type="video/webm"
+                  media="(max-width:1919px)"
+                />
+                <source src="/videos/intro/original.mp4" type="video/mp4" />
+                <source src="/videos/intro/original.webm" type="video/webm" />
                 Video of Yuriy say hi!
               </video>
             </motion.div>

@@ -7,7 +7,7 @@ const Results = () => {
         <figure className="flex flex-col gap-2">
           <div className="relative aspect-[1/3.71]">
             <Image
-              src={"/images/heimdal-data/home-desktop.png"}
+              src={"/images/heimdal-data/home-desktop.webp"}
               alt="image"
               fill
               className="object-cover"
@@ -23,7 +23,7 @@ const Results = () => {
         <figure className="flex flex-col gap-2">
           <div className="relative aspect-[1/11.5]">
             <Image
-              src={"/images/heimdal-data/home-mobile.png"}
+              src={"/images/heimdal-data/home-mobile.webp"}
               alt="image"
               fill
               className="object-cover"

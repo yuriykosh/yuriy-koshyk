@@ -63,15 +63,33 @@ export default function About() {
                 variants={textRevealMotion(0.65)}
               >
                 <video
-                  src={
-                    "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/qm0k22kyeqom7i8iyogq"
-                  }
                   autoPlay
                   muted
                   playsInline
                   loop
                   className="object-cover bg-bg-secondary border border-sep-primary"
-                />
+                >
+                  <source
+                    src="https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/v1/df-team/mp4/320p"
+                    type="video/mp4"
+                    media="(max-width:1023px)"
+                  />
+                  <source
+                    src="https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/v1/df-team/webm/320p"
+                    type="video/webm"
+                    media="(max-width:1023px)"
+                  />
+                  <source
+                    src="https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/v1/df-team/mp4/720p"
+                    type="video/mp4"
+                  />
+                  <source
+                    src="https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/v1/df-team/webm/720p"
+                    type="video/webm"
+                  />
+                  Yuriy Koshyk and DF Druckluft-Fachhandel Gmbh management team
+                  together.
+                </video>
               </motion.li>
             </ul>
             <motion.p

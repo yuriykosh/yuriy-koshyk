@@ -26,7 +26,9 @@ const SinglePicture: React.FC<SinglePictureProps> = ({
         src={url}
         fill
         quality={100}
-        sizes="75vw"
+        sizes="45vw"
+        placeholder="blur"
+        blurDataURL={url}
         alt={alt}
         className={className}
       />

@@ -7,7 +7,7 @@ const KeyFeatures = () => {
       title: "Customization Options",
       description:
         "Flexibility to customize branding, pricing, and promotional offers to suit the unique requirements of each event.",
-      image: "/images/eventPOS/features/0.png",
+      image: "/images/eventPOS/features/0.webp",
       color: {
         primary: "text-green-300",
         secondary: "border-green-300/45",
@@ -17,7 +17,7 @@ const KeyFeatures = () => {
       title: "Mobile Payments",
       description:
         "Seamless mobile payment processing using various methods such as NFC, QR codes, and contactless bracelets",
-      image: "/images/eventPOS/features/1.png",
+      image: "/images/eventPOS/features/1.webp",
       color: {
         primary: "text-sky-300",
         secondary: "border-sky-300/45",
@@ -27,7 +27,7 @@ const KeyFeatures = () => {
       title: "Attendee Experience",
       description:
         "A user-friendly interface for attendees to make purchases quickly and securely.",
-      image: "/images/eventPOS/features/03.png",
+      image: "/images/eventPOS/features/2.webp",
       color: {
         primary: "text-pink-300",
         secondary: "border-pink-300/45",
@@ -37,7 +37,7 @@ const KeyFeatures = () => {
       title: "Analytics Dashboard",
       description:
         "Real-time analytics dashboard for event organizers to track sales performance and make data-driven decisions.",
-      image: "/images/eventPOS/features/3.png",
+      image: "/images/eventPOS/features/3.webp",
       color: {
         primary: "text-purple-300",
         secondary: "border-purple-300/45",

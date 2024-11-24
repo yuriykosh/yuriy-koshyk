@@ -14,7 +14,7 @@ export const projects = [
     description:
       "Multimillion-dollar e-commerce for complete compressed air solutions (a part of Atlas Copco Group)",
     year: 2024,
-    src: "/images/df.webp",
+    src: "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/v1/df-cover",
     url: "https://www.druckluft-fachhandel.de/",
     color: "#977F6D",
     linkStyles: "cursor-alias",
@@ -25,7 +25,7 @@ export const projects = [
     description:
       "AI-powered interactive platform for learning mathematics and developing critical thinking skills among school students.",
     year: 2024,
-    src: "/images/gios-school.png",
+    src: "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/v1/gios-cover",
     url: "/projects/gios-school",
     color: "#BBACAF",
   },
@@ -70,14 +70,14 @@ export const playgroundItems = [
     description:
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2022,
-    src: "/images/dream-net.png",
+    src: "/images/dream-net.webp",
   },
   {
     title: "ABROY Law Firm",
     tags: "Desktop & Mobile Web, B2B, B2C",
     description: "Finance SaaS solution for all kinds of businesses.",
     year: 2024,
-    src: "/images/playground/abroy.png",
+    src: "/images/playground/abroy.webp",
     url: "https://www.behance.net/gallery/146846905/UXUI-Design-Branding-Case-Study-(ABROY-Consult)",
     color: "bright",
   },
@@ -87,7 +87,7 @@ export const playgroundItems = [
     description:
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2020,
-    src: "/images/playground/mallony.png",
+    src: "/images/playground/mallony.webp",
   },
   {
     title: "Motion Challenge",
@@ -95,7 +95,7 @@ export const playgroundItems = [
     description:
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2022,
-    src: "/images/playground/motion-challenge.png",
+    src: "/images/playground/motion-challenge.webp",
     url: "https://www.figma.com/proto/2BsfrBrmbJscL4zaR8zCYH/09.%2BExercise%2B-%2BDelight?page-id=108%3A2&node-id=201-114&node-type=canvas&viewport=685%2C706%2C0.32&t=uTpf0BBNYsO1wbmL-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=201%3A3&show-proto-sidebar=1",
     color: "dark",
   },
@@ -105,7 +105,7 @@ export const playgroundItems = [
     description:
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2020,
-    src: "/images/playground/save-the-planet.png",
+    src: "/images/playground/save-the-planet.webp",
     url: "/files/playground/save-the-planet.pdf",
     color: "light",
   },
@@ -115,7 +115,7 @@ export const playgroundItems = [
     description:
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2020,
-    src: "/images/playground/sony-marketing-plan.png",
+    src: "/images/playground/sony-marketing-plan.webp",
     url: "/files/playground/sony-marketing-plan.pdf",
     color: "dark",
   },
@@ -125,14 +125,14 @@ export const playgroundItems = [
     description:
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2020,
-    src: "/images/playground/neumorphism.png",
+    src: "/images/playground/neumorphism.webp",
   },
   {
     title: "PlayStation 5",
     tags: "Desktop, B2C, Concept",
     description: "PlayStation 5 Concept",
     year: 2020,
-    src: "/images/playground/ps5-concept.png",
+    src: "/images/playground/ps5-concept.webp",
     url: "https://www.figma.com/proto/k0WXsbP51uICWSIag5MesT/Landing-Page-Sony-(Concept)?page-id=401%3A2&node-id=410-0&node-type=canvas&viewport=1712%2C-1422%2C0.21&t=KEUBGBN74cEukw9j-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=410%3A0",
     color: "dark",
   },
@@ -142,7 +142,7 @@ export const playgroundItems = [
     description:
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2022,
-    src: "/images/playground/samsung.png",
+    src: "/images/playground/samsung.webp",
   },
 ];
 

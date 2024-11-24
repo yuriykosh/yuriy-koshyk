@@ -36,7 +36,7 @@ export default function ProjectHeimdalDataApS() {
           }}
         >
           <IntroImage
-            url="/images/heimdal-data.jpg"
+            url="/images/heimdal-data/cover.webp"
             alt="Heimdal Data ApS Redesign case study hero picture"
           />
           <article className="mt-2">
@@ -191,7 +191,7 @@ export default function ProjectHeimdalDataApS() {
                   </p>
 
                   <SinglePicture
-                    url="/images/heimdal-data/style.png"
+                    url="/images/heimdal-data/style.webp"
                     alt="Grid system & Style guide"
                   />
                 </TrackedSection>
@@ -211,7 +211,7 @@ export default function ProjectHeimdalDataApS() {
                     seamless user experience.
                   </p>
                   <SinglePicture
-                    url="/images/heimdal-data/testing-and-feedback.png"
+                    url="/images/heimdal-data/testing-and-feedback.webp"
                     alt="Mockup with new mobile home page & desktop services page"
                   />
                 </TrackedSection>

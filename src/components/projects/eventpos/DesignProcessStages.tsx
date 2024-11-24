@@ -6,7 +6,7 @@ const DesignProcessStages = () => {
       title: "User Research",
       details:
         "The design team conducted extensive research to understand the pain points and requirements of event organizers, vendors, and attendees. This involved surveys, interviews, and observation sessions at various events to gather insights.",
-      image: "/images/eventPOS/user-research.png",
+      image: "/images/eventPOS/user-research.webp",
       styles: {
         container:
           "before:block before:absolute before:w-full before:h-[45%] before:bg-sky-500/10 before:rounded-3xl before:scale-110 before:md:scale-100 before:bottom-[2%] before:md:bottom-[8%] before:md:-translate-x-[10%]",
@@ -19,7 +19,7 @@ const DesignProcessStages = () => {
       title: "Wireframing and Prototyping",
       details:
         "Based on the research findings, wireframes and prototypes were developed to visualize the app structure and functionality. These prototypes underwent iterative refinement based on feedback from stakeholders and usability testing.",
-      image: "/images/eventPOS/wireframing.png",
+      image: "/images/eventPOS/wireframing.webp",
       styles: {
         container: "",
         image:
@@ -32,7 +32,7 @@ const DesignProcessStages = () => {
       title: "User Interface Design",
       details:
         "The user interface was designed with a focus on simplicity, creativity, and consistency. A clean and intuitive layout was adopted to guide users through the payment process seamlessly, minimizing friction and confusion.",
-      image: "/images/eventPOS/ui-design.png",
+      image: "/images/eventPOS/ui-design.webp",
       styles: {
         container: "",
         image:
@@ -45,7 +45,7 @@ const DesignProcessStages = () => {
       title: "Security Implementation",
       details:
         "Robust security measures were integrated into the app to safeguard sensitive financial data. This included encryption protocols, authentication mechanisms, and adherence to industry standards for data protection.",
-      image: "/images/eventPOS/security.png",
+      image: "/images/eventPOS/security.webp",
       styles: {
         container: "",
         image: "scale-[120%] max-md:-translate-y-[6%]",
@@ -57,7 +57,7 @@ const DesignProcessStages = () => {
       title: "Scalability",
       details:
         "The architecture of EventPOS was designed to be highly scalable, capable of accommodating events ranging from small gatherings to large-scale festivals. This scalability ensured flexibility and adaptability to meet the evolving needs of diverse events.",
-      image: "/images/eventPOS/scalability.png",
+      image: "/images/eventPOS/scalability.webp",
       styles: {
         container: "",
         image: "scale-110 max-md:-translate-y-[4%] md:-translate-x-[10%]",

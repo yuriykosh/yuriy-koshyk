@@ -34,7 +34,7 @@ export default function ProjectGlieseOne() {
           }}
         >
           <IntroImage
-            url="/images/gliese1.jpg"
+            url="/images/gliese1/cover.webp"
             alt="Gliese1 case study hero picture"
           />
           <article className="mt-2">
@@ -156,7 +156,7 @@ export default function ProjectGlieseOne() {
                     </p>
 
                     <SinglePicture
-                      url="/images/gliese1/design-process.png"
+                      url="/images/gliese1/design-process.webp"
                       alt="The Double Diamond visual explanation"
                     />
                   </div>
@@ -174,7 +174,7 @@ export default function ProjectGlieseOne() {
                       information in one place.
                     </p>
                     <SinglePicture
-                      url="/images/gliese1/lean-canvas.png"
+                      url="/images/gliese1/lean-canvas.webp"
                       alt="Lean Canvas Table"
                     />
 
@@ -234,8 +234,8 @@ export default function ProjectGlieseOne() {
                     </p>
 
                     <DoublePicture
-                      urlLeft="/images/gliese1/functionality-research.png"
-                      urlRight="/images/gliese1/competitor-analysis.png"
+                      urlLeft="/images/gliese1/functionality-research.webp"
+                      urlRight="/images/gliese1/competitor-analysis.webp"
                       alt="Competitor Analysis & Functionality Research Visuals"
                     />
 
@@ -275,7 +275,7 @@ export default function ProjectGlieseOne() {
                     </p>
 
                     <SinglePicture
-                      url="/images/gliese1/user-interviews.png"
+                      url="/images/gliese1/user-interviews.webp"
                       alt="Pictures from Interviews"
                     />
 
@@ -330,8 +330,8 @@ export default function ProjectGlieseOne() {
                     </p>
 
                     <DoublePicture
-                      urlLeft="/images/gliese1/persona-1.png"
-                      urlRight="/images/gliese1/persona-2.png"
+                      urlLeft="/images/gliese1/persona-1.webp"
+                      urlRight="/images/gliese1/persona-2.webp"
                       alt="Persona"
                     />
 
@@ -394,8 +394,8 @@ export default function ProjectGlieseOne() {
                     </p>
 
                     <DoublePicture
-                      urlLeft="/images/gliese1/cjm-1.png"
-                      urlRight="/images/gliese1/cjm-2.png"
+                      urlLeft="/images/gliese1/cjm-1.webp"
+                      urlRight="/images/gliese1/cjm-2.webp"
                       alt="Customer Journey Map (CJM)"
                     />
 
@@ -433,7 +433,7 @@ export default function ProjectGlieseOne() {
                     </p>
 
                     <SinglePicture
-                      url="/images/gliese1/value-proposition-canvas.png"
+                      url="/images/gliese1/value-proposition-canvas.webp"
                       alt="Value-Proposition Canvas"
                     />
 
@@ -479,7 +479,7 @@ export default function ProjectGlieseOne() {
                     </p>
 
                     <SinglePicture
-                      url="/images/gliese1/ideation.png"
+                      url="/images/gliese1/ideation.webp"
                       alt="Ideation Flow"
                     />
 
@@ -512,7 +512,7 @@ export default function ProjectGlieseOne() {
                     </p>
 
                     <SinglePicture
-                      url="/images/gliese1/architecture.png"
+                      url="/images/gliese1/architecture.webp"
                       alt="Architecture Map"
                     />
 
@@ -616,7 +616,7 @@ export default function ProjectGlieseOne() {
                     </p>
 
                     <SinglePicture
-                      url="/images/gliese1/dashboard.png"
+                      url="/images/gliese1/dashboard.webp"
                       alt="Dashboard screens"
                     />
                   </div>
@@ -632,7 +632,7 @@ export default function ProjectGlieseOne() {
                     </p>
 
                     <SinglePicture
-                      url="/images/gliese1/onboarding.png"
+                      url="/images/gliese1/onboarding.webp"
                       alt="Onboarding screens"
                     />
                   </div>
@@ -647,7 +647,7 @@ export default function ProjectGlieseOne() {
                       entries.
                     </p>
                     <SinglePicture
-                      url="/images/gliese1/transactions.png"
+                      url="/images/gliese1/transactions.webp"
                       alt="Transactions screens"
                     />
                   </div>
@@ -661,7 +661,7 @@ export default function ProjectGlieseOne() {
                       entries and adjustments to their financial records.
                     </p>
                     <SinglePicture
-                      url="/images/gliese1/manual-journal.png"
+                      url="/images/gliese1/manual-journal.webp"
                       alt="Manual Journal screens"
                     />
                   </div>
@@ -675,7 +675,7 @@ export default function ProjectGlieseOne() {
                       accounts, transaction history, and reconciliation tools.
                     </p>
                     <SinglePicture
-                      url="/images/gliese1/banking.png"
+                      url="/images/gliese1/banking.webp"
                       alt="Banking screens"
                     />
                   </div>
@@ -689,11 +689,11 @@ export default function ProjectGlieseOne() {
                       financial records with external bank statements.
                     </p>
                     <SinglePicture
-                      url="/images/gliese1/reconciliation-1.png"
+                      url="/images/gliese1/reconciliation-1.webp"
                       alt="Reconciliation screens"
                     />
                     <SinglePicture
-                      url="/images/gliese1/reconciliation-2.png"
+                      url="/images/gliese1/reconciliation-2.webp"
                       alt="Reconciliation screens"
                     />
                   </div>
@@ -707,7 +707,7 @@ export default function ProjectGlieseOne() {
                       specific projects or initiatives.
                     </p>
                     <SinglePicture
-                      url="/images/gliese1/projects.png"
+                      url="/images/gliese1/projects.webp"
                       alt="Projects screens"
                     />
                   </div>
@@ -722,7 +722,7 @@ export default function ProjectGlieseOne() {
                       monitor team members&#39; access to financial data.
                     </p>
                     <SinglePicture
-                      url="/images/gliese1/team.png"
+                      url="/images/gliese1/team.webp"
                       alt="Team screens"
                     />
                   </div>
@@ -743,7 +743,7 @@ export default function ProjectGlieseOne() {
                     solution in the market for financial reconciliation.
                   </p>
                   <SinglePicture
-                    url="/images/gliese1/conclusion.png"
+                    url="/images/gliese1/conclusion.webp"
                     alt="Gliese1 is on the way to the market"
                   />
                   <ul className="p-2 rounded-2xl border border-fg-secondary/80">

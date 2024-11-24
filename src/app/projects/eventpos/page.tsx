@@ -34,7 +34,7 @@ export default function ProjectEventPOS() {
           }}
         >
           <IntroImage
-            url="/images/event-pos.png"
+            url="/images/eventPOS/cover.webp"
             alt="eventPOS case study hero picture"
           />
           <article className="mt-2">
@@ -187,7 +187,7 @@ export default function ProjectEventPOS() {
 
               <div className="relative h-[80vh]">
                 <Image
-                  src={"/images/eventPOS/closeupBottom1.png"}
+                  src={"/images/eventPOS/closeupBottom1.webp"}
                   fill
                   quality={100}
                   alt="image"

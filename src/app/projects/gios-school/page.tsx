@@ -40,7 +40,7 @@ export default function ProjectGiosSchool() {
           }}
         >
           <IntroImage
-            url="/images/gios-school.png"
+            url="/images/gios-school/cover.webp"
             alt="Gios School case study hero picture"
           />
           <article className="mt-2">
@@ -204,7 +204,7 @@ export default function ProjectGiosSchool() {
                   </motion.p>
 
                   <SinglePicture
-                    url="/images/gios-school/design-process.png"
+                    url="/images/gios-school/design-process.webp"
                     alt="Project stages graph"
                   />
 
@@ -325,7 +325,7 @@ export default function ProjectGiosSchool() {
                     </motion.p>
 
                     <SinglePicture
-                      url="/images/gios-school/competitor-analysis.png"
+                      url="/images/gios-school/competitor-analysis.webp"
                       alt="Competitor logos"
                     />
                   </div>
@@ -349,7 +349,7 @@ export default function ProjectGiosSchool() {
                     </motion.p>
 
                     <SinglePicture
-                      url="/images/gios-school/user-interviews.png"
+                      url="/images/gios-school/user-interviews.webp"
                       alt="User Interview screenshots"
                     />
 
@@ -396,7 +396,7 @@ export default function ProjectGiosSchool() {
                     </motion.p>
 
                     <SinglePicture
-                      url="/images/gios-school/persona.png"
+                      url="/images/gios-school/persona.webp"
                       alt="Persona details"
                     />
 
@@ -448,7 +448,7 @@ export default function ProjectGiosSchool() {
                     </motion.p>
 
                     <SinglePicture
-                      url="/images/gios-school/cjm.png"
+                      url="/images/gios-school/cjm.webp"
                       alt="Customer Journey Map (CJM) details"
                     />
 
@@ -615,7 +615,7 @@ export default function ProjectGiosSchool() {
                       viewport={{ once: true }}
                     >
                       <Image
-                        src="/images/gios-school/home-page.png"
+                        src="/images/gios-school/home-page.webp"
                         fill
                         quality={100}
                         sizes="75vw"
@@ -655,8 +655,8 @@ export default function ProjectGiosSchool() {
                     <TopicTitle title="Tutor Page" />
 
                     <DoublePicture
-                      urlLeft="/images/gios-school/tutor-page-1.png"
-                      urlRight="/images/gios-school/tutor-page-2.png"
+                      urlLeft="/images/gios-school/tutor-page-1.webp"
+                      urlRight="/images/gios-school/tutor-page-2.webp"
                       alt="Tutor page screen"
                       className="mt-20"
                     />
@@ -693,8 +693,8 @@ export default function ProjectGiosSchool() {
                     <TopicTitle title="Course Navigation" />
 
                     <DoublePicture
-                      urlLeft="/images/gios-school/architecture.png"
-                      urlRight="/images/gios-school/navigation.png"
+                      urlLeft="/images/gios-school/architecture.webp"
+                      urlRight="/images/gios-school/navigation.webp"
                       alt="Architecture and Navigation new structure"
                       className="mt-20"
                     />

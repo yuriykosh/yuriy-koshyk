@@ -7,7 +7,7 @@ const Wireframes = () => {
         <figure className="flex flex-col gap-2">
           <div className="relative aspect-[44/185] rounded-md overflow-hidden ring-1 ring-sep-primary">
             <Image
-              src={"/images/heimdal-data/wireframes/home-map.png"}
+              src={"/images/heimdal-data/wireframes/home-map.webp"}
               alt="image"
               fill
               className="object-cover"
@@ -21,7 +21,7 @@ const Wireframes = () => {
         <figure className="flex flex-col gap-2 w-full h-full pt-8">
           <div className="relative aspect-[308/775] rounded-md overflow-hidden ring-1 ring-sep-primary">
             <Image
-              src={"/images/heimdal-data/wireframes/about-wireframes.png"}
+              src={"/images/heimdal-data/wireframes/about-wireframes.webp"}
               alt="image"
               fill
               className="object-cover"
@@ -35,7 +35,7 @@ const Wireframes = () => {
         <figure className="flex flex-col gap-2 w-full h-full">
           <div className="relative aspect-[6/5] rounded-md overflow-hidden ring-1 ring-sep-primary">
             <Image
-              src={"/images/heimdal-data/wireframes/services-wireframes.png"}
+              src={"/images/heimdal-data/wireframes/services-wireframes.webp"}
               alt="image"
               fill
               className="object-cover"
@@ -52,7 +52,7 @@ const Wireframes = () => {
         <figure className="flex flex-col gap-2 w-full h-full">
           <div className="relative w-full h-full rounded-md overflow-hidden ring-1 ring-sep-primary">
             <Image
-              src={"/images/heimdal-data/wireframes/home-wireframes.png"}
+              src={"/images/heimdal-data/wireframes/home-wireframes.webp"}
               alt="image"
               fill
               className="object-cover"
@@ -66,7 +66,7 @@ const Wireframes = () => {
         <figure className="flex flex-col gap-2 w-full h-full">
           <div className="relative aspect-[0.65/1] rounded-md overflow-hidden ring-1 ring-sep-primary">
             <Image
-              src={"/images/heimdal-data/wireframes/contacts-wireframes.png"}
+              src={"/images/heimdal-data/wireframes/contacts-wireframes.webp"}
               alt="image"
               fill
               className="object-cover"
