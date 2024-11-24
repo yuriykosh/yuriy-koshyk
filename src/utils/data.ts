@@ -4,7 +4,7 @@ export const projects = [
     tags: "Desktop Web, B2C SaaS",
     description: "Finance SaaS solution for all kinds of businesses.",
     year: 2024,
-    src: "/images/gliese1.jpg",
+    src: "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/v1/gliese1-cover",
     url: "/projects/gliese1",
     color: "#BBACAF",
   },
