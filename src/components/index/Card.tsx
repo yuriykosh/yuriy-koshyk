@@ -123,37 +123,37 @@ const Card: React.FC<CardProps> = ({
                   className="w-full h-full object-cover object-center"
                 >
                   <source
-                    src={`${src}-hd`}
+                    src={`${src}/mp4/hd`}
                     type="video/mp4"
                     media="(max-width:639px)"
                   />
                   <source
-                    src={`${src}-hd`}
+                    src={`${src}/webm/hd`}
                     type="video/webm"
                     media="(max-width:639px)"
                   />
                   <source
-                    src={`${src}-x1`}
+                    src={`${src}/mp4/full-hd`}
                     type="video/mp4"
                     media="(max-width:1279px)"
                   />
                   <source
-                    src={`${src}-x1`}
+                    src={`${src}/webm/full-hd`}
                     type="video/webm"
                     media="(max-width:1279px)"
                   />
                   <source
-                    src={`${src}-x2`}
+                    src={`${src}/mp4/2k`}
                     type="video/mp4"
                     media="(max-width:1919px)"
                   />
                   <source
-                    src={`${src}-x2`}
+                    src={`${src}/webm/2k`}
                     type="video/webm"
                     media="(max-width:1919px)"
                   />
-                  <source src={`${src}-x4`} type="video/mp4" />
-                  <source src={`${src}-x4`} type="video/webm" />
+                  <source src={`${src}/mp4/4k`} type="video/mp4" />
+                  <source src={`${src}/webm/4k`} type="video/webm" />
                   Your browser does not support the video tag.
                 </video>
               </motion.div>

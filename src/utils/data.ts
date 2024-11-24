@@ -45,7 +45,7 @@ export const projects = [
     description:
       "A cutting-edge mobile payment app crafted specifically for events.",
     year: 2023,
-    src: "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/v1/eventpos-cover/webm/eventpos",
+    src: "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/v1/eventpos-cover",
     url: "/projects/eventpos",
     color: "#C2491D",
   },
