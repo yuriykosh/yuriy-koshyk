@@ -70,7 +70,7 @@ export const playgroundItems = [
     description:
       "Telecommunication company that provides internet and television for thousands users.",
     year: 2022,
-    src: "/images/dream-net.webp",
+    src: "/images/playground/dream-net.webp",
   },
   {
     title: "ABROY Law Firm",
