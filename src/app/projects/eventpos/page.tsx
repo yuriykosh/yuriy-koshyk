@@ -187,7 +187,7 @@ export default function ProjectEventPOS() {
 
               <div className="relative h-[80vh]">
                 <Image
-                  src={"/images/eventPOS/closeupBottom1.webp"}
+                  src={"/images/eventPOS/closeupBottom1.png"}
                   fill
                   quality={100}
                   alt="image"

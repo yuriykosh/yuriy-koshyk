@@ -37,6 +37,8 @@ const IntroImage: React.FC<IntroImageProps> = ({ url, alt }) => {
           sizes="100vw"
           quality={100}
           priority
+          placeholder="blur"
+          blurDataURL={url}
           alt={alt}
           style={{ objectFit: "cover" }}
         />
