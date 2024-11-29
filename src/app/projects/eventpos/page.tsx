@@ -52,8 +52,7 @@ export default function ProjectEventPOS() {
               </motion.h1>
               <div className="lg:col-span-9 flex flex-col gap-24">
                 <motion.h2 className="" variants={textRevealMotion(1.9)}>
-                  Transforming the onboarding experience to provide telecom
-                  services to 1,000+ students
+                  Empowering Events with Secure, Scalable Payment Innovation
                 </motion.h2>
                 <motion.div
                   className="w-full origin-left"
