@@ -51,7 +51,10 @@ export default function ProjectEventPOS() {
                 <span className={`text-sky-500`}>POS</span>
               </motion.h1>
               <div className="lg:col-span-9 flex flex-col gap-24">
-                <motion.h2 className="" variants={textRevealMotion(1.9)}>
+                <motion.h2
+                  className="text-pretty"
+                  variants={textRevealMotion(1.9)}
+                >
                   Empowering Events with Secure, Scalable Payment Innovation
                 </motion.h2>
                 <motion.div
