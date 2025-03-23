@@ -38,11 +38,11 @@ export default function About() {
             animate="animate"
           >
             <motion.p variants={textRevealMotion(0.5)}>
-              Hey there! I&#39;m Yuriy Koshyk, a Product Designer with 4+ years
-              of experience, blending creativity and technical expertise to
-              craft user-friendly, data-driven digital solutions that drive
-              business results. My focus is on creating digital experiences that
-              not only look great but also deliver on business and user needs.
+              Hey there! I&#39;m Yuriy, a Design Engineer with 5 years of
+              experience, blending creativity and technical expertise to craft
+              user-friendly, data-driven digital solutions that drive business
+              results. My focus is on creating digital experiences that not only
+              look great but also deliver on business and user needs.
             </motion.p>
             <ul className="grid grid-cols-3 gap-4">
               <motion.li
