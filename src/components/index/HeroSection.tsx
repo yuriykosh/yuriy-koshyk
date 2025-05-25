@@ -14,7 +14,7 @@ const HeroSection = () => {
       >
         <div className="flex items-center mb-px bg-bg-primary z-10">
           <motion.div
-            className="bg-fg-primary h-[1ch] flex-1 mr-8 block origin-left"
+            className="bg-fg-primary h-[1.05ch] flex-1 mt-1 mr-8 block origin-left"
             initial={{ scaleX: 0 }}
             animate={{
               scaleX: 1,
@@ -22,26 +22,26 @@ const HeroSection = () => {
             }}
           />
           <motion.h2
-            className="max-sm:font-semibold font-medium z-20"
+            className="max-sm:font-semibold font-bold z-20"
             variants={textRevealMotion(0)}
           >
             Design
           </motion.h2>
         </div>
-        <div className="mb-px bg-bg-primary z-20">
+        <div className="mb-px bg-bg-primary  z-20">
           <motion.h2
-            className="max-sm:font-semibold font-medium"
+            className="max-sm:font-semibold font-bold"
             variants={textRevealMotion(0.25)}
           >
-            Digital Products
+            <span className="">Digital</span> Products
           </motion.h2>
         </div>
         <div className="flex gap-4 md:gap-8 items-center mb-px">
           <motion.h2
-            className="max-sm:font-semibold max-[400px]:max-w-[70%] max-[468px]:max-w-[64%] font-medium md:pl-[10%] relative"
+            className="max-sm:font-semibold max-[400px]:max-w-[70%] max-[468px]:max-w-[64%] font-bold md:pl-[10%] relative"
             variants={textRevealMotion(0.5)}
           >
-            That Matters
+            That <span className="bg-lightGray">Matters</span>
           </motion.h2>
 
           <motion.div
@@ -90,12 +90,12 @@ const HeroSection = () => {
 
         <div className="bg-bg-primary z-30 flex-1 w-full pt-8 md:pl-[50%] font-medium text-base normal-case tracking-normal leading-normal">
           <motion.p
-            className="max-w-lg"
+            className="max-w-lg mb-4"
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
               transition: {
-                delay: 1.0,
+                delay: 0.8,
                 duration: 0.8,
                 ease: easings.easeInOutQuint,
               },
@@ -104,7 +104,20 @@ const HeroSection = () => {
             Based in Stuttgart, I&#39;m Yuriy, a full-stack product designer
             passionate about crafting intuitive interfaces and intelligent
             systems that enhance user interactions and align with business
-            goals. Let&#39;s connect —{" "}
+          </motion.p>
+          <motion.p
+            className="max-w-lg"
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: {
+                delay: 2,
+                duration: 0.8,
+                ease: easings.easeInOutQuint,
+              },
+            }}
+          >
+            Let&#39;s connect —{" "}
             <Link
               href={"mailto:yuriy.koshyk@gmail.com"}
               className="group inline-flex items-center gap-1.5 underline underline-offset-2 hover:text-fg-secondary transition-all duration-200"
@@ -117,6 +130,7 @@ const HeroSection = () => {
                 <CarbonMailAll />
               </span>
             </Link>
+            ``
           </motion.p>
         </div>
       </motion.div>

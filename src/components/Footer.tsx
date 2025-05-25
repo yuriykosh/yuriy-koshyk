@@ -41,7 +41,7 @@ const Footer = () => {
               <li className="col-span-3 md:col-span-1">Made with love by</li>
               <li className="md:justify-self-center">Yuriy Koshyk</li>
               <li className="col-span-2 md:col-span-1 justify-self-end">
-                Copyright ©2024
+                Copyright ©2025
               </li>
             </ul>
           </footer>

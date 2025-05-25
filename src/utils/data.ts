@@ -8,17 +8,17 @@ export const projects = [
     url: "/projects/gliese1",
     color: "#BBACAF",
   },
-  {
-    title: "DF Druckluft-Fachhandel",
-    tags: "Web, B2C & B2B E-commerce",
-    description:
-      "Multimillion-dollar e-commerce for complete compressed air solutions (a part of Atlas Copco Group)",
-    year: 2024,
-    src: "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/v1/df-cover",
-    url: "https://www.druckluft-fachhandel.de/",
-    color: "#977F6D",
-    linkStyles: "cursor-alias",
-  },
+  // {
+  //   title: "DF Druckluft-Fachhandel",
+  //   tags: "Web, B2C & B2B E-commerce",
+  //   description:
+  //     "Multimillion-dollar e-commerce for complete compressed air solutions (a part of Atlas Copco Group)",
+  //   year: 2024,
+  //   src: "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/v1/df-cover",
+  //   url: "https://www.druckluft-fachhandel.de/",
+  //   color: "#977F6D",
+  //   linkStyles: "cursor-alias",
+  // },
   {
     title: "Gios School",
     tags: "B2B, B2C, EdTech",
@@ -29,16 +29,16 @@ export const projects = [
     url: "/projects/gios-school",
     color: "#BBACAF",
   },
-  {
-    title: "Heimdal Data",
-    tags: "Desktop & Mobile Web, B2B",
-    description:
-      "Software development agency specializes in creating products for the payment, fintech, gamedev and other fields.",
-    year: 2023,
-    src: "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/v1/heimdal-cover",
-    url: "/projects/heimdal-data-aps",
-    color: "#B62429",
-  },
+  // {
+  //   title: "Heimdal Data",
+  //   tags: "Desktop & Mobile Web, B2B",
+  //   description:
+  //     "Software development agency specializes in creating products for the payment, fintech, gamedev and other fields.",
+  //   year: 2023,
+  //   src: "https://res.cloudinary.com/dfyj2bzi7/video/upload/f_auto:video,q_auto/v1/heimdal-cover",
+  //   url: "/projects/heimdal-data-aps",
+  //   color: "#B62429",
+  // },
   {
     title: "EventPOS",
     tags: "iOS & Android, B2C SaaS",

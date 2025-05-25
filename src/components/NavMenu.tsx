@@ -21,7 +21,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ menuOpen, setMenuOpen }) => {
     { title: "LinkedIn", url: "https://www.linkedin.com/in/yuriy-koshyk" },
     { title: "GitHub", url: "https://github.com/yuriykosh" },
     { title: "Behance", url: "https://www.behance.net/yuriykosh" },
-    { title: "Resume", url: "https://read.cv/yuriy_kosh" },
+    // { title: "Resume", url: "https://read.cv/yuriy_kosh" },
   ];
 
   return (

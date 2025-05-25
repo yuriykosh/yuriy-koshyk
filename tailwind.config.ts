@@ -24,6 +24,7 @@ const config: Config = {
           secondary: "var(--sep-secondary)",
           tertiary: "var(--sep-tertiary)",
         },
+        lightGray: "#DDD8D2",
       },
     },
   },

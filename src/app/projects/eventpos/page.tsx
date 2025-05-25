@@ -12,6 +12,7 @@ import DesignProcessStages from "@/components/projects/eventpos/DesignProcessSta
 import Goals from "@/components/projects/eventpos/Goals";
 import KeyFeatures from "@/components/projects/eventpos/KeyFeatures";
 import TransitionOverlay from "@/components/assets/TransitionOverlay";
+import DesignRushBadge from "@/components/assets/DesignRushBadge";
 
 export default function ProjectEventPOS() {
   const { values } = useTOCContextValues();
@@ -37,7 +38,7 @@ export default function ProjectEventPOS() {
             url="/images/eventPOS/cover.webp"
             alt="eventPOS case study hero picture"
           />
-          <article className="mt-2">
+          <article className="mt-2 overflow-hidden">
             <motion.div
               className="grid grid-cols-1 lg:grid-cols-12 px-6 leading-tight tracking-tight font-medium text-4xl sm:text-5xl"
               initial="initial"
@@ -57,12 +58,27 @@ export default function ProjectEventPOS() {
                 >
                   Empowering Events with Secure, Scalable Payment Innovation
                 </motion.h2>
-                <motion.div
-                  className="w-full origin-left"
-                  variants={dividerMotion}
-                >
-                  <Divider />
-                </motion.div>
+                <div className="relative">
+                  <motion.div
+                    className="w-full origin-left"
+                    variants={dividerMotion}
+                  >
+                    <Divider />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{
+                      opacity: 1,
+                      transition: {
+                        duration: 0.8,
+                        delay: 1.5,
+                        ease: easings.easeInOutQuint,
+                      },
+                    }}
+                  >
+                    <DesignRushBadge />
+                  </motion.div>
+                </div>
               </div>
             </motion.div>
 

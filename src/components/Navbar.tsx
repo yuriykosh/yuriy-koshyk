@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
       </Link>
 
       <ul className="hidden md:block col-span-2 text-sm text-bg-primary font-medium">
-        <li>Design Engineer</li>
+        <li>Senior Product Designer</li>
         <li className="text-sm opacity-45">Always learning</li>
       </ul>
       <LocalTime />
