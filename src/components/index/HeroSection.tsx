@@ -130,7 +130,6 @@ const HeroSection = () => {
                 <CarbonMailAll />
               </span>
             </Link>
-            ``
           </motion.p>
         </div>
       </motion.div>

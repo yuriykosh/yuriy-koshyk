@@ -2,7 +2,7 @@ const DesignRushBadge = () => {
   return (
     <div className="absolute -top-2 right-0">
       <a
-        href="https://www.designrush.com/best-designers"
+        href="https://www.designrush.com/best-designs/apps/eventpos-app-design"
         className="relative w-fit flex flex-col items-center justify-center px-10 pt-4 pb-4 gap-2 text-white
         group"
       >
