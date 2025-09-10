@@ -173,12 +173,12 @@ const Card: React.FC<CardProps> = ({
               </motion.div>
             )}
           </Link>
-          <div className="w-full grid grid-cols-3 grid-rows-2 md:grid-rows-1 gap-4 relative py-2 text-sm font-medium text-fg-secondary">
-            <ul className="col-span-2 md:col-span-1 ">
+          <div className="w-full grid grid-cols-3 grid-rows-2 md:grid-rows-1 md:grid-cols-6 gap-4 relative py-2 text-sm font-medium text-fg-secondary">
+            <ul className="col-span-2 md:col-span-3">
               <li className="text-fg-primary">{title}</li>
               <li>{tags}</li>
             </ul>
-            <p className="col-span-3 md:col-span-1 max-md:order-last font-medium">
+            <p className="col-span-3 md:col-span-2 md:ml-4 max-md:order-last font-medium">
               {description}
             </p>
             <p className="justify-self-end">{year}</p>

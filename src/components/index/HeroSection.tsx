@@ -6,46 +6,49 @@ import CarbonMailAll from "../assets/icons/CarbonMailAll";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen h-auto min-[376px]:min-h-[80vh] min-[376px]:h-auto relative flex flex-col px-6 pt-20 sm:pt-40 mb-16">
+    <section className="min-h-fit h-auto min-md:min-h-[80vh] min-md:h-auto relative flex flex-col px-6 pt-20 sm:pt-24 mb-16">
       <motion.div
-        className="flex flex-col flex-1 mx-auto uppercase tracking-wide text-5xl leading-snug sm:text-6xl sm:leading-snug md:text-7xl md:leading-tight lg:text-[6.1rem] xl:text-[7.2rem] min-[1308px]:text-[8rem]"
+        className="flex flex-col flex-1 mx-auto font-medium tracking-[-0.03em] leading-[90%] max-[440px]:text-[3.25rem] text-6xl md:text-7xl lg:text-[6.1rem] xl:text-[7.2rem] min-[1308px]:text-[8rem]"
         initial="initial"
         animate="animate"
       >
-        <div className="flex items-center mb-px bg-bg-primary z-10">
+        <div className="relative flex items-center mb-px bg-bg-primary z-20">
           <motion.div
-            className="bg-fg-primary h-[1.05ch] flex-1 mt-1 mr-8 block origin-left"
+            className="bg-fg-primary h-[1.02ch] flex-1 mt-[6px] mr-8 block origin-left"
             initial={{ scaleX: 0 }}
             animate={{
               scaleX: 1,
               transition: { duration: 0.8, ease: easings.easeInOutQuint },
             }}
           />
-          <motion.h2
-            className="max-sm:font-semibold font-bold z-20"
-            variants={textRevealMotion(0)}
-          >
+          <motion.h2 className="z-20 pr-14" variants={textRevealMotion(0)}>
             Design
           </motion.h2>
+          <motion.div
+            className="absolute -bottom-28 bg-bg-primary w-full h-24 z-20"
+            initial={{ opacity: 1 }}
+            animate={{
+              opacity: 0,
+              transition: { duration: 0.3, delay: 0.5 },
+            }}
+          />
         </div>
-        <div className="mb-px bg-bg-primary  z-20">
-          <motion.h2
-            className="max-sm:font-semibold font-bold"
-            variants={textRevealMotion(0.25)}
-          >
-            <span className="">Digital</span> Products
+        <div className="mb-px z-20">
+          <motion.h2 variants={textRevealMotion(0.25)}>
+            digital products
           </motion.h2>
         </div>
         <div className="flex gap-4 md:gap-8 items-center mb-px">
-          <motion.h2
-            className="max-sm:font-semibold max-[400px]:max-w-[70%] max-[468px]:max-w-[64%] font-bold md:pl-[10%] relative"
-            variants={textRevealMotion(0.5)}
-          >
-            That <span className="bg-lightGray">Matters</span>
+          <motion.h2 className="  relative" variants={textRevealMotion(0.5)}>
+            that{" "}
+            <span className="relative before:content-[''] before:block before:absolute before:left-0 max-[440px]:before:bottom-2.5 before:bottom-3 lg:before:bottom-5 xl:before:bottom-6 before:bg-pink-300 before:w-[101%] before:h-[1.2ch] before:-z-10">
+              matters
+            </span>
           </motion.h2>
 
+          {/* video */}
           <motion.div
-            className="relative inline-block max-[468px]:w-[2ch] max-[468px]:h-[2ch] max-[468px]:self-end mb-3 sm:mb-0 w-[1.5ch] h-[1.5ch] sm:w-[1.1ch] sm:h-[1.1ch]
+            className="relative inline-block max-[468px]:w-[1.5ch] max-[468px]:h-[1.5ch] mb-3 sm:mb-0 w-[1.4ch] h-[1.4ch] md:w-[1.2ch] md:h-[1.2ch] lg:w-[1ch] lg:h-[1ch] xl:w-[1.1ch] xl:h-[1.1ch]
             rounded-full overflow-hidden ring-1 md:ring ring-fg-primary bg-fg-primary"
             variants={textRevealMotion(0.7)}
           >
@@ -90,7 +93,7 @@ const HeroSection = () => {
 
         <div className="bg-bg-primary z-30 flex-1 w-full pt-8 md:pl-[50%] font-medium text-base normal-case tracking-normal leading-normal">
           <motion.p
-            className="max-w-lg mb-4"
+            className="max-w-md mb-4"
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
@@ -120,11 +123,11 @@ const HeroSection = () => {
             Let&#39;s connect —{" "}
             <Link
               href={"mailto:yuriy.koshyk@gmail.com"}
-              className="group inline-flex items-center gap-1.5 underline underline-offset-2 hover:text-fg-secondary transition-all duration-200"
+              className="group inline-flex items-center gap-1.5 underline decoration-1 underline-offset-2 hover:text-fg-secondary transition-all duration-200"
             >
-              send me an email and say hi!
+              send me an email to say hi!
               <span
-                className="flex items-center justify-center underline w-[1.5ch] h-[1.5ch] text-fg-secondary
+                className="flex items-center justify-center w-[1.5ch] h-[1.5ch] text-fg-secondary
               opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-200"
               >
                 <CarbonMailAll />

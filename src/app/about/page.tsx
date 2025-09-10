@@ -33,7 +33,7 @@ export default function About() {
           <StackList />
 
           <motion.div
-            className="col-span-1 md:col-span-3 flex flex-col gap-10 mb-14 md:m-0 text-xl md:text-2xl font-medium"
+            className="col-span-1 md:col-span-3 flex flex-col gap-10 mb-14 md:m-0 text-xl md:text-2xl font-regular"
             initial="initial"
             animate="animate"
           >

@@ -1,3 +1,5 @@
+import { Testimonial } from "@/utils/types";
+
 export const projects = [
   {
     title: "Gliese1",
@@ -60,6 +62,33 @@ export const projects = [
   //   url: "/playground",
   //   color: "#88A28D",
   // },
+];
+
+// testimonialsData
+export const testimonials: Testimonial[] = [
+  {
+    id: "jana-flaskova",
+    quote:
+      "Yuriy is a very talented designer, with an eye for innovative solutions. He is hard working and is very detail orientated. He is a team player and works great in a team. We have been very happy with his design work and will use him in the future for sure.",
+    author: "Jana Flaskova",
+    title: "Web Developer",
+  },
+  {
+    id: "peter-poulsen",
+    quote:
+      "I found Yuriy an easy going colleague who is very talented at designing mobile apps. I also admire his dedication to learn new things and staying on top of the game.",
+    author: "Peter Robert Poulsen",
+    title: "CEO",
+    company: "Heimdal Data ApS",
+  },
+  {
+    id: "steffen-siefert",
+    quote:
+      "Yuriy consistently demonstrated the ability to immediately grasp complex situations and identify the core issues. He approached every task independently, thoughtfully, and with great care. His strategic mindset, combined with a high level of precision and reliability, made him a driving force behind key initiatives... He always delivered outstanding results - both in quality and execution.",
+    author: "Steffen Siefert",
+    title: "GM & Co-Founder",
+    company: "DF Druckluft-Fachhandel GmbH",
+  },
 ];
 
 // playgroundData
