@@ -13,7 +13,7 @@ const TestimonialCard = ({
   <li className="flex flex-col gap-10">
     <figure className="flex flex-col gap-4">
       <blockquote className="text-fg-primary leading-relaxed">
-        "{testimonial.quote}"
+        &quot;{testimonial.quote}&quot;
       </blockquote>
       <figcaption className="flex flex-col items-end text-right">
         <cite className="not-italic font-medium text-fg-primary">
